@@ -49,13 +49,20 @@ namespace ContasAReceber.model
 
         public DataSet BindingSourceContas()
         {
-            BancoDeDados bd = new BancoDeDados(stringDeConexao);
-            bd.AbreConexao();
             string query = "SELECT contasareceber.entrada, pessoa.nome, contasareceber.valor, contasareceber.documento, class.tipo, situacao.situacao, contasareceber.vencimento, contasareceber.pagamento FROM contasareceber JOIN pessoa ON contasareceber.idcliente = pessoa.idpessoa JOIN class ON contasareceber.class = class.iidclass JOIN situacao ON contasareceber.situacao = situacao.idsituacao";
+            BancoDeDados bd = new BancoDeDados(stringDeConexao);
             FbDataAdapter adaptador = new FbDataAdapter(query, bd.conexao(stringDeConexao));
             DataSet dt = new DataSet();
-            adaptador.Fill(dt, "contasareceber");
+            try
+            {
+                bd.AbreConexao();
+                adaptador.Fill(dt, "contasareceber");
+                
+            }
+            catch (Exception ex)
+            {
 
+            }
             return dt;
         }
         public DataTable ExibeGridContas()
@@ -63,7 +70,6 @@ namespace ContasAReceber.model
             BancoDeDados bd = new BancoDeDados(stringDeConexao);
             bd.AbreConexao();
             string query = "SELECT contasareceber.entrada, pessoa.nome, contasareceber.valor, contasareceber.documento, class.tipo, situacao.situacao, contasareceber.vencimento, contasareceber.pagamento FROM contasareceber JOIN pessoa ON contasareceber.idcliente = pessoa.idpessoa JOIN class ON contasareceber.class = class.iidclass JOIN situacao ON contasareceber.situacao = situacao.idsituacao";
-            
             FbCommand comando = new FbCommand(query, bd.conexao(stringDeConexao));
             FbDataAdapter adaptador = new FbDataAdapter(comando);
             DataTable dt = new DataTable();
