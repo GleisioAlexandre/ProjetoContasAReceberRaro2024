@@ -1,0 +1,219 @@
+﻿using ContasAReceber.controller;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Globalization;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+
+namespace ContasAReceber.View
+{
+    public partial class FrmOperacoesContas : Form
+    {
+        private FrmContas contas;
+        private int LocalizacaoX;
+        private int LocalizacaoY;
+        public FrmOperacoesContas(FrmContas frmContas)
+        {
+            InitializeComponent();
+            LocalizacaoX = (Screen.PrimaryScreen.Bounds.Width - this.Width)/2;
+            LocalizacaoY = (Screen.PrimaryScreen.Bounds.Height - this.Height)/2;
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.contas = frmContas;
+        }
+        public void DadosDOFormContas(string stringDoFormContas)
+        {
+            
+                    string documento = stringDoFormContas;
+                    OperacoesContas opContas = new OperacoesContas();
+                    lblConta.Text = opContas.PesquisarDivida(documento)[0].ToString();
+                    dtEntrada.Text = opContas.PesquisarDivida(documento)[1].ToString();
+                    txtCodigoCliente.Text = opContas.PesquisarDivida(documento)[2].ToString();
+                    txtNomeCliente.Text = opContas.PesquisarDivida(documento)[3].ToString();
+                    txtValor.Text = opContas.PesquisarDivida(documento)[4].ToString();
+                    txtDocumento.Text = opContas.PesquisarDivida(documento)[5].ToString();
+                    cbxClass.SelectedIndex = Int32.Parse(opContas.PesquisarDivida(documento)[6].ToString()) - 1;
+                    cbxSituacao.SelectedIndex = Int32.Parse(opContas.PesquisarDivida(documento)[7].ToString()) - 1;
+                    dtVencimento.Text = opContas.PesquisarDivida(documento)[8].ToString();
+                    dtPagamento.Text = opContas.PesquisarDivida(documento)[9].ToString();
+                    btnDeletar.Enabled = true;
+                    btnAtualizar.Enabled = true;
+                    btnInserir.Enabled = false;
+                    txtValor.Focus();
+                    txtDocumento.Focus();
+        }
+
+        private void FrmInserirContas_Load(object sender, EventArgs e)
+        {
+            if (txtDocumento.Text.Equals(""))
+            {
+                dtEntrada.Text = DateTime.Now.ToString("dd/MM/yyyy");
+                dtVencimento.Text = DateTime.Now.ToString("dd/MM/yyyy");
+                dtPagamento.Text = DateTime.Now.ToString("dd/MM/yyyy");
+                txtValor.Text = "0,00";
+            }
+            if (dtPagamento.Value.Date > dtVencimento.Value.Date)
+            {
+                cbxSituacao.SelectedIndex = 1;
+            }
+
+        }
+
+        private void btnPesquisarCliente_Click(object sender, EventArgs e)
+        {
+           if (txtNomeCliente.Text.Equals(""))
+            {
+                MessageBox.Show("O campos Nome do Cliente, não pode ser nulo!");
+            }
+            else
+            {
+                try
+                {
+                    OperacoesContas op = new OperacoesContas();
+                    txtCodigoCliente.Text = op.PesquisarCliente(txtNomeCliente.Text)[0].ToString();
+                    txtNomeCliente.Text = op.PesquisarCliente(txtNomeCliente.Text)[1].ToString();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro: Registro não encontrado!\n" + ex, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+        private void txtNomeCliente_TextChanged(object sender, EventArgs e)
+        {
+            txtNomeCliente.Text = txtNomeCliente.Text.ToUpper();
+            txtNomeCliente.SelectionStart = txtNomeCliente.Text.Length;
+        }
+        private void txtValor_Validated(object sender, EventArgs e)
+        {
+           if (txtValor.Text.Equals(""))
+            {
+                txtValor.Text = "0,00";
+            }
+            else
+            {
+                txtValor.Text = double.Parse(txtValor.Text).ToString("N2");
+            }
+        }
+
+
+        private void txtValor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.' && e.KeyChar != ','))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtDocumento_TextChanged(object sender, EventArgs e)
+        {
+            txtDocumento.Text = txtDocumento.Text.ToUpper();
+            txtDocumento.SelectionStart = txtDocumento.Text.Length;
+        }
+
+
+        private void txtNomeCliente_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                try
+                {
+
+                    OperacoesContas op = new OperacoesContas();
+                    txtCodigoCliente.Text = op.PesquisarCliente(txtNomeCliente.Text)[0].ToString();
+                    txtNomeCliente.Text = op.PesquisarCliente(txtNomeCliente.Text)[1].ToString();
+                    txtValor.Focus();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro: " + ex, "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void btnInserir_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtNomeCliente.Text.Equals("") || txtValor.Text.Equals("") || txtDocumento.Text.Equals(""))
+                {
+                    MessageBox.Show("Todos os campos devem ser preenchidos para a inclusão do registro!", "Alerta!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    if (MessageBox.Show("Verifique se todos os dados foram inseridos corretamente! \n Se tudo estiver correto clique em SIM", "Informação!", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                    {
+                        OperacoesContas op = new OperacoesContas();
+                        op.InserirConta(dtEntrada.Text, Int32.Parse(txtCodigoCliente.Text), Double.Parse(txtValor.Text), txtDocumento.Text, (cbxClass.SelectedIndex)+1, (cbxSituacao.SelectedIndex)+1, dtVencimento.Text, dtPagamento.Text);
+                        this.Close();
+                        contas.AtualizaGridContas();
+                    }
+                    else
+                    {
+                        this.Close();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex, "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        
+
+        private void btnDeletar_Click(object sender, EventArgs e)
+        {
+            if (txtDocumento.Text.Equals(""))
+            {
+                MessageBox.Show("Todos os campos devem ser preenchidos para a exclusão do registro!", "Informação!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                try
+                {
+                    if (MessageBox.Show("Tem certeza de que quer excluir este registro ?", "Alerta", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+                    {
+                        OperacoesContas op = new OperacoesContas();
+                        op.DeletarContas(Int32.Parse(lblConta.Text));
+                        contas.AtualizaGridContas();
+                        this.Close();
+                    }
+                    else
+                    {
+                        this.Close();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro: " + ex, "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void btnAtualizar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OperacoesContas op = new OperacoesContas();
+                op.AtualizaContas(dtEntrada.Text, Int32.Parse(txtCodigoCliente.Text), Double.Parse(txtValor.Text), txtDocumento.Text, (cbxClass.SelectedIndex + 1), (cbxSituacao.SelectedIndex + 1), dtVencimento.Text, dtPagamento.Text, Int32.Parse(lblConta.Text));
+                this.Close();
+                contas.AtualizaGridContas();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex, "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void FrmOperacoesContas_Move(object sender, EventArgs e)
+        {
+            this.Location = new System.Drawing.Point(LocalizacaoX, LocalizacaoY);
+        }
+    }
+}
