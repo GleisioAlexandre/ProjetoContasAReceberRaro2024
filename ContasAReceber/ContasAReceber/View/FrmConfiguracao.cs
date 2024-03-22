@@ -59,6 +59,8 @@ namespace ContasAReceber.View
                 config.ConnectionStrings.ConnectionStrings["ConexaoFirebird"].ConnectionString = novaStringConexao;
                 config.Save(ConfigurationSaveMode.Modified);
                 MessageBox.Show("Alterações realizadas com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Reinicie a aplicação para validar as configurações!", "Reinicie a Aplicação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
             }
             catch (Exception ex)
             {
@@ -69,8 +71,8 @@ namespace ContasAReceber.View
 
         private void FrmConfiguracao_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Restart();
-            Environment.Exit(0);
+            //Application.Restart();
+            //Environment.Exit(0);
         }
     }
 }
