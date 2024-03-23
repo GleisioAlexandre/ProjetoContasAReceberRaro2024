@@ -23,13 +23,10 @@ namespace ContasAReceber.View
         {
             InitializeComponent();
         }
-        
         private void FrmConfiguracao_Load(object sender, EventArgs e)
         {
             string stringConexao = ConfigurationManager.ConnectionStrings["ConexaoFirebird"].ConnectionString;
-
             string[] partes = stringConexao.Split(';');
-
             usuario = partes[0].Substring(partes[0].IndexOf("=") + 1).Trim();
             senha = partes[1].Substring(partes[1].IndexOf("=") + 1).Trim();
             bancoDados = partes[2].Substring(partes[2].IndexOf("=") + 1).Trim();
@@ -40,9 +37,7 @@ namespace ContasAReceber.View
             txtCaminho.Text = bancoDados;
             txtServidor.Text = servidor;
             txtPorta.Text = porta.ToString(); ;
-           
         }
-
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             try
@@ -52,9 +47,7 @@ namespace ContasAReceber.View
                 bancoDados = txtCaminho.Text;
                 servidor = txtServidor.Text;
                 porta = txtPorta.Text;
-
                 string novaStringConexao = $"User={usuario};password={senha};Database={bancoDados};DataSource={servidor};Port={porta}";
-
                 Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
                 config.ConnectionStrings.ConnectionStrings["ConexaoFirebird"].ConnectionString = novaStringConexao;
                 config.Save(ConfigurationSaveMode.Modified);
@@ -66,13 +59,13 @@ namespace ContasAReceber.View
             {
                 MessageBox.Show("Erro: " + ex, "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
         }
-
-        private void FrmConfiguracao_FormClosed(object sender, FormClosedEventArgs e)
+        private void btnPesquisar_Click(object sender, EventArgs e)
         {
-            //Application.Restart();
-            //Environment.Exit(0);
+            OpenFileDialog fileDialog = new OpenFileDialog();
+            fileDialog.Filter = "Firebird .fdb|*.fdb*";
+            fileDialog.ShowDialog();
+            txtCaminho.Text = fileDialog.FileName;
         }
     }
 }

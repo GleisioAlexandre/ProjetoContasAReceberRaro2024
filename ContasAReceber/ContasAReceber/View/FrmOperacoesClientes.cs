@@ -104,7 +104,7 @@ namespace ContasAReceber.View
                     pj = 0;
                 }
                 OperacoesClientes opCliente = new OperacoesClientes();
-                opCliente.InseirClinete(txtCliente.Text, txtCpfCnpj.Text, txtCep.Text, txtLogradouro.Text, txtNumero.Text, txtComplemento.Text, txtBairro.Text, txtCidade.Text, txtUf.Text, pj);
+                opCliente.InseirClinete(txtCliente.Text, txtCpfCnpj.Text, txtCep.Text, txtLogradouro.Text, Int32.Parse(txtNumero.Text), txtComplemento.Text, txtBairro.Text, txtCidade.Text, txtUf.Text, pj);
                 clientes.AtualizaGriCliente();
                 this.Close();
             } catch (Exception ex)

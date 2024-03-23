@@ -15,9 +15,9 @@ namespace ContasAReceber.controller
         {
             return cliente.ExibeGridClientes();
         }
-        public void InseirClinete(String nome, String cadastrodepessoa, String cep, String logradouro, String numero, String complemento, String bairro, String cidade, String uf, Int32 pj)
+        public void InseirClinete(String nome, String cadastropessoa, String cep, String logradouro, int numero, String complemento, String bairro, String cidade, String uf, int pj)
         {
-            cliente.InserirClientes(nome, cadastrodepessoa, cep, logradouro, numero, complemento, bairro, cidade, uf, pj);
+            cliente.InserirClientes(nome, cadastropessoa, cep, logradouro, numero, complemento, bairro, cidade, uf, pj);
         }
         public void AtualizarCliente(String nome, String cadastrodepessoa, String cep, String logradouro, String numero, String complemento, String bairro, String cidade, String uf, Int32 pj,  Int32 idpessoa)
         {

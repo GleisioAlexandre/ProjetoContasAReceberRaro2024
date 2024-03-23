@@ -53,33 +53,34 @@
             // toolStrip1
             // 
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripSeparator1,
             this.toolStripLabel1,
             this.toolStripSeparator2});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 521);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 520);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1259, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(1259, 26);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 26);
             // 
             // toolStripLabel1
             // 
             this.toolStripLabel1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(43, 22);
+            this.toolStripLabel1.Size = new System.Drawing.Size(55, 23);
             this.toolStripLabel1.Text = "Insert";
             this.toolStripLabel1.ToolTipText = "Pressione Insert Para Inseir Um Novo Cliente";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 26);
             // 
             // dtgClientes
             // 
@@ -141,7 +142,7 @@
             // 
             // cadastropessoa
             // 
-            this.cadastropessoa.DataPropertyName = "cadastrodepessoa";
+            this.cadastropessoa.DataPropertyName = "cadastropessoa";
             this.cadastropessoa.HeaderText = "CPF/CNPJ";
             this.cadastropessoa.Name = "cadastropessoa";
             this.cadastropessoa.ReadOnly = true;
@@ -197,7 +198,7 @@
             // 
             // uf
             // 
-            this.uf.DataPropertyName = "uf";
+            this.uf.DataPropertyName = "estado";
             this.uf.HeaderText = "UF";
             this.uf.Name = "uf";
             this.uf.ReadOnly = true;
@@ -205,7 +206,7 @@
             // 
             // pj
             // 
-            this.pj.DataPropertyName = "pj";
+            this.pj.DataPropertyName = "pessoajuridica";
             this.pj.HeaderText = "PJ";
             this.pj.Name = "pj";
             this.pj.ReadOnly = true;
