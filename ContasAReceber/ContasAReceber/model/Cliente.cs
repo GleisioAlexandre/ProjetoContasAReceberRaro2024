@@ -29,7 +29,7 @@ namespace ContasAReceber.model
         public void InserirClientes(String nome, String cadastropessoa, String cep, String logradouro, int numero, String complemento, String bairro, String cidade, String uf, int pj)
         {
             BancoDeDados bd = new BancoDeDados(stringDeConexao);
-            FbCommand comando = new FbCommand($"insert into pessoa (nome, cadastrodepessoa, cep, logradouro, numero, complemento, bairro, cidade, uf) values ('{nome}', '{cadastropessoa}', '{cep}', '{logradouro}', '{numero}', '{complemento}', '{bairro}', '{cidade}', '{uf}', '{pj}' );", bd.conexao(stringDeConexao));
+            FbCommand comando = new FbCommand($"insert into pessoa (nome, cadastrodepessoa, cep, logradouro, numero, complemento, bairro, cidade, uf, pj) values ('{nome}', '{cadastropessoa}', '{cep}', '{logradouro}', {numero}, '{complemento}', '{bairro}', '{cidade}', '{uf}', {pj});", bd.conexao(stringDeConexao));
             comando.Parameters.AddWithValue($"{nome}", nome);
             comando.Parameters.AddWithValue($"{cadastropessoa}", cadastropessoa);
             comando.Parameters.AddWithValue($"{cep}", cep);
