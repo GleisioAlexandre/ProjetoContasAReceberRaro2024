@@ -12,39 +12,7 @@ namespace ContasAReceber.model
 {
     class Contas
     {
-        private String entrada;
-        private int idCliente;
-        private double valor;
-        private String documento;
-        private int classe;
-        private int situacao;
-        private String vencimento;
-        private String pagamento;
         private string stringDeConexao = ConfigurationManager.ConnectionStrings["ConexaoFirebird"].ConnectionString;
-
-        public Contas()
-        {
-        }
-        public Contas(string entrada, int idCliente, double valor, string documento, int classe, int situacao, string vencimento, string pagamento)
-        {
-            this.entrada = entrada;
-            this.idCliente = idCliente;
-            this.valor = valor;
-            this.documento = documento;
-            this.classe = classe;
-            this.situacao = situacao;
-            this.vencimento = vencimento;
-            this.pagamento = pagamento;
-        }
-
-        public string Entrada { get => entrada; set => entrada = value; }
-        public int IdCliente { get => idCliente; set => idCliente = value; }
-        public double Valor { get => valor; set => valor = value; }
-        public string Documento { get => documento; set => documento = value; }
-        public int Classe { get => classe; set => classe = value; }
-        public int Situacao { get => situacao; set => situacao = value; }
-        public string Vencimento { get => vencimento; set => vencimento = value; }
-        public string Pagamento { get => pagamento; set => pagamento = value; }
 
 
         public DataSet BindingSourceContas()

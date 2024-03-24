@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\ContasAReceber"
+    "\\ContasAReceber",
+    "\\ContasAReceber\\ContasAReceber",
+    "\\ContasAReceber\\ContasAReceber\\View"
   ],
-  "SelectedNode": "\\ContasAReceber\\ContasAReceber.sln",
+  "SelectedNode": "\\ContasAReceber\\ContasAReceber\\View\\FrmClientes.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -11,6 +11,11 @@ namespace ContasAReceber.controller
     class OperacoesClientes
     {
         Cliente cliente = new Cliente();
+
+        public DataSet BindigSourceClientes()
+        {
+            return cliente.BindingSourceClinetes(); ;
+        }
         public DataTable ExibeGridClinetes()
         {
             return cliente.ExibeGridClientes();

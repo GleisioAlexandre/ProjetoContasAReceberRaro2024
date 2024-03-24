@@ -354,6 +354,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Cadastro de Clientes";
             this.TopMost = true;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmOperacoesClientes_FormClosed);
+            this.Load += new System.EventHandler(this.FrmOperacoesClientes_Load);
             this.Move += new System.EventHandler(this.FrmOperacoesClientes_Move);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

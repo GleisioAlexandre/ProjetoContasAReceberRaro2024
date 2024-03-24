@@ -14,6 +14,18 @@ namespace ContasAReceber.model
 
         private string stringDeConexao = ConfigurationManager.ConnectionStrings["ConexaoFirebird"].ConnectionString;
 
+        public DataSet BindingSourceClinetes()
+        {
+            string query = "select * from pessoa";
+            BancoDeDados bd = new BancoDeDados(stringDeConexao);
+            FbDataAdapter dataAdapter = new FbDataAdapter(query, bd.conexao(stringDeConexao));
+            DataSet dt = new DataSet();
+
+            bd.AbreConexao();
+            dataAdapter.Fill(dt, "pessoa");
+
+            return dt;
+        }
         public DataTable ExibeGridClientes()
         {
             

@@ -26,7 +26,7 @@ namespace ContasAReceber.View
             this.StartPosition = FormStartPosition.CenterScreen;
             this.contas = frmContas;
         }
-        public void DadosDOFormContas(string stringDoFormContas)
+        public void DadosDoFormContas(string stringDoFormContas)
         {
             
                     string documento = stringDoFormContas;

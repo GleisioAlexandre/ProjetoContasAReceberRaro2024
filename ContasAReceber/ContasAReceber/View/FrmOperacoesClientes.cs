@@ -28,6 +28,33 @@ namespace ContasAReceber.View
             this.StartPosition = FormStartPosition.CenterScreen;
             this.clientes = frmClientes;
         }
+        public void DadosDoFormClientes(string stringDoFormClientes)
+        {
+            string nome = stringDoFormClientes;
+            OperacoesClientes opClientes = new OperacoesClientes();
+            lblIdCliente.Text = opClientes.PesquisaCliente(nome)[0].ToString();
+            txtCliente.Text = opClientes.PesquisaCliente(nome)[1].ToString();
+            txtCep.Text = opClientes.PesquisaCliente(nome)[3].ToString();
+            txtLogradouro.Text = opClientes.PesquisaCliente(nome)[4].ToString();
+            txtNumero.Text = opClientes.PesquisaCliente(nome)[5].ToString();
+            txtComplemento.Text = opClientes.PesquisaCliente(nome)[6].ToString();
+            txtBairro.Text = opClientes.PesquisaCliente(nome)[7].ToString();
+            txtCidade.Text = opClientes.PesquisaCliente(nome)[8].ToString();
+            txtUf.Text = opClientes.PesquisaCliente(nome)[9].ToString();
+            if (opClientes.PesquisaCliente(nome)[10].Equals(1))
+            {
+                cbxPj.Checked = true;
+            }
+            else
+            {
+                cbxPj.Checked = false;
+            }
+            txtCpfCnpj.Text = opClientes.PesquisaCliente(nome)[2].ToString();
+        }
+        private void FrmOperacoesClientes_Load(object sender, EventArgs e)
+        {
+
+        }
 
         private void FrmOperacoesClientes_Move(object sender, EventArgs e)
         {
@@ -194,7 +221,7 @@ namespace ContasAReceber.View
                 {
                     OperacoesClientes opclinete = new OperacoesClientes();
                     opclinete.DeletaCliente(Int32.Parse(lblIdCliente.Text));
-                    clientes.AtualizaGriCliente();
+                   
                     this.Close();
                 }
                 catch (Exception ex)
@@ -206,6 +233,11 @@ namespace ContasAReceber.View
             {
 
             }
+        }
+
+        private void FrmOperacoesClientes_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            clientes.AtualizaGriCliente();
         }
     }
 }

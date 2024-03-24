@@ -17,9 +17,10 @@ namespace ContasAReceber.View
         {
             InitializeComponent();
         }
-
+        OperacoesClientes op = new OperacoesClientes();
         private void FrmClientes_Load(object sender, EventArgs e)
         {
+            bindingSource1.DataSource = op.BindigSourceClientes().Tables["pessoa"];
             AtualizaGriCliente();
         }
 
@@ -33,8 +34,36 @@ namespace ContasAReceber.View
         }
         public void AtualizaGriCliente()
         {
-            OperacoesClientes opClientes = new OperacoesClientes();
-            dtgClientes.DataSource = opClientes.ExibeGridClinetes();
+            dtgClientes.DataSource = op.BindigSourceClientes().Tables["pessoa"];
+            toolStripTextBox1.Clear();
+            dtgClientes.Refresh();
+        }
+
+        private void toolStripTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            bindingSource1.DataSource = op.BindigSourceClientes().Tables["pessoa"];
+            string filtro = toolStripTextBox1.Text;
+            if (bindingSource1 != null)
+            {
+                bindingSource1.Filter = string.Format("nome like '%{0}%'", filtro);
+            }
+        }
+
+        private void dtgClientes_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.RowIndex < dtgClientes.Rows.Count){
+                DataGridViewRow linhaClicada = dtgClientes.Rows[e.RowIndex];
+                int indiceDaColuna = 1;
+                object valorDaCelula = linhaClicada.Cells[indiceDaColuna].Value;
+                if (valorDaCelula != null)
+                {
+                    string textoDaCelula = valorDaCelula.ToString();
+                    FrmOperacoesClientes operacoesClientes = new FrmOperacoesClientes(this);
+                    operacoesClientes.DadosDoFormClientes(textoDaCelula);
+                    operacoesClientes.ShowDialog();
+                   
+                }
+            }
         }
     }
 }
