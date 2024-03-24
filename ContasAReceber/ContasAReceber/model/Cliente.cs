@@ -19,19 +19,19 @@ namespace ContasAReceber.model
             
             BancoDeDados bd = new BancoDeDados(stringDeConexao);
             bd.AbreConexao();
-            FbCommand comando = new FbCommand("select * from clientes;", bd.conexao(stringDeConexao));
+            FbCommand comando = new FbCommand("select * from pessoa;", bd.conexao(stringDeConexao));
             FbDataAdapter adaptador = new FbDataAdapter(comando);
             DataTable dt = new DataTable();
             adaptador.Fill(dt);
             bd.Fechaconexao();
             return dt;
         }
-        public void InserirClientes(String nome, String cadastropessoa, String cep, String logradouro, int numero, String complemento, String bairro, String cidade, String uf, Int32 pj)
+        public void InserirClientes(String nome, String cadastropessoa, String cep, String logradouro, int numero, String complemento, String bairro, String cidade, String uf, int pj)
         {
             BancoDeDados bd = new BancoDeDados(stringDeConexao);
-            FbCommand comando = new FbCommand($"insert into clientes (nome, cadastropessoa, cep, logradouro, numero, complemento, bairro, cidade, estado, pessoajuridica) values ('{nome}', '{cadastropessoa}', '{cep}', '{logradouro}', '{numero}', '{complemento}', '{bairro}', '{cidade}', '{uf}', '{pj}');", bd.conexao(stringDeConexao));
+            FbCommand comando = new FbCommand($"insert into pessoa (nome, cadastrodepessoa, cep, logradouro, numero, complemento, bairro, cidade, uf) values ('{nome}', '{cadastropessoa}', '{cep}', '{logradouro}', '{numero}', '{complemento}', '{bairro}', '{cidade}', '{uf}', '{pj}' );", bd.conexao(stringDeConexao));
             comando.Parameters.AddWithValue($"{nome}", nome);
-           comando.Parameters.AddWithValue($"{cadastropessoa}", cadastropessoa);
+            comando.Parameters.AddWithValue($"{cadastropessoa}", cadastropessoa);
             comando.Parameters.AddWithValue($"{cep}", cep);
             comando.Parameters.AddWithValue($"{logradouro}", logradouro);
             comando.Parameters.AddWithValue($"{numero}", numero);
@@ -43,8 +43,6 @@ namespace ContasAReceber.model
             bd.AbreConexao();
             comando.ExecuteNonQuery();
             bd.Fechaconexao();
-
-            /**/
         }
         public object[] PesquisarCliente(String nome)
         {
