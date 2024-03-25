@@ -22,23 +22,18 @@ namespace ContasAReceber.View
             InitializeComponent();
 
         }
-       
-
         private void FrmContas_Load(object sender, EventArgs e)
         {
-            CorGrid();
             try
             {
                 AtualizaGridContas();
+                toolStripComboBox1.SelectedIndex = 0;
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Erro: " + ex, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.Close();
             }
-
-          
-                                                  
         }
         private void CorGrid()
         {
@@ -65,8 +60,6 @@ namespace ContasAReceber.View
             dtgContas.DataSource =bindingSource1;
             toolStripTextBox1.Clear();
         }
-
-
         private void FrmContas_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Insert)
@@ -85,7 +78,6 @@ namespace ContasAReceber.View
                 bindingSource1.Filter = string.Format("nome like '%{0}%'", filtro);
             }
         }
-
         private void dtgContas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
              if (e.RowIndex >= 0 && e.RowIndex < dtgContas.Rows.Count)
@@ -104,10 +96,24 @@ namespace ContasAReceber.View
                      operacoesContas.ShowDialog();
                  }
              }
-            
         }
 
-        
+        private void toolStripComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string situacao = toolStripComboBox1.SelectedItem?.ToString();
+            if (string.IsNullOrEmpty(situacao))
+            {
+                bindingSource1.RemoveFilter();
+            }
+            else if (situacao.Equals("Todos"))
+            {
+                bindingSource1.RemoveFilter();
+            }
+            else
+            {
+                bindingSource1.Filter = $"situacao = '{situacao}'";
+            }
+        }
     }
 }
     
