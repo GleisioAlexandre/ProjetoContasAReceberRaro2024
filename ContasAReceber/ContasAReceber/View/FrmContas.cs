@@ -37,7 +37,7 @@ namespace ContasAReceber.View
                 this.Close();
             }
 
-            bindingSource1.DataSource = op.BindiSourceContas().Tables["contasareceber"];
+          
                                                   
         }
         private void CorGrid()
@@ -61,9 +61,9 @@ namespace ContasAReceber.View
         }
         public void AtualizaGridContas()
         {
-            dtgContas.DataSource = op.BindiSourceContas().Tables["contasareceber"];
+            bindingSource1.DataSource = op.BindiSourceContas().Tables["contasareceber"];
+            dtgContas.DataSource =bindingSource1;
             toolStripTextBox1.Clear();
-            dtgContas.Refresh();
         }
 
 

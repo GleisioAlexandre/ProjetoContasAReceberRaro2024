@@ -20,7 +20,6 @@ namespace ContasAReceber.View
         OperacoesClientes op = new OperacoesClientes();
         private void FrmClientes_Load(object sender, EventArgs e)
         {
-            bindingSource1.DataSource = op.BindigSourceClientes().Tables["pessoa"];
             AtualizaGriCliente();
         }
 
@@ -34,9 +33,9 @@ namespace ContasAReceber.View
         }
         public void AtualizaGriCliente()
         {
-            dtgClientes.DataSource = op.BindigSourceClientes().Tables["pessoa"];
+            bindingSource1.DataSource = op.BindigSourceClientes().Tables["pessoa"];
+            dtgClientes.DataSource = bindingSource1;
             toolStripTextBox1.Clear();
-            dtgClientes.Refresh();
         }
 
         private void toolStripTextBox1_TextChanged(object sender, EventArgs e)

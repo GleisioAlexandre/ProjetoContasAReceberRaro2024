@@ -16,10 +16,11 @@ namespace ContasAReceber.model
 
         public DataSet BindingSourceClinetes()
         {
+            DataSet dt = new DataSet();
             string query = "select * from pessoa";
             BancoDeDados bd = new BancoDeDados(stringDeConexao);
             FbDataAdapter dataAdapter = new FbDataAdapter(query, bd.conexao(stringDeConexao));
-            DataSet dt = new DataSet();
+           
 
             bd.AbreConexao();
             dataAdapter.Fill(dt, "pessoa");
