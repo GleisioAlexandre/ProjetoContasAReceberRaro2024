@@ -114,6 +114,41 @@ namespace ContasAReceber.View
                 bindingSource1.Filter = $"situacao = '{situacao}'";
             }
         }
+
+        private void toolStripStatusLabel2_Click(object sender, EventArgs e)
+        {
+            PrintDialog printDialog = new PrintDialog();
+            printDialog.Document = printDocument1;
+            if (printDialog.ShowDialog() == DialogResult.OK)
+            {
+                printDocument1.Print();
+            }
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            int x = 50;
+            int y = 50;
+            int cellHeight = 20;
+
+            foreach (DataGridViewColumn column in dtgContas.Columns)
+            {
+                e.Graphics.DrawString(column.HeaderText, dtgContas.Font, Brushes.Black, x, y);
+                x += column.Width;
+            }
+            foreach (DataGridViewRow row in dtgContas.Rows)
+            {
+                y += cellHeight;
+                x = 50;
+
+                foreach (DataGridViewCell cell in row.Cells)
+                {
+                    e.Graphics.DrawString(cell.Value.ToString(), dtgContas.Font, Brushes.Black, x, y);
+                    x += cell.OwningColumn.Width;
+                }
+               
+            }
+        }
     }
 }
     
