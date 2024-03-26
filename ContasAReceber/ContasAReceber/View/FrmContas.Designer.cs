@@ -32,15 +32,25 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmContas));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmContas));
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.dtgContas = new System.Windows.Forms.DataGridView();
+            this.entrada = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.situacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vencimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pagamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -55,17 +65,7 @@
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-            this.entrada = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.situacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vencimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pagamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgContas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
@@ -90,6 +90,13 @@
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(165, 17);
             this.toolStripStatusLabel1.Text = "Insert - Inseir Novo Registro";
+            // 
+            // toolStripStatusLabel2
+            // 
+            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(32, 17);
+            this.toolStripStatusLabel2.Text = "Print";
+            this.toolStripStatusLabel2.Click += new System.EventHandler(this.toolStripStatusLabel2_Click);
             // 
             // dtgContas
             // 
@@ -131,9 +138,82 @@
             this.dtgContas.Name = "dtgContas";
             this.dtgContas.ReadOnly = true;
             this.dtgContas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgContas.Size = new System.Drawing.Size(1225, 488);
+            this.dtgContas.Size = new System.Drawing.Size(1213, 488);
             this.dtgContas.TabIndex = 2;
             this.dtgContas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgContas_CellDoubleClick);
+            // 
+            // entrada
+            // 
+            this.entrada.DataPropertyName = "entrada";
+            dataGridViewCellStyle3.Format = "d";
+            dataGridViewCellStyle3.NullValue = null;
+            this.entrada.DefaultCellStyle = dataGridViewCellStyle3;
+            this.entrada.HeaderText = "Entrada";
+            this.entrada.Name = "entrada";
+            this.entrada.ReadOnly = true;
+            this.entrada.Width = 75;
+            // 
+            // nome
+            // 
+            this.nome.DataPropertyName = "nome";
+            this.nome.HeaderText = "Nome";
+            this.nome.Name = "nome";
+            this.nome.ReadOnly = true;
+            this.nome.Width = 400;
+            // 
+            // valor
+            // 
+            this.valor.DataPropertyName = "valor";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle4.Format = "C2";
+            dataGridViewCellStyle4.NullValue = null;
+            this.valor.DefaultCellStyle = dataGridViewCellStyle4;
+            this.valor.HeaderText = "Valor";
+            this.valor.Name = "valor";
+            this.valor.ReadOnly = true;
+            this.valor.Width = 90;
+            // 
+            // documento
+            // 
+            this.documento.DataPropertyName = "documento";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.documento.DefaultCellStyle = dataGridViewCellStyle5;
+            this.documento.HeaderText = "Documento";
+            this.documento.Name = "documento";
+            this.documento.ReadOnly = true;
+            this.documento.Width = 90;
+            // 
+            // tipo
+            // 
+            this.tipo.DataPropertyName = "tipo";
+            this.tipo.HeaderText = "Tipo";
+            this.tipo.Name = "tipo";
+            this.tipo.ReadOnly = true;
+            this.tipo.Width = 58;
+            // 
+            // situacao
+            // 
+            this.situacao.DataPropertyName = "situacao";
+            this.situacao.HeaderText = "Situação";
+            this.situacao.Name = "situacao";
+            this.situacao.ReadOnly = true;
+            this.situacao.Width = 73;
+            // 
+            // vencimento
+            // 
+            this.vencimento.DataPropertyName = "vencimento";
+            this.vencimento.HeaderText = "Vencimento";
+            this.vencimento.Name = "vencimento";
+            this.vencimento.ReadOnly = true;
+            this.vencimento.Width = 87;
+            // 
+            // pagamento
+            // 
+            this.pagamento.DataPropertyName = "pagamento";
+            this.pagamento.HeaderText = "Pagamento";
+            this.pagamento.Name = "pagamento";
+            this.pagamento.ReadOnly = true;
+            this.pagamento.Width = 87;
             // 
             // bindingNavigator1
             // 
@@ -282,89 +362,9 @@
             this.toolStripComboBox1.Tag = "";
             this.toolStripComboBox1.SelectedIndexChanged += new System.EventHandler(this.toolStripComboBox1_SelectedIndexChanged);
             // 
-            // toolStripStatusLabel2
-            // 
-            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(32, 17);
-            this.toolStripStatusLabel2.Text = "Print";
-            this.toolStripStatusLabel2.Click += new System.EventHandler(this.toolStripStatusLabel2_Click);
-            // 
             // printDocument1
             // 
             this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
-            // 
-            // entrada
-            // 
-            this.entrada.DataPropertyName = "entrada";
-            dataGridViewCellStyle3.Format = "d";
-            dataGridViewCellStyle3.NullValue = null;
-            this.entrada.DefaultCellStyle = dataGridViewCellStyle3;
-            this.entrada.HeaderText = "Entrada";
-            this.entrada.Name = "entrada";
-            this.entrada.ReadOnly = true;
-            this.entrada.Width = 75;
-            // 
-            // nome
-            // 
-            this.nome.DataPropertyName = "nome";
-            this.nome.HeaderText = "Nome";
-            this.nome.Name = "nome";
-            this.nome.ReadOnly = true;
-            this.nome.Width = 400;
-            // 
-            // valor
-            // 
-            this.valor.DataPropertyName = "valor";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle4.Format = "C2";
-            dataGridViewCellStyle4.NullValue = null;
-            this.valor.DefaultCellStyle = dataGridViewCellStyle4;
-            this.valor.HeaderText = "Valor";
-            this.valor.Name = "valor";
-            this.valor.ReadOnly = true;
-            this.valor.Width = 90;
-            // 
-            // documento
-            // 
-            this.documento.DataPropertyName = "documento";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.documento.DefaultCellStyle = dataGridViewCellStyle5;
-            this.documento.HeaderText = "Documento";
-            this.documento.Name = "documento";
-            this.documento.ReadOnly = true;
-            this.documento.Width = 90;
-            // 
-            // tipo
-            // 
-            this.tipo.DataPropertyName = "tipo";
-            this.tipo.HeaderText = "Tipo";
-            this.tipo.Name = "tipo";
-            this.tipo.ReadOnly = true;
-            this.tipo.Width = 58;
-            // 
-            // situacao
-            // 
-            this.situacao.DataPropertyName = "situacao";
-            this.situacao.HeaderText = "Situação";
-            this.situacao.Name = "situacao";
-            this.situacao.ReadOnly = true;
-            this.situacao.Width = 73;
-            // 
-            // vencimento
-            // 
-            this.vencimento.DataPropertyName = "vencimento";
-            this.vencimento.HeaderText = "Vencimento";
-            this.vencimento.Name = "vencimento";
-            this.vencimento.ReadOnly = true;
-            this.vencimento.Width = 87;
-            // 
-            // pagamento
-            // 
-            this.pagamento.DataPropertyName = "pagamento";
-            this.pagamento.HeaderText = "Pagamento";
-            this.pagamento.Name = "pagamento";
-            this.pagamento.ReadOnly = true;
-            this.pagamento.Width = 87;
             // 
             // FrmContas
             // 

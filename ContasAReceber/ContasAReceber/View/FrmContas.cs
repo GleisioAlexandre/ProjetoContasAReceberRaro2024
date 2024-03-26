@@ -11,6 +11,7 @@ using ContasAReceber.controller;
 using ContasAReceber.model;
 using FirebirdSql.Data.FirebirdClient;
 using PagedList;
+using System.Drawing.Printing;
 
 namespace ContasAReceber.View
 {
@@ -20,7 +21,7 @@ namespace ContasAReceber.View
         public FrmContas()
         {
             InitializeComponent();
-
+            printDocument1.PrintPage += new PrintPageEventHandler(printDocument1_PrintPage);
         }
         private void FrmContas_Load(object sender, EventArgs e)
         {
@@ -127,6 +128,7 @@ namespace ContasAReceber.View
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
+            
             int x = 50;
             int y = 50;
             int cellHeight = 20;
