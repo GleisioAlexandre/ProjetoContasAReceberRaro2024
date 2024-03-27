@@ -115,8 +115,7 @@ namespace ContasAReceber.View
                 bindingSource1.Filter = $"situacao = '{situacao}'";
             }
         }
-
-        private void toolStripStatusLabel2_Click(object sender, EventArgs e)
+        private void toolStripButton1_Click(object sender, EventArgs e)
         {
             PrintDialog printDialog = new PrintDialog();
             printDialog.Document = printDocument1;
@@ -125,14 +124,12 @@ namespace ContasAReceber.View
                 printDocument1.Print();
             }
         }
-
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
-            
             int x = 50;
-            int y = 50;
+            int y = 200;
             int cellHeight = 20;
-
+            e.Graphics.DrawString("Relatório de Devedores", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(250, 50));
             foreach (DataGridViewColumn column in dtgContas.Columns)
             {
                 e.Graphics.DrawString(column.HeaderText, dtgContas.Font, Brushes.Black, x, y);
@@ -145,12 +142,15 @@ namespace ContasAReceber.View
 
                 foreach (DataGridViewCell cell in row.Cells)
                 {
-                    e.Graphics.DrawString(cell.Value.ToString(), dtgContas.Font, Brushes.Black, x, y);
+                    string dadosForamtados = ((DateTime)cell.Value).ToString("dd/MM/yyyy");
+                    e.Graphics.DrawString(dadosForamtados, dtgContas.Font, Brushes.Black, x, y);
                     x += cell.OwningColumn.Width;
                 }
                
             }
         }
+
+       
     }
 }
     
