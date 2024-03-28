@@ -15,7 +15,9 @@ using System.Drawing.Printing;
 using iText.Kernel.Pdf;
 using iText.Layout;
 using iText.Layout.Element;
+using iText.Layout.Renderer;
 using System.IO;
+using System.Diagnostics;
 
 namespace ContasAReceber.View
 {
@@ -39,7 +41,6 @@ namespace ContasAReceber.View
                 MessageBox.Show("Erro: " + ex, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.Close();
             }
-           // this.reportViewer1.RefreshReport();
         }
         private void CorGrid()
         {
@@ -123,12 +124,7 @@ namespace ContasAReceber.View
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             GerarRelatorio();
-            /*PrintDialog printDialog = new PrintDialog();
-            printDialog.Document = printDocument1;
-            if (printDialog.ShowDialog() == DialogResult.OK)
-            {
-                printDocument1.Print();
-            }*/
+          
         }
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
@@ -157,29 +153,43 @@ namespace ContasAReceber.View
         }
         private void GerarRelatorio()
         {
+            string caminhoPdf = @"C:\Users\Gleisio\Desktop\bd\relatorio.pdf";
+            PdfWriter writer = new PdfWriter(@"C:\Users\Gleisio\Desktop\bd\relatorio.pdf");
+            PdfDocument pdf = new PdfDocument(writer);
+            Document documento = new Document(pdf);
+            Paragraph titulo = new Paragraph("Relatorio");
+            Table table = new Table(dtgContas.Columns.Count);
             try
             {
-                PdfDocument pdf = new PdfDocument(new PdfWriter(@"C:\Users\Gleisio\Desktop\bd\relatorio.pdf"));
-
-                Document documento = new Document(pdf);
-
-                Paragraph titulo = new Paragraph("Relatorio");
-                titulo.SetFontSize(10);
+               
+                pdf.SetDefaultPageSize(iText.Kernel.Geom.PageSize.A4.Rotate());
+               
+                titulo.SetFontSize(30);
                 titulo.SetTextAlignment(iText.Layout.Properties.TextAlignment.CENTER);
                 documento.Add(titulo);
-                Table table = new Table(dtgContas.Columns.Count);
-
+                
+               
                 foreach (DataGridViewColumn column in dtgContas.Columns)
                 {
                     table.AddHeaderCell(column.HeaderText);
                 }
                 foreach (DataGridViewRow row in dtgContas.Rows)
                 {
+                    table.SetPadding(10);
                     foreach (DataGridViewCell cell in row.Cells)
                     {
                         table.AddCell(cell.Value.ToString());
+
+                        
+                    }
+                    foreach (Cell cell in table.GetChildren())
+                    {
+                        Paragraph paragraph = (Paragraph)cell.GetChildren().First();
+                        paragraph.SetFontSize(9f);
+                        
                     }
                 }
+
                 documento.Add(table);
                 documento.Close();
             }
@@ -188,20 +198,10 @@ namespace ContasAReceber.View
                 MessageBox.Show($"Erro: {ex}", "Erro");
                 Console.WriteLine(ex);
             }
-            /*DataTable dt = new DataTable();
-            foreach (DataGridViewColumn column in dtgContas.Columns)
+            if (File.Exists(caminhoPdf))
             {
-                dt.Columns.Add(column.HeaderText, column.ValueType);
+                Process.Start(caminhoPdf);
             }
-            foreach (DataGridViewRow row in dtgContas.Rows)
-            {
-                DataRow dataRow = dt.NewRow();
-                foreach (DataGridViewCell cell in row.Cells)
-                {
-                    dataRow[cell.ColumnIndex] = cell.Value;
-                }
-                dt.Rows.Add(dataRow);
-            }*/
         }
 
        
