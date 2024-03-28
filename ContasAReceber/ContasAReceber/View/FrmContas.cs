@@ -12,6 +12,10 @@ using ContasAReceber.model;
 using FirebirdSql.Data.FirebirdClient;
 using PagedList;
 using System.Drawing.Printing;
+using iText.Kernel.Pdf;
+using iText.Layout;
+using iText.Layout.Element;
+using System.IO;
 
 namespace ContasAReceber.View
 {
@@ -35,6 +39,7 @@ namespace ContasAReceber.View
                 MessageBox.Show("Erro: " + ex, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.Close();
             }
+           // this.reportViewer1.RefreshReport();
         }
         private void CorGrid()
         {
@@ -117,12 +122,13 @@ namespace ContasAReceber.View
         }
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            PrintDialog printDialog = new PrintDialog();
+            GerarRelatorio();
+            /*PrintDialog printDialog = new PrintDialog();
             printDialog.Document = printDocument1;
             if (printDialog.ShowDialog() == DialogResult.OK)
             {
                 printDocument1.Print();
-            }
+            }*/
         }
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
@@ -148,6 +154,54 @@ namespace ContasAReceber.View
                 }
                
             }
+        }
+        private void GerarRelatorio()
+        {
+            try
+            {
+                PdfDocument pdf = new PdfDocument(new PdfWriter(@"C:\Users\Gleisio\Desktop\bd\relatorio.pdf"));
+
+                Document documento = new Document(pdf);
+
+                Paragraph titulo = new Paragraph("Relatorio");
+                titulo.SetFontSize(10);
+                titulo.SetTextAlignment(iText.Layout.Properties.TextAlignment.CENTER);
+                documento.Add(titulo);
+                Table table = new Table(dtgContas.Columns.Count);
+
+                foreach (DataGridViewColumn column in dtgContas.Columns)
+                {
+                    table.AddHeaderCell(column.HeaderText);
+                }
+                foreach (DataGridViewRow row in dtgContas.Rows)
+                {
+                    foreach (DataGridViewCell cell in row.Cells)
+                    {
+                        table.AddCell(cell.Value.ToString());
+                    }
+                }
+                documento.Add(table);
+                documento.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro: {ex}", "Erro");
+                Console.WriteLine(ex);
+            }
+            /*DataTable dt = new DataTable();
+            foreach (DataGridViewColumn column in dtgContas.Columns)
+            {
+                dt.Columns.Add(column.HeaderText, column.ValueType);
+            }
+            foreach (DataGridViewRow row in dtgContas.Rows)
+            {
+                DataRow dataRow = dt.NewRow();
+                foreach (DataGridViewCell cell in row.Cells)
+                {
+                    dataRow[cell.ColumnIndex] = cell.Value;
+                }
+                dt.Rows.Add(dataRow);
+            }*/
         }
 
        

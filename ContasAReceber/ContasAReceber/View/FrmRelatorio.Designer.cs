@@ -30,12 +30,16 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.ContasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.ContasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ContasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // ContasBindingSource
+            // 
+            this.ContasBindingSource.DataSource = typeof(ContasAReceber.model.Contas);
             // 
             // reportViewer1
             // 
@@ -49,10 +53,6 @@
             this.reportViewer1.Size = new System.Drawing.Size(594, 592);
             this.reportViewer1.TabIndex = 0;
             // 
-            // ContasBindingSource
-            // 
-            this.ContasBindingSource.DataSource = typeof(ContasAReceber.model.Contas);
-            // 
             // FrmRelatorio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -62,8 +62,8 @@
             this.Name = "FrmRelatorio";
             this.Text = "FrmRelatorio";
             this.Load += new System.EventHandler(this.FrmRelatorio_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ContasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
