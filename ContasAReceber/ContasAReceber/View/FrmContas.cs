@@ -27,7 +27,6 @@ namespace ContasAReceber.View
         public FrmContas()
         {
             InitializeComponent();
-            printDocument1.PrintPage += new PrintPageEventHandler(printDocument1_PrintPage);
         }
         private void FrmContas_Load(object sender, EventArgs e)
         {
@@ -126,82 +125,60 @@ namespace ContasAReceber.View
             GerarRelatorio();
           
         }
-        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
-        {
-            int x = 50;
-            int y = 200;
-            int cellHeight = 20;
-            e.Graphics.DrawString("Relatório de Devedores", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(250, 50));
-            foreach (DataGridViewColumn column in dtgContas.Columns)
-            {
-                e.Graphics.DrawString(column.HeaderText, dtgContas.Font, Brushes.Black, x, y);
-                x += column.Width;
-            }
-            foreach (DataGridViewRow row in dtgContas.Rows)
-            {
-                y += cellHeight;
-                x = 50;
-
-                foreach (DataGridViewCell cell in row.Cells)
-                {
-                    string dadosForamtados = ((DateTime)cell.Value).ToString("dd/MM/yyyy");
-                    e.Graphics.DrawString(dadosForamtados, dtgContas.Font, Brushes.Black, x, y);
-                    x += cell.OwningColumn.Width;
-                }
-               
-            }
-        }
         private void GerarRelatorio()
         {
-            string caminhoPdf = @"C:\Users\Gleisio\Desktop\bd\relatorio.pdf";
-            PdfWriter writer = new PdfWriter(@"C:\Users\Gleisio\Desktop\bd\relatorio.pdf");
-            PdfDocument pdf = new PdfDocument(writer);
-            Document documento = new Document(pdf);
-            Paragraph titulo = new Paragraph("Relatorio");
-            Table table = new Table(dtgContas.Columns.Count);
+
             try
             {
-               
-                pdf.SetDefaultPageSize(iText.Kernel.Geom.PageSize.A4.Rotate());
-               
-                titulo.SetFontSize(30);
-                titulo.SetTextAlignment(iText.Layout.Properties.TextAlignment.CENTER);
-                documento.Add(titulo);
-                
-               
-                foreach (DataGridViewColumn column in dtgContas.Columns)
+                string caminhoPdf = @"E:\Desktop\bd\relatorio.pdf";
+                using (PdfWriter writer = new PdfWriter(@"E:\Desktop\bd\relatorio.pdf"))
                 {
-                    table.AddHeaderCell(column.HeaderText);
-                }
-                foreach (DataGridViewRow row in dtgContas.Rows)
-                {
-                    table.SetPadding(10);
-                    foreach (DataGridViewCell cell in row.Cells)
+                    using (PdfDocument pdf = new PdfDocument(writer))
                     {
-                        table.AddCell(cell.Value.ToString());
+                        Document documento = new Document(pdf);
+                        Paragraph titulo = new Paragraph("Relatorio");
+                        titulo.SetTextAlignment(iText.Layout.Properties.TextAlignment.CENTER);
+                        pdf.SetDefaultPageSize(iText.Kernel.Geom.PageSize.A4.Rotate());
+                        titulo.SetFontSize(30);
+                        documento.Add(titulo);
+                        Table table = new Table(dtgContas.Columns.Count);
 
-                        
-                    }
-                    foreach (Cell cell in table.GetChildren())
-                    {
-                        Paragraph paragraph = (Paragraph)cell.GetChildren().First();
-                        paragraph.SetFontSize(9f);
-                        
+                        foreach (DataGridViewColumn column in dtgContas.Columns)
+                        {
+                            table.AddHeaderCell(new Paragraph(column.HeaderText)); 
+                        }
+                        foreach (DataGridViewRow row in dtgContas.Rows)
+                        {
+                            foreach (DataGridViewCell cell in row.Cells)
+                            {
+                                table.AddCell(new Paragraph(cell.Value.ToString()));
+                            }
+                        }
+                        foreach (Cell cell in table.GetChildren())
+                        {
+                            foreach (IBlockElement element in cell.GetChildren())
+                            {
+                                if (element is Paragraph paragraph)
+                                {
+                                    paragraph.SetFontSize(9f);
+                                }
+                            }
+                        }
+
+                        documento.Add(table);
+                        documento.Close();
                     }
                 }
-
-                documento.Add(table);
-                documento.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Erro: {ex}", "Erro");
                 Console.WriteLine(ex);
             }
-            if (File.Exists(caminhoPdf))
+          /*  if (File.Exists(caminhoPdf))
             {
                 Process.Start(caminhoPdf);
-            }
+            }*/
         }
 
        
