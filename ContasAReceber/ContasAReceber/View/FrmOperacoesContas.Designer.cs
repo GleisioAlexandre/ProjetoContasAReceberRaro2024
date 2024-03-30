@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dtEntrada = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -39,9 +38,7 @@
             this.btnInserir = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.dtPagamento = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
-            this.dtVencimento = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.cbxSituacao = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -53,19 +50,12 @@
             this.btnDeletar = new System.Windows.Forms.Button();
             this.btnAtualizar = new System.Windows.Forms.Button();
             this.lblConta = new System.Windows.Forms.Label();
+            this.dtEntrada = new System.Windows.Forms.TextBox();
+            this.dtVencimento = new System.Windows.Forms.TextBox();
+            this.dtPagamento = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // dtEntrada
-            // 
-            this.dtEntrada.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtEntrada.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtEntrada.Location = new System.Drawing.Point(661, 39);
-            this.dtEntrada.Name = "dtEntrada";
-            this.dtEntrada.Size = new System.Drawing.Size(119, 26);
-            this.dtEntrada.TabIndex = 2;
-            this.dtEntrada.Value = new System.DateTime(2024, 1, 6, 0, 0, 0, 0);
             // 
             // label1
             // 
@@ -152,10 +142,10 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.dtPagamento);
-            this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.dtVencimento);
+            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.cbxSituacao);
             this.groupBox2.Controls.Add(this.label6);
@@ -182,16 +172,6 @@
             this.label9.TabIndex = 20;
             this.label9.Text = "Pagamento";
             // 
-            // dtPagamento
-            // 
-            this.dtPagamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtPagamento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtPagamento.Location = new System.Drawing.Point(643, 142);
-            this.dtPagamento.Name = "dtPagamento";
-            this.dtPagamento.Size = new System.Drawing.Size(119, 26);
-            this.dtPagamento.TabIndex = 21;
-            this.dtPagamento.Value = new System.DateTime(2024, 1, 6, 0, 0, 0, 0);
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -201,16 +181,6 @@
             this.label8.Size = new System.Drawing.Size(104, 20);
             this.label8.TabIndex = 18;
             this.label8.Text = "Vencimento";
-            // 
-            // dtVencimento
-            // 
-            this.dtVencimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtVencimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtVencimento.Location = new System.Drawing.Point(18, 142);
-            this.dtVencimento.Name = "dtVencimento";
-            this.dtVencimento.Size = new System.Drawing.Size(119, 26);
-            this.dtVencimento.TabIndex = 19;
-            this.dtVencimento.Value = new System.DateTime(2024, 1, 6, 0, 0, 0, 0);
             // 
             // label7
             // 
@@ -332,11 +302,36 @@
             this.lblConta.Text = "Conta";
             this.lblConta.Visible = false;
             // 
+            // dtEntrada
+            // 
+            this.dtEntrada.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtEntrada.Location = new System.Drawing.Point(651, 37);
+            this.dtEntrada.Name = "dtEntrada";
+            this.dtEntrada.Size = new System.Drawing.Size(100, 29);
+            this.dtEntrada.TabIndex = 28;
+            // 
+            // dtVencimento
+            // 
+            this.dtVencimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtVencimento.Location = new System.Drawing.Point(18, 142);
+            this.dtVencimento.Name = "dtVencimento";
+            this.dtVencimento.Size = new System.Drawing.Size(100, 29);
+            this.dtVencimento.TabIndex = 30;
+            // 
+            // dtPagamento
+            // 
+            this.dtPagamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtPagamento.Location = new System.Drawing.Point(639, 142);
+            this.dtPagamento.Name = "dtPagamento";
+            this.dtPagamento.Size = new System.Drawing.Size(100, 29);
+            this.dtPagamento.TabIndex = 31;
+            // 
             // FrmOperacoesContas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 528);
+            this.Controls.Add(this.dtEntrada);
             this.Controls.Add(this.lblConta);
             this.Controls.Add(this.btnAtualizar);
             this.Controls.Add(this.btnDeletar);
@@ -344,7 +339,6 @@
             this.Controls.Add(this.btnInserir);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dtEntrada);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmOperacoesContas";
@@ -363,8 +357,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DateTimePicker dtEntrada;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnPesquisarCliente;
@@ -375,9 +367,7 @@
         private System.Windows.Forms.Button btnInserir;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DateTimePicker dtPagamento;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DateTimePicker dtVencimento;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cbxSituacao;
         private System.Windows.Forms.Label label6;
@@ -389,5 +379,8 @@
         private System.Windows.Forms.Button btnDeletar;
         private System.Windows.Forms.Button btnAtualizar;
         private System.Windows.Forms.Label lblConta;
+        private System.Windows.Forms.TextBox dtPagamento;
+        private System.Windows.Forms.TextBox dtVencimento;
+        private System.Windows.Forms.TextBox dtEntrada;
     }
 }

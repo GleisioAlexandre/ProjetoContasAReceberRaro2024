@@ -18,11 +18,6 @@ namespace ContasAReceber.View
 
         }
 
-        private void contasAReceberToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-           
-        }
-
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
@@ -48,23 +43,11 @@ namespace ContasAReceber.View
             contas.MdiParent = this;
             contas.Show();
         }
-
-        private void clientesDevedoresToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-        }
-
         private void configurarBancoDeDabosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmConfiguracao configuracao = new FrmConfiguracao();
             configuracao.MdiParent = this;
             configuracao.Show();
-        }
-
-        private void relatorioToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FrmRelatorio relatorio = new FrmRelatorio();
-            relatorio.MdiParent = this;
-            relatorio.Show();
         }
     }
 }

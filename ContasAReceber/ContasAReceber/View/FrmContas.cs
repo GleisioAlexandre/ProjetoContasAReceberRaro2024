@@ -32,7 +32,7 @@ namespace ContasAReceber.View
             try
             {
                 AtualizaGridContas();
-                toolStripComboBox1.SelectedIndex = 0;
+                toolStripComboBox1.SelectedText = "Todos";
             }
             catch (Exception ex)
             {
@@ -85,7 +85,7 @@ namespace ContasAReceber.View
         }
         private void dtgContas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0 && e.RowIndex < dtgContas.Rows.Count)
+           if (e.RowIndex >= 0 && e.RowIndex < dtgContas.Rows.Count)
             {
                 DataGridViewRow linhaClicada = dtgContas.Rows[e.RowIndex];
 
@@ -127,7 +127,7 @@ namespace ContasAReceber.View
         private void GerarRelatorio()
         {
             Document doc = new Document(PageSize.A4);
-            doc.SetMargins(40, 40, 40, 40);
+            doc.SetMargins(30, 30, 30, 30);
             doc.AddCreationDate();
             string caminho = @"E:\Desktop\bd\relatorio.pdf";
 
@@ -137,13 +137,13 @@ namespace ContasAReceber.View
 
             //// Criando uma fonte para o cabeçalho da tabela
             Font fontTitulo = new Font(baseFont, 30);
-             
+
 
             //Cria o titulo da tebla
             Paragraph titulo = new Paragraph();
             titulo.Alignment = Element.ALIGN_CENTER;
             titulo.Font = fontTitulo;
-            titulo.Add("Relatório de Clientes " + "(" +toolStripComboBox1.SelectedText.ToString() + ")" + "\n\n");
+            titulo.Add("\n\nRelatório de Clientes " + "(" + toolStripComboBox1.SelectedText.ToString() + ")" + "\n\n");
             doc.Add(titulo);
 
             // Criando uma fonte para o conteúdo da tabela
@@ -155,9 +155,9 @@ namespace ContasAReceber.View
             table.WidthPercentage = 105;
 
             // Definindo a largura das colunas
-            float[] larguraColuna = new float[] {1f, 4f, 1f, 1f, 0f, 0f, 1f, 1f };
+            float[] larguraColuna = new float[] { 1f, 4f, 1f, 1f, 0f, 0f, 1f, 1f };
             table.SetWidths(larguraColuna);
-            
+
             // Adicionando cabeçalhos da tabela
             foreach (DataGridViewColumn column in dtgContas.Columns)
             {
@@ -183,7 +183,7 @@ namespace ContasAReceber.View
                     {
                         cellPdf.HorizontalAlignment = Element.ALIGN_CENTER;
                     }
-                    
+
                     else if (cell.OwningColumn.Name == "entrada" || cell.OwningColumn.Name == "vencimento" || cell.OwningColumn.Name == "pagamento")
                     {
                         string dataFormatada = (cell.Value != null && cell.Value != DBNull.Value && DateTime.TryParse(cell.Value.ToString(), out DateTime data)) ? data.ToString("dd/MM/yyyy") : string.Empty;
@@ -193,26 +193,51 @@ namespace ContasAReceber.View
                     }
                     else
                     {
-                         cellPdf = new PdfPCell(new Phrase(cell.Value != null ? cell.Value.ToString() : string.Empty, fontConteudo)); // Usando a fonte para o conteúdo
+                        cellPdf = new PdfPCell(new Phrase(cell.Value != null ? cell.Value.ToString() : string.Empty, fontConteudo)); // Usando a fonte para o conteúdo
 
                     }
-                         table.AddCell(cellPdf);
+                    table.AddCell(cellPdf);
                 }
             }
 
             // Adicionando a tabela ao documento
             doc.Add(table);
-
             doc.Close();
             writer.Close();
+            AbrirPdf(caminho);
+        }
+        private void AbrirPdf(string caminhoPdf)
+        {
+            try
+            {
+                if (File.Exists(caminhoPdf))
+                {
+                    Process.Start(caminhoPdf);
+                }
+                else
+                {
+                    MessageBox.Show("O arquivo PDF não foi encontrado!", "Erro ao Abrir o PDF");
 
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro ao abrir o PDF: {ex.Message}", "Erro ao abrir o PDF");
+            }
+        }
 
-           
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            if (dtgContas.Rows[dtgContas.NewRowIndex - 1].IsNewRow)
+            {
+
+            }
+            string entrada = dtgContas.Rows[dtgContas.NewRowIndex].Cells["entrada"].Value.ToString(); ;
+            Console.WriteLine(entrada);
+            /*bindingSource1.EndEdit();
+            op.InserirConta();*/
         }
     }
-
-       
-    
 }
 
 

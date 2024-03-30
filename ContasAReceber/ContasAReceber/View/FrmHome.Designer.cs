@@ -38,7 +38,6 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblData = new System.Windows.Forms.ToolStripStatusLabel();
-            this.relatorioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -66,19 +65,17 @@
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.clientesToolStripMenuItem.Text = "Clientes";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
             // contasAReceberToolStripMenuItem
             // 
             this.contasAReceberToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.contasAReceberToolStripMenuItem1,
-            this.relatorioToolStripMenuItem});
+            this.contasAReceberToolStripMenuItem1});
             this.contasAReceberToolStripMenuItem.Name = "contasAReceberToolStripMenuItem";
             this.contasAReceberToolStripMenuItem.Size = new System.Drawing.Size(110, 20);
             this.contasAReceberToolStripMenuItem.Text = "Contas a Receber";
-            this.contasAReceberToolStripMenuItem.Click += new System.EventHandler(this.contasAReceberToolStripMenuItem_Click);
             // 
             // contasAReceberToolStripMenuItem1
             // 
@@ -130,13 +127,6 @@
             this.lblData.Size = new System.Drawing.Size(76, 17);
             this.lblData.Text = "00/00/0000";
             // 
-            // relatorioToolStripMenuItem
-            // 
-            this.relatorioToolStripMenuItem.Name = "relatorioToolStripMenuItem";
-            this.relatorioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.relatorioToolStripMenuItem.Text = "Relatorio";
-            this.relatorioToolStripMenuItem.Click += new System.EventHandler(this.relatorioToolStripMenuItem_Click);
-            // 
             // FrmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -172,6 +162,5 @@
         private System.Windows.Forms.ToolStripMenuItem contasAReceberToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem configuraçãoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem configurarBancoDeDabosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem relatorioToolStripMenuItem;
     }
 }

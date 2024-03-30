@@ -57,7 +57,7 @@ namespace ContasAReceber.controller
             contas.DeletarContas(idcontas);
         }
 
-        public void AtualizaContas(String entrada, Int32 idcliente, Double valor, String documento, Int32 classe, Int32 situacao, String vencimento, String pagamento, int idcontas)
+        public void AtualizaContas(string entrada, Int32 idcliente, Double valor, String documento, Int32 classe, Int32 situacao, string vencimento, string pagamento, int idcontas)
         {
             contas.AtualizarContas(entrada, idcliente, valor, documento, classe, situacao, vencimento, pagamento, idcontas);
         }

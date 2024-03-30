@@ -57,10 +57,10 @@ namespace ContasAReceber.View
                 dtPagamento.Text = DateTime.Now.ToString("dd/MM/yyyy");
                 txtValor.Text = "0,00";
             }
-            if (dtPagamento.Value.Date > dtVencimento.Value.Date)
+            /*if (dtPagamento.Text > dtVencimento.Value.Date)
             {
                 cbxSituacao.SelectedIndex = 1;
-            }
+            }*/
 
         }
 
@@ -201,7 +201,7 @@ namespace ContasAReceber.View
             try
             {
                 OperacoesContas op = new OperacoesContas();
-                op.AtualizaContas(dtEntrada.Text, Int32.Parse(txtCodigoCliente.Text), Double.Parse(txtValor.Text), txtDocumento.Text, (cbxClass.SelectedIndex + 1), (cbxSituacao.SelectedIndex + 1), dtVencimento.Text, dtPagamento.Text, Int32.Parse(lblConta.Text));
+                op.AtualizaContas(dtEntrada.Text , Int32.Parse(txtCodigoCliente.Text), Double.Parse(txtValor.Text), txtDocumento.Text, (cbxClass.SelectedIndex + 1), (cbxSituacao.SelectedIndex + 1), dtVencimento.Text, dtPagamento.Text, Int32.Parse(lblConta.Text));
                 this.Close();
                 contas.AtualizaGridContas();
             }
@@ -214,6 +214,11 @@ namespace ContasAReceber.View
         private void FrmOperacoesContas_Move(object sender, EventArgs e)
         {
             this.Location = new System.Drawing.Point(LocalizacaoX, LocalizacaoY);
+        }
+
+        private void dtPagamento_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
         }
     }
 }

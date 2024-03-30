@@ -94,7 +94,7 @@ namespace ContasAReceber.model
             comando.ExecuteNonQuery();
             bd.Fechaconexao();
         }
-        public void AtualizarContas(String entrada, Int32 idcliente, Double valor, String documento, Int32 classe, Int32 situacao, String vencimento, String pagamento, int idcontas)
+        public void AtualizarContas(string entrada, Int32 idcliente, Double valor, String documento, Int32 classe, Int32 situacao, string vencimento, string pagamento, int idcontas)
         {
             BancoDeDados bd = new BancoDeDados(stringDeConexao);
             FbCommand comando = new FbCommand("update contasareceber set entrada = @entrada, idcliente = @idcliente ,valor = @valor ,documento = @documento ,class = @classe, situacao = @situacao, vencimento = @vencimento, pagamento = @pagamento where  idcontas = @idcontas", bd.conexao(stringDeConexao));

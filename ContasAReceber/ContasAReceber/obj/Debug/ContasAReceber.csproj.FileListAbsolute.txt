@@ -1051,7 +1051,6 @@ D:\Projetos 2024\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.Frm
 D:\Projetos 2024\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmHome.resources
 D:\Projetos 2024\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmOperacoesClientes.resources
 D:\Projetos 2024\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmOperacoesContas.resources
-D:\Projetos 2024\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmRelatorio.resources
 D:\Projetos 2024\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.csproj.GenerateResource.cache
 D:\Projetos 2024\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.csproj.CoreCompileInputs.cache
 D:\Projetos 2024\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.csproj.CopyComplete
