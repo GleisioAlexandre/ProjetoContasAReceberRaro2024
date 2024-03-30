@@ -33,11 +33,12 @@
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contasAReceberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contasAReceberToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.configuraçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.configurarBancoDeDabosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblData = new System.Windows.Forms.ToolStripStatusLabel();
-            this.configuraçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.configurarBancoDeDabosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.relatorioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -72,7 +73,8 @@
             // contasAReceberToolStripMenuItem
             // 
             this.contasAReceberToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.contasAReceberToolStripMenuItem1});
+            this.contasAReceberToolStripMenuItem1,
+            this.relatorioToolStripMenuItem});
             this.contasAReceberToolStripMenuItem.Name = "contasAReceberToolStripMenuItem";
             this.contasAReceberToolStripMenuItem.Size = new System.Drawing.Size(110, 20);
             this.contasAReceberToolStripMenuItem.Text = "Contas a Receber";
@@ -81,9 +83,24 @@
             // contasAReceberToolStripMenuItem1
             // 
             this.contasAReceberToolStripMenuItem1.Name = "contasAReceberToolStripMenuItem1";
-            this.contasAReceberToolStripMenuItem1.Size = new System.Drawing.Size(165, 22);
+            this.contasAReceberToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.contasAReceberToolStripMenuItem1.Text = "Contas a Receber";
             this.contasAReceberToolStripMenuItem1.Click += new System.EventHandler(this.contasAReceberToolStripMenuItem1_Click);
+            // 
+            // configuraçãoToolStripMenuItem
+            // 
+            this.configuraçãoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.configurarBancoDeDabosToolStripMenuItem});
+            this.configuraçãoToolStripMenuItem.Name = "configuraçãoToolStripMenuItem";
+            this.configuraçãoToolStripMenuItem.Size = new System.Drawing.Size(96, 20);
+            this.configuraçãoToolStripMenuItem.Text = "Configurações";
+            // 
+            // configurarBancoDeDabosToolStripMenuItem
+            // 
+            this.configurarBancoDeDabosToolStripMenuItem.Name = "configurarBancoDeDabosToolStripMenuItem";
+            this.configurarBancoDeDabosToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
+            this.configurarBancoDeDabosToolStripMenuItem.Text = "Configurar Banco de Dabos";
+            this.configurarBancoDeDabosToolStripMenuItem.Click += new System.EventHandler(this.configurarBancoDeDabosToolStripMenuItem_Click);
             // 
             // statusStrip1
             // 
@@ -113,20 +130,12 @@
             this.lblData.Size = new System.Drawing.Size(76, 17);
             this.lblData.Text = "00/00/0000";
             // 
-            // configuraçãoToolStripMenuItem
+            // relatorioToolStripMenuItem
             // 
-            this.configuraçãoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.configurarBancoDeDabosToolStripMenuItem});
-            this.configuraçãoToolStripMenuItem.Name = "configuraçãoToolStripMenuItem";
-            this.configuraçãoToolStripMenuItem.Size = new System.Drawing.Size(96, 20);
-            this.configuraçãoToolStripMenuItem.Text = "Configurações";
-            // 
-            // configurarBancoDeDabosToolStripMenuItem
-            // 
-            this.configurarBancoDeDabosToolStripMenuItem.Name = "configurarBancoDeDabosToolStripMenuItem";
-            this.configurarBancoDeDabosToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
-            this.configurarBancoDeDabosToolStripMenuItem.Text = "Configurar Banco de Dabos";
-            this.configurarBancoDeDabosToolStripMenuItem.Click += new System.EventHandler(this.configurarBancoDeDabosToolStripMenuItem_Click);
+            this.relatorioToolStripMenuItem.Name = "relatorioToolStripMenuItem";
+            this.relatorioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.relatorioToolStripMenuItem.Text = "Relatorio";
+            this.relatorioToolStripMenuItem.Click += new System.EventHandler(this.relatorioToolStripMenuItem_Click);
             // 
             // FrmHome
             // 
@@ -163,5 +172,6 @@
         private System.Windows.Forms.ToolStripMenuItem contasAReceberToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem configuraçãoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem configurarBancoDeDabosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem relatorioToolStripMenuItem;
     }
 }

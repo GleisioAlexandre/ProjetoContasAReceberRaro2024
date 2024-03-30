@@ -12,12 +12,11 @@ using ContasAReceber.model;
 using FirebirdSql.Data.FirebirdClient;
 using PagedList;
 using System.Drawing.Printing;
-using iText.Kernel.Pdf;
-using iText.Layout;
-using iText.Layout.Element;
-using iText.Layout.Renderer;
 using System.IO;
 using System.Diagnostics;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using Font = iTextSharp.text.Font;
 
 namespace ContasAReceber.View
 {
@@ -62,8 +61,8 @@ namespace ContasAReceber.View
         }
         public void AtualizaGridContas()
         {
-            bindingSource1.DataSource = op.BindiSourceContas().Tables["contasareceber"];
-            dtgContas.DataSource =bindingSource1;
+            bindingSource1.DataSource = op.datSet().Tables["contasareceber"];
+            dtgContas.DataSource = bindingSource1;
             toolStripTextBox1.Clear();
         }
         private void FrmContas_KeyDown(object sender, KeyEventArgs e)
@@ -76,32 +75,32 @@ namespace ContasAReceber.View
         }
         private void toolStripTextBox1_TextChanged(object sender, EventArgs e)
         {
-            
-            bindingSource1.DataSource = op.BindiSourceContas().Tables["contasareceber"];
+
+            bindingSource1.DataSource = op.datSet().Tables["contasareceber"];
             string filtro = toolStripTextBox1.Text;
-            if(bindingSource1 != null)
+            if (bindingSource1 != null)
             {
                 bindingSource1.Filter = string.Format("nome like '%{0}%'", filtro);
             }
         }
         private void dtgContas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-             if (e.RowIndex >= 0 && e.RowIndex < dtgContas.Rows.Count)
-             {
-                 DataGridViewRow linhaClicada = dtgContas.Rows[e.RowIndex];
+            if (e.RowIndex >= 0 && e.RowIndex < dtgContas.Rows.Count)
+            {
+                DataGridViewRow linhaClicada = dtgContas.Rows[e.RowIndex];
 
-                 int indiceDaColuna = 3;
+                int indiceDaColuna = 3;
 
-                 object valorDaCelula = linhaClicada.Cells[indiceDaColuna].Value;
+                object valorDaCelula = linhaClicada.Cells[indiceDaColuna].Value;
 
-                 if (valorDaCelula != null)
-                 {
-                     string textoDaCelula = valorDaCelula.ToString();
-                     FrmOperacoesContas operacoesContas = new FrmOperacoesContas(this);
-                     operacoesContas.DadosDoFormContas(textoDaCelula);
-                     operacoesContas.ShowDialog();
-                 }
-             }
+                if (valorDaCelula != null)
+                {
+                    string textoDaCelula = valorDaCelula.ToString();
+                    FrmOperacoesContas operacoesContas = new FrmOperacoesContas(this);
+                    operacoesContas.DadosDoFormContas(textoDaCelula);
+                    operacoesContas.ShowDialog();
+                }
+            }
         }
 
         private void toolStripComboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -123,66 +122,97 @@ namespace ContasAReceber.View
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             GerarRelatorio();
-          
+
         }
         private void GerarRelatorio()
         {
+            Document doc = new Document(PageSize.A4);
+            doc.SetMargins(40, 40, 40, 40);
+            doc.AddCreationDate();
+            string caminho = @"E:\Desktop\bd\relatorio.pdf";
 
-            try
+            PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(caminho, FileMode.Create));
+            BaseFont baseFont = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
+            doc.Open();
+
+            //// Criando uma fonte para o cabeçalho da tabela
+            Font fontTitulo = new Font(baseFont, 30);
+             
+
+            //Cria o titulo da tebla
+            Paragraph titulo = new Paragraph();
+            titulo.Alignment = Element.ALIGN_CENTER;
+            titulo.Font = fontTitulo;
+            titulo.Add("Relatório de Clientes " + "(" +toolStripComboBox1.SelectedText.ToString() + ")" + "\n\n");
+            doc.Add(titulo);
+
+            // Criando uma fonte para o conteúdo da tabela
+            Font fontCabecalho = new Font(baseFont, 8);
+            Font fontConteudo = new Font(baseFont, 7);
+
+            // Criando a tabela
+            PdfPTable table = new PdfPTable(dtgContas.Columns.Count);
+            table.WidthPercentage = 105;
+
+            // Definindo a largura das colunas
+            float[] larguraColuna = new float[] {1f, 4f, 1f, 1f, 0f, 0f, 1f, 1f };
+            table.SetWidths(larguraColuna);
+            
+            // Adicionando cabeçalhos da tabela
+            foreach (DataGridViewColumn column in dtgContas.Columns)
             {
-                string caminhoPdf = @"E:\Desktop\bd\relatorio.pdf";
-                using (PdfWriter writer = new PdfWriter(@"E:\Desktop\bd\relatorio.pdf"))
+                PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText, fontCabecalho)); // Usando a fonte para o cabeçalho
+                cell.BackgroundColor = new BaseColor(240, 240, 240);
+                cell.HorizontalAlignment = Element.ALIGN_CENTER;
+                table.AddCell(cell);
+            }
+
+            // Adicionando dados à tabela
+            foreach (DataGridViewRow row in dtgContas.Rows)
+            {
+                foreach (DataGridViewCell cell in row.Cells)
                 {
-                    using (PdfDocument pdf = new PdfDocument(writer))
+                    PdfPCell cellPdf = new PdfPCell(new Phrase(cell.Value != null ? cell.Value.ToString() : string.Empty, fontConteudo));
+                    if (cell.OwningColumn.Name == "valor")
                     {
-                        Document documento = new Document(pdf);
-                        Paragraph titulo = new Paragraph("Relatorio");
-                        titulo.SetTextAlignment(iText.Layout.Properties.TextAlignment.CENTER);
-                        pdf.SetDefaultPageSize(iText.Kernel.Geom.PageSize.A4.Rotate());
-                        titulo.SetFontSize(30);
-                        documento.Add(titulo);
-                        Table table = new Table(dtgContas.Columns.Count);
-
-                        foreach (DataGridViewColumn column in dtgContas.Columns)
-                        {
-                            table.AddHeaderCell(new Paragraph(column.HeaderText)); 
-                        }
-                        foreach (DataGridViewRow row in dtgContas.Rows)
-                        {
-                            foreach (DataGridViewCell cell in row.Cells)
-                            {
-                                table.AddCell(new Paragraph(cell.Value.ToString()));
-                            }
-                        }
-                        foreach (Cell cell in table.GetChildren())
-                        {
-                            foreach (IBlockElement element in cell.GetChildren())
-                            {
-                                if (element is Paragraph paragraph)
-                                {
-                                    paragraph.SetFontSize(9f);
-                                }
-                            }
-                        }
-
-                        documento.Add(table);
-                        documento.Close();
+                        string valorMonetario = string.Format("{0:C}", cell.Value != null ? cell.Value : 0);
+                        cellPdf = new PdfPCell(new Phrase(valorMonetario, fontConteudo));
+                        cellPdf.HorizontalAlignment = Element.ALIGN_RIGHT;
                     }
+                    else if (cell.OwningColumn.Name == "documento")
+                    {
+                        cellPdf.HorizontalAlignment = Element.ALIGN_CENTER;
+                    }
+                    
+                    else if (cell.OwningColumn.Name == "entrada" || cell.OwningColumn.Name == "vencimento" || cell.OwningColumn.Name == "pagamento")
+                    {
+                        string dataFormatada = (cell.Value != null && cell.Value != DBNull.Value && DateTime.TryParse(cell.Value.ToString(), out DateTime data)) ? data.ToString("dd/MM/yyyy") : string.Empty;
+                        cellPdf = new PdfPCell(new Phrase(dataFormatada, fontCabecalho));
+                        cellPdf.HorizontalAlignment = Element.ALIGN_CENTER;
+
+                    }
+                    else
+                    {
+                         cellPdf = new PdfPCell(new Phrase(cell.Value != null ? cell.Value.ToString() : string.Empty, fontConteudo)); // Usando a fonte para o conteúdo
+
+                    }
+                         table.AddCell(cellPdf);
                 }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Erro: {ex}", "Erro");
-                Console.WriteLine(ex);
-            }
-          /*  if (File.Exists(caminhoPdf))
-            {
-                Process.Start(caminhoPdf);
-            }*/
+
+            // Adicionando a tabela ao documento
+            doc.Add(table);
+
+            doc.Close();
+            writer.Close();
+
+
+           
         }
+    }
 
        
-    }
-}
     
+}
+
 

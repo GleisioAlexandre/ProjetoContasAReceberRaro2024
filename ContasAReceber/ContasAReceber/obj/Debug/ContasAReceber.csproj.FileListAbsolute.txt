@@ -1136,7 +1136,6 @@ D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\System.Buffers.dll
 D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\System.Diagnostics.DiagnosticSource.dll
 D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\System.Memory.dll
 D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\System.Numerics.Vectors.dll
-D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\BouncyCastle.Crypto.xml
 D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\BouncyCastle.Cryptography.xml
 D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\itext.barcodes.xml
 D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\itext.bouncy-castle-adapter.xml
@@ -1163,3 +1162,5 @@ D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\System.Diagnostics.Diag
 D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\System.Memory.xml
 D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\System.Numerics.Vectors.xml
 D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\System.ValueTuple.xml
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\itextsharp.dll
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\itextsharp.xml

@@ -14,9 +14,9 @@ namespace ContasAReceber.controller
     {
         Contas contas = new Contas();
         
-        public DataSet BindiSourceContas()
+        public DataSet datSet()
         {
-            return contas.BindingSourceContas();
+            return contas.dataSet();
         }
         public DataTable ExibGridContas()
         {

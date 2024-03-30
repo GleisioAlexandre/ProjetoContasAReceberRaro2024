@@ -15,23 +15,23 @@ namespace ContasAReceber.model
         private string stringDeConexao = ConfigurationManager.ConnectionStrings["ConexaoFirebird"].ConnectionString;
 
 
-        public DataSet BindingSourceContas()
+        public DataSet dataSet()
         {
             string query = "SELECT contasareceber.entrada, pessoa.nome, contasareceber.valor, contasareceber.documento, class.tipo, situacao.situacao, contasareceber.vencimento, contasareceber.pagamento FROM contasareceber JOIN pessoa ON contasareceber.idcliente = pessoa.idpessoa JOIN class ON contasareceber.class = class.iidclass JOIN situacao ON contasareceber.situacao = situacao.idsituacao";
             BancoDeDados bd = new BancoDeDados(stringDeConexao);
             FbDataAdapter adaptador = new FbDataAdapter(query, bd.conexao(stringDeConexao));
-            DataSet dt = new DataSet();
+            DataSet dataSet  = new DataSet();
             try
             {
                 bd.AbreConexao();
-                adaptador.Fill(dt, "contasareceber");
+                adaptador.Fill(dataSet, "contasareceber");
                 
             }
             catch (Exception ex)
             {
 
             }
-            return dt;
+            return dataSet;
         }
         public DataTable ExibeGridContas()
         {

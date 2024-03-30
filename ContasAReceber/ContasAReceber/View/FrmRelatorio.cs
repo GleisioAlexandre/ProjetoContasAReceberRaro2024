@@ -1,4 +1,5 @@
-﻿using ContasAReceber.model;
+﻿using ContasAReceber.controller;
+using ContasAReceber.model;
 using Microsoft.Reporting.WinForms;
 using System;
 using System.Collections.Generic;
@@ -19,11 +20,19 @@ namespace ContasAReceber.View
             InitializeComponent();
         }
 
+        OperacoesContas operacoesContas = new OperacoesContas();
         private void FrmRelatorio_Load(object sender, EventArgs e)
         {
-            Contas contas = new Contas();
-            bindingSource1.DataSource = contas.BindingSourceContas();
+            this.Controls.Add(reportViewer1);
+            dataSet();
         }
-        
+        private void dataSet()
+        {
+            contasBindingSource.DataSource = operacoesContas.datSet();
+           /* DataSet dataSet = operacoesContas.datSet();
+            reportViewer1.LocalReport.DataSources.Clear();
+            reportViewer1.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DataSet1", dataSet.Tables["contasareceber"]));
+            reportViewer1.RefreshReport();*/
+        }
     }
 }

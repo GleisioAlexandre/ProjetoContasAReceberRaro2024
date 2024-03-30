@@ -15,6 +15,7 @@ namespace ContasAReceber.View
         public FrmHome()
         {
             InitializeComponent();
+
         }
 
         private void contasAReceberToolStripMenuItem_Click(object sender, EventArgs e)
@@ -57,6 +58,13 @@ namespace ContasAReceber.View
             FrmConfiguracao configuracao = new FrmConfiguracao();
             configuracao.MdiParent = this;
             configuracao.Show();
+        }
+
+        private void relatorioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmRelatorio relatorio = new FrmRelatorio();
+            relatorio.MdiParent = this;
+            relatorio.Show();
         }
     }
 }
