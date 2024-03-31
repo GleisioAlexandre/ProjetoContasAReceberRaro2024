@@ -26,11 +26,14 @@ namespace ContasAReceber.View
         public FrmContas()
         {
             InitializeComponent();
+
         }
         private void FrmContas_Load(object sender, EventArgs e)
         {
+           
             try
             {
+                CorGrid();
                 AtualizaGridContas();
                 toolStripComboBox1.SelectedText = "Todos";
             }
@@ -40,31 +43,7 @@ namespace ContasAReceber.View
                 this.Close();
             }
         }
-        private void CorGrid()
-        {
-
-            int colunaIndex = 5;
-            foreach (DataGridViewRow row in dtgContas.Rows)
-            {
-                if (!row.IsNewRow)
-                {
-                    DataGridViewCell celula = row.Cells[colunaIndex];
-
-                    string textocelula = celula.Value.ToString();
-                    if (textocelula == "Pago")
-                    {
-                        row.DefaultCellStyle.BackColor = Color.Green;
-                    }
-
-                }
-            }
-        }
-        public void AtualizaGridContas()
-        {
-            bindingSource1.DataSource = op.datSet().Tables["contasareceber"];
-            dtgContas.DataSource = bindingSource1;
-            toolStripTextBox1.Clear();
-        }
+      
         private void FrmContas_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Insert)
@@ -82,6 +61,10 @@ namespace ContasAReceber.View
             {
                 bindingSource1.Filter = string.Format("nome like '%{0}%'", filtro);
             }
+        }
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            dtgContas.CurrentRow.DefaultCellStyle.BackColor = Color.Red;
         }
         private void dtgContas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -124,40 +107,75 @@ namespace ContasAReceber.View
             GerarRelatorio();
 
         }
+        private void dtgContas_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            CorGrid();           
+        }
+        //I*************************************nicio dos metodos criados manualmenet*************************************************************************
+        private void CorGrid()
+        {
+
+            int colunaIndex = 5;
+            foreach (DataGridViewRow row in dtgContas.Rows)
+            {
+                if (!row.IsNewRow)
+                {
+                    DataGridViewCell celula = row.Cells[colunaIndex];
+
+                    string textocelula = celula.Value.ToString();
+                    if (textocelula == "Pago")
+                    {
+                        row.DefaultCellStyle.BackColor = Color.Green;
+                    }else if (textocelula == "Atrasado")
+                    {
+                        row.DefaultCellStyle.BackColor = Color.Red;
+                    }else if (textocelula == "Em Dia")
+                    {
+                        row.DefaultCellStyle.BackColor = Color.Yellow;
+                    }
+                    else
+                    {
+                        row.DefaultCellStyle.BackColor = Color.White;
+                    }
+
+                }
+            }
+        }
+        public void AtualizaGridContas()
+        {
+            //Define o bindingSource
+            bindingSource1.DataSource = op.datSet().Tables["contasareceber"];
+            //Carrega o dataGrid com os dados do bindingSource
+            dtgContas.DataSource = bindingSource1;
+            //Limpa o texbox do filtro
+            toolStripTextBox1.Clear();
+        }
         private void GerarRelatorio()
         {
             Document doc = new Document(PageSize.A4);
             doc.SetMargins(30, 30, 30, 30);
             doc.AddCreationDate();
-            string caminho = @"E:\Desktop\bd\relatorio.pdf";
-
+            string caminho = PegarCaminho()+@"\relatorio.pdf";
             PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(caminho, FileMode.Create));
             BaseFont baseFont = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
             doc.Open();
-
             //// Criando uma fonte para o cabeçalho da tabela
             Font fontTitulo = new Font(baseFont, 30);
-
-
             //Cria o titulo da tebla
             Paragraph titulo = new Paragraph();
             titulo.Alignment = Element.ALIGN_CENTER;
             titulo.Font = fontTitulo;
-            titulo.Add("\n\nRelatório de Clientes " + "(" + toolStripComboBox1.SelectedText.ToString() + ")" + "\n\n");
+            titulo.Add("\n\nRelatório de Clientes \n\n");
             doc.Add(titulo);
-
             // Criando uma fonte para o conteúdo da tabela
             Font fontCabecalho = new Font(baseFont, 8);
             Font fontConteudo = new Font(baseFont, 7);
-
             // Criando a tabela
             PdfPTable table = new PdfPTable(dtgContas.Columns.Count);
             table.WidthPercentage = 105;
-
             // Definindo a largura das colunas
             float[] larguraColuna = new float[] { 1f, 4f, 1f, 1f, 0f, 0f, 1f, 1f };
             table.SetWidths(larguraColuna);
-
             // Adicionando cabeçalhos da tabela
             foreach (DataGridViewColumn column in dtgContas.Columns)
             {
@@ -166,7 +184,6 @@ namespace ContasAReceber.View
                 cell.HorizontalAlignment = Element.ALIGN_CENTER;
                 table.AddCell(cell);
             }
-
             // Adicionando dados à tabela
             foreach (DataGridViewRow row in dtgContas.Rows)
             {
@@ -183,7 +200,6 @@ namespace ContasAReceber.View
                     {
                         cellPdf.HorizontalAlignment = Element.ALIGN_CENTER;
                     }
-
                     else if (cell.OwningColumn.Name == "entrada" || cell.OwningColumn.Name == "vencimento" || cell.OwningColumn.Name == "pagamento")
                     {
                         string dataFormatada = (cell.Value != null && cell.Value != DBNull.Value && DateTime.TryParse(cell.Value.ToString(), out DateTime data)) ? data.ToString("dd/MM/yyyy") : string.Empty;
@@ -199,7 +215,6 @@ namespace ContasAReceber.View
                     table.AddCell(cellPdf);
                 }
             }
-
             // Adicionando a tabela ao documento
             doc.Add(table);
             doc.Close();
@@ -225,18 +240,27 @@ namespace ContasAReceber.View
                 MessageBox.Show($"Erro ao abrir o PDF: {ex.Message}", "Erro ao abrir o PDF");
             }
         }
-
-        private void toolStripButton2_Click(object sender, EventArgs e)
+        private string PegarCaminho()
         {
-            if (dtgContas.Rows[dtgContas.NewRowIndex - 1].IsNewRow)
+            string caminho = "";
+            // Cria um novo FolderBrowserDialog
+            FolderBrowserDialog browserDialog = new FolderBrowserDialog();
+            // Define o título da caixa de diálogo
+            browserDialog.Description = "Selecione uma pasta";
+            // Define o diretório inicial
+            browserDialog.SelectedPath = @"Desktop\";
+            // Exibe a caixa de diálogo e aguarda o usuário selecionar um diretório
+            DialogResult result = browserDialog.ShowDialog();
+            // Verifica se o usuário selecionou um diretório
+            if (result == DialogResult.OK)
             {
-
+                caminho = browserDialog.SelectedPath;
             }
-            string entrada = dtgContas.Rows[dtgContas.NewRowIndex].Cells["entrada"].Value.ToString(); ;
-            Console.WriteLine(entrada);
-            /*bindingSource1.EndEdit();
-            op.InserirConta();*/
+          
+            return caminho ;
         }
+
+        
     }
 }
 
