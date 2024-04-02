@@ -891,12 +891,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_77EDB6AB9BFE48ECBDEB75F4BB5D50B7"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_782CE497BD62678C0A86C43DDA33EDB4"
         "OwnerKey" = "8:_82BCFBF5D2265497BEFE557F0DCCB916"
         "MsmSig" = "8:_UNDEFINED"
@@ -988,13 +982,13 @@
         "Entry"
         {
         "MsmKey" = "8:_8066C6EF0CE25ED0466CB20E783E53EB"
-        "OwnerKey" = "8:_AB9FAE0ABE914252B9414911C4426E07"
+        "OwnerKey" = "8:_031BC7C3E969C61C459EB57CAC4EF919"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_8066C6EF0CE25ED0466CB20E783E53EB"
-        "OwnerKey" = "8:_031BC7C3E969C61C459EB57CAC4EF919"
+        "OwnerKey" = "8:_AB9FAE0ABE914252B9414911C4426E07"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -2344,12 +2338,6 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_031BC7C3E969C61C459EB57CAC4EF919"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_AB9FAE0ABE914252B9414911C4426E07"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -3010,12 +2998,6 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_8066C6EF0CE25ED0466CB20E783E53EB"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_82BCFBF5D2265497BEFE557F0DCCB916"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -3049,6 +3031,18 @@
         "OwnerKey" = "8:_9BE7B2396E8AAA5880EB53F49C65F7C9"
         "MsmSig" = "8:_UNDEFINED"
         }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_031BC7C3E969C61C459EB57CAC4EF919"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_8066C6EF0CE25ED0466CB20E783E53EB"
+        "MsmSig" = "8:_UNDEFINED"
+        }
     }
     "Configurations"
     {
@@ -3067,6 +3061,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -3083,6 +3085,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -6106,26 +6116,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_77EDB6AB9BFE48ECBDEB75F4BB5D50B7"
-            {
-            "SourcePath" = "8:..\\..\\..\\..\\..\\..\\..\\Desktop\\bd\\BD.FDB"
-            "TargetName" = "8:BD.FDB"
-            "Tag" = "8:"
-            "Folder" = "8:_50D92D7D51F44F04B9C97AAEB656E161"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_782CE497BD62678C0A86C43DDA33EDB4"
@@ -9345,7 +9335,7 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:Setup"
+        "ProductName" = "8:Contas a Receber"
         "ProductCode" = "8:{5A7F8A1F-B3FE-48C4-9AD0-05EE6713D741}"
         "PackageCode" = "8:{22A3134B-0069-4CE6-A7D0-AD310E35894D}"
         "UpgradeCode" = "8:{30D4CB49-F0C1-414F-A7E3-99CC55E9B0A5}"
