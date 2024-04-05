@@ -35,6 +35,7 @@ namespace ContasAReceber.View
                 CorGrid();
                 AtualizaGridContas();
                 toolStripComboBox1.SelectedText = "Todos";
+                SomaValor();
             }
             catch (Exception ex)
             {
@@ -98,6 +99,7 @@ namespace ContasAReceber.View
             else
             {
                 bindingSource1.Filter = $"situacao = '{situacao}'";
+                SomaValor();
             }
         }
         private void toolStripButton1_Click(object sender, EventArgs e)
@@ -109,7 +111,16 @@ namespace ContasAReceber.View
         {
             CorGrid();           
         }
-        //I*************************************nicio dos metodos criados manualmenet*************************************************************************
+        //I*************************************Inicio dos metodos criados manualmenet*************************************************************************
+        private void SomaValor()
+        {
+            decimal total = 0;
+            foreach (DataGridViewRow row in dtgContas.Rows)
+            {
+                total = total + Convert.ToDecimal(row.Cells[2].Value);
+            }
+            lblValor.Text = total.ToString("C2");
+        }
         private void CorGrid()
         {
             int colunaIndex = 5;
@@ -139,12 +150,15 @@ namespace ContasAReceber.View
         }
         public void AtualizaGridContas()
         {
+            var lefLabel1 = new ToolStripStatusLabel("Label1 a Esquerda");
+            var rightlabel = new ToolStripStatusLabel("label a Direita");
             //Define o bindingSource
             bindingSource1.DataSource = op.datSet().Tables["contasareceber"];
             //Carrega o dataGrid com os dados do bindingSource
             dtgContas.DataSource = bindingSource1;
             //Limpa o texbox do filtro
             toolStripTextBox1.Clear();
+           
         }
         private void GerarRelatorio()
         {
@@ -260,7 +274,10 @@ namespace ContasAReceber.View
 
         }
 
+        private void lblValor_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }
 
