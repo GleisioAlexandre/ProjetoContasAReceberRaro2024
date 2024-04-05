@@ -30,7 +30,6 @@ namespace ContasAReceber.View
         }
         private void FrmContas_Load(object sender, EventArgs e)
         {
-           
             try
             {
                 CorGrid();
@@ -39,8 +38,7 @@ namespace ContasAReceber.View
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro: " + ex, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                this.Close();
+                MessageBox.Show("Erro, ao conectar o banco de dados! \n Erro: " + ex, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
       
@@ -114,7 +112,6 @@ namespace ContasAReceber.View
         //I*************************************nicio dos metodos criados manualmenet*************************************************************************
         private void CorGrid()
         {
-
             int colunaIndex = 5;
             foreach (DataGridViewRow row in dtgContas.Rows)
             {
@@ -137,7 +134,6 @@ namespace ContasAReceber.View
                     {
                         row.DefaultCellStyle.BackColor = Color.White;
                     }
-
                 }
             }
         }
@@ -152,74 +148,81 @@ namespace ContasAReceber.View
         }
         private void GerarRelatorio()
         {
-            Document doc = new Document(PageSize.A4);
-            doc.SetMargins(30, 30, 30, 30);
-            doc.AddCreationDate();
-            string caminho = PegarCaminho()+@"\relatorio.pdf";
-            PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(caminho, FileMode.Create));
-            BaseFont baseFont = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
-            doc.Open();
-            //// Criando uma fonte para o cabeçalho da tabela
-            Font fontTitulo = new Font(baseFont, 30);
-            //Cria o titulo da tebla
-            Paragraph titulo = new Paragraph();
-            titulo.Alignment = Element.ALIGN_CENTER;
-            titulo.Font = fontTitulo;
-            titulo.Add("\n\nRelatório de Clientes \n\n");
-            doc.Add(titulo);
-            // Criando uma fonte para o conteúdo da tabela
-            Font fontCabecalho = new Font(baseFont, 8);
-            Font fontConteudo = new Font(baseFont, 7);
-            // Criando a tabela
-            PdfPTable table = new PdfPTable(dtgContas.Columns.Count);
-            table.WidthPercentage = 105;
-            // Definindo a largura das colunas
-            float[] larguraColuna = new float[] { 1f, 4f, 1f, 1f, 0f, 0f, 1f, 1f };
-            table.SetWidths(larguraColuna);
-            // Adicionando cabeçalhos da tabela
-            foreach (DataGridViewColumn column in dtgContas.Columns)
+            try
             {
-                PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText, fontCabecalho)); // Usando a fonte para o cabeçalho
-                cell.BackgroundColor = new BaseColor(240, 240, 240);
-                cell.HorizontalAlignment = Element.ALIGN_CENTER;
-                table.AddCell(cell);
-            }
-            // Adicionando dados à tabela
-            foreach (DataGridViewRow row in dtgContas.Rows)
-            {
-                foreach (DataGridViewCell cell in row.Cells)
+                Document doc = new Document(PageSize.A4);
+                doc.SetMargins(30, 30, 30, 30);
+                doc.AddCreationDate();
+                string caminho = PegarCaminho() + @"\relatorio.pdf";//
+                PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(caminho, FileMode.Create));
+                BaseFont baseFont = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
+                doc.Open();
+                //// Criando uma fonte para o cabeçalho da tabela
+                Font fontTitulo = new Font(baseFont, 30);
+                //Cria o titulo da tebla
+                Paragraph titulo = new Paragraph();
+                titulo.Alignment = Element.ALIGN_CENTER;
+                titulo.Font = fontTitulo;
+                titulo.Add("\n\nRelatório de Clientes \n\n");
+                doc.Add(titulo);
+                // Criando uma fonte para o conteúdo da tabela
+                Font fontCabecalho = new Font(baseFont, 8);
+                Font fontConteudo = new Font(baseFont, 7);
+                // Criando a tabela
+                PdfPTable table = new PdfPTable(dtgContas.Columns.Count);
+                table.WidthPercentage = 105;
+                // Definindo a largura das colunas
+                float[] larguraColuna = new float[] { 1f, 4f, 1f, 1f, 0f, 0f, 1f, 1f };
+                table.SetWidths(larguraColuna);
+                // Adicionando cabeçalhos da tabela
+                foreach (DataGridViewColumn column in dtgContas.Columns)
                 {
-                    PdfPCell cellPdf = new PdfPCell(new Phrase(cell.Value != null ? cell.Value.ToString() : string.Empty, fontConteudo));
-                    if (cell.OwningColumn.Name == "valor")
-                    {
-                        string valorMonetario = string.Format("{0:C}", cell.Value != null ? cell.Value : 0);
-                        cellPdf = new PdfPCell(new Phrase(valorMonetario, fontConteudo));
-                        cellPdf.HorizontalAlignment = Element.ALIGN_RIGHT;
-                    }
-                    else if (cell.OwningColumn.Name == "documento")
-                    {
-                        cellPdf.HorizontalAlignment = Element.ALIGN_CENTER;
-                    }
-                    else if (cell.OwningColumn.Name == "entrada" || cell.OwningColumn.Name == "vencimento" || cell.OwningColumn.Name == "pagamento")
-                    {
-                        string dataFormatada = (cell.Value != null && cell.Value != DBNull.Value && DateTime.TryParse(cell.Value.ToString(), out DateTime data)) ? data.ToString("dd/MM/yyyy") : string.Empty;
-                        cellPdf = new PdfPCell(new Phrase(dataFormatada, fontCabecalho));
-                        cellPdf.HorizontalAlignment = Element.ALIGN_CENTER;
-
-                    }
-                    else
-                    {
-                        cellPdf = new PdfPCell(new Phrase(cell.Value != null ? cell.Value.ToString() : string.Empty, fontConteudo)); // Usando a fonte para o conteúdo
-
-                    }
-                    table.AddCell(cellPdf);
+                    PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText, fontCabecalho)); // Usando a fonte para o cabeçalho
+                    cell.BackgroundColor = new BaseColor(240, 240, 240);
+                    cell.HorizontalAlignment = Element.ALIGN_CENTER;
+                    table.AddCell(cell);
                 }
+                // Adicionando dados à tabela
+                foreach (DataGridViewRow row in dtgContas.Rows)
+                {
+                    foreach (DataGridViewCell cell in row.Cells)
+                    {
+                        PdfPCell cellPdf = new PdfPCell(new Phrase(cell.Value != null ? cell.Value.ToString() : string.Empty, fontConteudo));
+                        if (cell.OwningColumn.Name == "valor")
+                        {
+                            string valorMonetario = string.Format("{0:C}", cell.Value != null ? cell.Value : 0);
+                            cellPdf = new PdfPCell(new Phrase(valorMonetario, fontConteudo));
+                            cellPdf.HorizontalAlignment = Element.ALIGN_RIGHT;
+                        }
+                        else if (cell.OwningColumn.Name == "documento")
+                        {
+                            cellPdf.HorizontalAlignment = Element.ALIGN_CENTER;
+                        }
+                        else if (cell.OwningColumn.Name == "entrada" || cell.OwningColumn.Name == "vencimento" || cell.OwningColumn.Name == "pagamento")
+                        {
+                            string dataFormatada = (cell.Value != null && cell.Value != DBNull.Value && DateTime.TryParse(cell.Value.ToString(), out DateTime data)) ? data.ToString("dd/MM/yyyy") : string.Empty;
+                            cellPdf = new PdfPCell(new Phrase(dataFormatada, fontCabecalho));
+                            cellPdf.HorizontalAlignment = Element.ALIGN_CENTER;
+
+                        }
+                        else
+                        {
+                            cellPdf = new PdfPCell(new Phrase(cell.Value != null ? cell.Value.ToString() : string.Empty, fontConteudo)); // Usando a fonte para o conteúdo
+
+                        }
+                        table.AddCell(cellPdf);
+                    }
+                }
+                // Adicionando a tabela ao documento
+                doc.Add(table);
+                doc.Close();
+                writer.Close();
+                AbrirPdf(caminho);
             }
-            // Adicionando a tabela ao documento
-            doc.Add(table);
-            doc.Close();
-            writer.Close();
-            AbrirPdf(caminho);
+            catch (Exception ex)
+            {
+                MessageBox.Show("Nem um caminho selecionado!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
         private void AbrirPdf(string caminhoPdf)
         {
@@ -237,7 +240,7 @@ namespace ContasAReceber.View
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Erro ao abrir o PDF: {ex.Message}", "Erro ao abrir o PDF");
+                MessageBox.Show($"Erro ao Gerar o PDF: {ex.Message}", "Erro ao gerar o PDF");
             }
         }
         private string PegarCaminho()
@@ -252,15 +255,12 @@ namespace ContasAReceber.View
             // Exibe a caixa de diálogo e aguarda o usuário selecionar um diretório
             DialogResult result = browserDialog.ShowDialog();
             // Verifica se o usuário selecionou um diretório
-            if (result == DialogResult.OK)
-            {
-                caminho = browserDialog.SelectedPath;
-            }
-          
-            return caminho ;
+            caminho = browserDialog.SelectedPath;
+            return caminho;
+
         }
 
-        
+
     }
 }
 

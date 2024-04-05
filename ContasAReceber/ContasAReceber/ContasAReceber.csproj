@@ -191,7 +191,6 @@
     <Compile Include="model\CepInfo.cs" />
     <Compile Include="model\Cliente.cs" />
     <Compile Include="model\Contas.cs" />
-    <Compile Include="model\Relatorio.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="servico\ServicoBuscaCep.cs" />
@@ -260,7 +259,6 @@
     <EmbeddedResource Include="View\FrmOperacoesContas.resx">
       <DependentUpon>FrmOperacoesContas.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="BancoDeDados\BD.FDB" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\ContasAReceber.model.Contas.datasource" />
     <None Include="Properties\Settings.settings">

@@ -20,7 +20,14 @@ namespace ContasAReceber.View
         OperacoesClientes op = new OperacoesClientes();
         private void FrmClientes_Load(object sender, EventArgs e)
         {
-            AtualizaGriCliente();
+            try
+            {
+                AtualizaGriCliente();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void FrmClientes_KeyDown(object sender, KeyEventArgs e)

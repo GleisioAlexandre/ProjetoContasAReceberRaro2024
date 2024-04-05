@@ -64,7 +64,6 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgContas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
@@ -224,8 +223,7 @@
             this.toolStripTextBox1,
             this.toolStripSeparator2,
             this.toolStripComboBox1,
-            this.toolStripSeparator3,
-            this.toolStripButton2});
+            this.toolStripSeparator3});
             this.bindingNavigator1.Location = new System.Drawing.Point(0, 0);
             this.bindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -365,16 +363,6 @@
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
             // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton2.Text = "toolStripButton2";
-            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
-            // 
             // FrmContas
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -432,6 +420,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn pagamento;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
     }
 }

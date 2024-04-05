@@ -64,8 +64,15 @@ namespace ContasAReceber.View
         {
             OpenFileDialog fileDialog = new OpenFileDialog();
             fileDialog.Filter = "Firebird .fdb|*.fdb*";
-            fileDialog.ShowDialog();
-            txtCaminho.Text = fileDialog.FileName;
+            DialogResult result = fileDialog.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                txtCaminho.Text = fileDialog.FileName;
+            }
+           
+
+            
         }
     }
 }

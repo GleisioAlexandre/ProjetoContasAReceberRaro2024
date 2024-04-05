@@ -21,16 +21,8 @@ namespace ContasAReceber.model
             BancoDeDados bd = new BancoDeDados(stringDeConexao);
             FbDataAdapter adaptador = new FbDataAdapter(query, bd.conexao(stringDeConexao));
             DataSet dataSet  = new DataSet();
-            try
-            {
-                bd.AbreConexao();
-                adaptador.Fill(dataSet, "contasareceber");
-                
-            }
-            catch (Exception ex)
-            {
-
-            }
+            bd.AbreConexao();
+            adaptador.Fill(dataSet, "contasareceber");
             return dataSet;
         }
         public DataTable ExibeGridContas()
