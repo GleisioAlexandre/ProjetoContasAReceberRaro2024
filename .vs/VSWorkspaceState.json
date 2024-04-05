@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\ContasAReceber",
-    "\\ContasAReceber\\ContasAReceber"
+    "\\ContasAReceber\\ContasAReceber",
+    "\\ContasAReceber\\ContasAReceber\\View"
   ],
-  "SelectedNode": "\\ContasAReceber\\ContasAReceber\\View",
+  "SelectedNode": "\\ContasAReceber\\ContasAReceber\\View\\FrmContas.cs",
   "PreviewInSolutionExplorer": false
 }
