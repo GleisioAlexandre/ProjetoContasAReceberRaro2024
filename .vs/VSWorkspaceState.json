@@ -2,9 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\ContasAReceber",
-    "\\ContasAReceber\\ContasAReceber",
-    "\\ContasAReceber\\ContasAReceber\\View"
+    "\\ContasAReceber\\ContasAReceber"
   ],
-  "SelectedNode": "\\ContasAReceber\\ContasAReceber\\View\\FrmOperacoesContas.resx",
+  "SelectedNode": "\\ContasAReceber\\ContasAReceber\\View",
   "PreviewInSolutionExplorer": false
 }

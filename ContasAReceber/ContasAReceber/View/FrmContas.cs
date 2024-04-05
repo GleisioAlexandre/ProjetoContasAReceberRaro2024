@@ -100,6 +100,7 @@ namespace ContasAReceber.View
             {
                 bindingSource1.Filter = $"situacao = '{situacao}'";
                 SomaValor();
+                ColoreValor();
             }
         }
         private void toolStripButton1_Click(object sender, EventArgs e)
@@ -119,7 +120,26 @@ namespace ContasAReceber.View
             {
                 total = total + Convert.ToDecimal(row.Cells[2].Value);
             }
-            lblValor.Text = total.ToString("C2");
+            lblValor.Text = "Total: " + total.ToString("C2");
+        }
+        private void ColoreValor()
+        {
+            switch (toolStripComboBox1.SelectedIndex)
+            {
+                case 0:
+                    lblValor.ForeColor = Color.Black;
+                    break;
+                case 1:
+                    lblValor.ForeColor = Color.Red;
+                    break;
+                case 2:
+                    lblValor.ForeColor = Color.Yellow;
+                    break;
+                case 3:
+                    lblValor.ForeColor = Color.Green;
+                    break;
+               
+            }
         }
         private void CorGrid()
         {
@@ -277,6 +297,17 @@ namespace ContasAReceber.View
         private void lblValor_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void statusStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void toolStripButton2_Click_1(object sender, EventArgs e)
+        {
+            FrmOperacoesContas frmInserirContas = new FrmOperacoesContas(this);
+            frmInserirContas.ShowDialog();
         }
     }
 }
