@@ -8036,7 +8036,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Contas a Receber"
         "ProductCode" = "8:{5A7F8A1F-B3FE-48C4-9AD0-05EE6713D741}"
-        "PackageCode" = "8:{9186B21C-AE41-4F7D-8DC7-B22A290C2E7A}"
+        "PackageCode" = "8:{4F1D16EE-E179-45BD-8474-7AEDEB3ED2E3}"
         "UpgradeCode" = "8:{30D4CB49-F0C1-414F-A7E3-99CC55E9B0A5}"
         "AspNetVersion" = "8:"
         "RestartWWWService" = "11:FALSE"
@@ -8158,7 +8158,7 @@
         {
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_DC4F996A00E442499A7F91555600784D"
             {
-            "Name" = "8:ContasAReceber"
+            "Name" = "8:Contas a Receber"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
