@@ -103,7 +103,7 @@ namespace ContasAReceber.controller
             headerTable.TotalWidth = 560;
             headerTable.LockedWidth = true;
             headerTable.HorizontalAlignment = Element.ALIGN_CENTER;
-            Image logo = Image.GetInstance(@"E:\Download\logo.png");
+            Image logo = Image.GetInstance(@"C:\Program Files (x86)\Raro Do Ser\Contas a Receber\Logo\logo.png");
             logo.ScaleAbsolute(100f, 40f);
             PdfPCell logoCell = new PdfPCell(logo);
             logoCell.HorizontalAlignment = Element.ALIGN_LEFT;
