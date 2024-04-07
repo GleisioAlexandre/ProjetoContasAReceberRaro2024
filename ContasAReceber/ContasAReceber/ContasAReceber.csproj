@@ -294,6 +294,7 @@
     <None Include="Resources\icons8-print-16.png" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Img\" />
     <Folder Include="Instalador\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
