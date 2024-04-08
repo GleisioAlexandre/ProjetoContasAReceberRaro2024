@@ -66,18 +66,22 @@ namespace ContasAReceber.controller
             contas.AtualizarContas(entrada, idcliente, valor, documento, classe, situacao, vencimento, pagamento, idcontas);
         }
 
-        public void GerarRelatorio(DataGridView dtgContas)
+        public void GerarRelatorio(DataGridView dtgContas,  string total)
         {
             string data = DateTime.Now.ToString("ddMMyyyyhhmmss");
             try
             {
+                Console.WriteLine(total);
+              
                 string caminho = PegarCaminho() + $@"\{data}.pdf";
                 Document doc = CriarDocumento();
                 PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(caminho, FileMode.Create));
+                Paragraph paragrafoVariavel = new Paragraph(total);
                 writer.PageEvent = new Rodape();
                 doc.Open();
                 Cabecalho(doc);
                 Conteudo(doc, dtgContas);
+                doc.Add(paragrafoVariavel);
                 doc.Close();
                 writer.Close();
                 AbrirPdf(caminho);
@@ -121,6 +125,7 @@ namespace ContasAReceber.controller
             Contato(doc);
             Titulo(doc);
         }
+       
         private void Data(Document doc)
         {
             Font fontData = new Font(BaseFont.CreateFont(BaseFont.HELVETICA_BOLD, BaseFont.CP1252, BaseFont.NOT_EMBEDDED), 8);

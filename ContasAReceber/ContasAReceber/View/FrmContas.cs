@@ -34,7 +34,7 @@ namespace ContasAReceber.View
             {
                 CorGrid();
                 AtualizaGridContas();
-                toolStripComboBox1.SelectedText = "Todos";
+                CbxSituacao.SelectedIndex = 0;
                 SomaValor();
             }
             catch (Exception ex)
@@ -51,16 +51,7 @@ namespace ContasAReceber.View
                 frmInserirContas.ShowDialog();
             }
         }
-        private void toolStripTextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-            bindingSource1.DataSource = op.datSet().Tables["contasareceber"];
-            string filtro = toolStripTextBox1.Text;
-            if (bindingSource1 != null)
-            {
-                bindingSource1.Filter = string.Format("nome like '%{0}%'", filtro);
-            }
-        }
+       
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
             dtgContas.CurrentRow.DefaultCellStyle.BackColor = Color.Red;
@@ -84,10 +75,73 @@ namespace ContasAReceber.View
                 }
             }
         }
-
-        private void toolStripComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void TxtNomeCliente_TextChanged(object sender, EventArgs e)
         {
-            string situacao = toolStripComboBox1.SelectedItem?.ToString();
+            AplicarFiltroNomeCliente();
+        }
+
+        private void CbxSituacao_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            AplicarFiltroSituacao();
+        }
+        private void BntImprimir_Click(object sender, EventArgs e)
+        {
+            op.GerarRelatorio(dtgContas, lblValor.Text);
+        }
+        private void dtgContas_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            CorGrid();           
+        }
+        //I*************************************Inicio dos metodos criados manualmenet*************************************************************************
+        private void Filtro()
+        {
+            string filtro = TxtNomeCliente.Text;
+            string situacao = CbxSituacao.SelectedItem?.ToString();
+
+            if(!string.IsNullOrEmpty(situacao))
+            {
+                string filtroExistente = bindingSource1.Filter;
+
+                if (string.IsNullOrEmpty(filtroExistente))
+                {
+                    filtro = $"situacao = '{situacao}'";
+                }
+                else
+                {
+                    filtro = $"({filtroExistente}) and (situacao = '{situacao}')";
+                }
+                bindingSource1.Filter = filtro;
+            }
+            else
+            {
+                bindingSource1.RemoveFilter();
+            }
+
+
+        }
+        private void AplicarFiltroNomeCliente()
+        {
+            string filtro = TxtNomeCliente.Text;
+            if (bindingSource1.DataSource != null)
+            {
+                filtro = TxtNomeCliente.Text;
+                bindingSource1.DataSource = op.datSet().Tables["contasareceber"];
+
+                if (bindingSource1 != null)
+                {
+                    bindingSource1.Filter = $"nome like '%{filtro}%'";
+                    SomaValor();
+                    ColoreValor();
+                }
+                else
+                {
+                    bindingSource1.RemoveFilter();
+                }
+            }
+        }
+        private void AplicarFiltroSituacao()
+        {
+            string situacao = CbxSituacao.SelectedItem?.ToString();
             if (string.IsNullOrEmpty(situacao))
             {
                 bindingSource1.RemoveFilter();
@@ -95,6 +149,8 @@ namespace ContasAReceber.View
             else if (situacao.Equals("Todos"))
             {
                 bindingSource1.RemoveFilter();
+                SomaValor();
+                ColoreValor();
             }
             else
             {
@@ -103,15 +159,8 @@ namespace ContasAReceber.View
                 ColoreValor();
             }
         }
-        private void toolStripButton1_Click(object sender, EventArgs e)
-        {
-            op.GerarRelatorio(dtgContas);
-        }
-        private void dtgContas_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            CorGrid();           
-        }
-        //I*************************************Inicio dos metodos criados manualmenet*************************************************************************
+
+        
         private void SomaValor()
         {
             decimal total = 0;
@@ -123,21 +172,24 @@ namespace ContasAReceber.View
         }
         private void ColoreValor()
         {
-            switch (toolStripComboBox1.SelectedIndex)
+            switch (CbxSituacao.SelectedIndex)
             {
                 case 0:
                     lblValor.ForeColor = Color.Black;
+                    SomaValor();
                     break;
                 case 1:
                     lblValor.ForeColor = Color.Red;
+                    SomaValor();
                     break;
                 case 2:
                     lblValor.ForeColor = Color.Yellow;
+                    SomaValor();
                     break;
                 case 3:
                     lblValor.ForeColor = Color.Green;
+                    SomaValor();
                     break;
-               
             }
         }
         private void CorGrid()
@@ -174,14 +226,19 @@ namespace ContasAReceber.View
             //Carrega o dataGrid com os dados do bindingSource
             dtgContas.DataSource = bindingSource1;
             //Limpa o texbox do filtro
-            toolStripTextBox1.Clear();
+            TxtNomeCliente.Clear();
            
         }
        
-        private void toolStripButton2_Click_1(object sender, EventArgs e)
+        private void BtnInserir_Click(object sender, EventArgs e)
         {
             FrmOperacoesContas frmInserirContas = new FrmOperacoesContas(this);
             frmInserirContas.ShowDialog();
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            Filtro();
         }
     }
 }

@@ -1041,7 +1041,6 @@ D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\pt\Microsoft.ReportView
 D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
 D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
-D:\Projetos 2024\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.csprojAssemblyReference.cache
 D:\Projetos 2024\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.exe.config
 D:\Projetos 2024\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.Properties.Resources.resources
 D:\Projetos 2024\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmClientes.resources

@@ -42,13 +42,13 @@ namespace ContasAReceber.View
         {
             bindingSource1.DataSource = op.BindigSourceClientes().Tables["pessoa"];
             dtgClientes.DataSource = bindingSource1;
-            toolStripTextBox1.Clear();
+            txtNomeCliente.Clear();
         }
 
-        private void toolStripTextBox1_TextChanged(object sender, EventArgs e)
+        private void txtNomeCliente_TextChanged(object sender, EventArgs e)
         {
             bindingSource1.DataSource = op.BindigSourceClientes().Tables["pessoa"];
-            string filtro = toolStripTextBox1.Text;
+            string filtro = txtNomeCliente.Text;
             if (bindingSource1 != null)
             {
                 bindingSource1.Filter = string.Format("nome like '%{0}%'", filtro);
@@ -70,6 +70,12 @@ namespace ContasAReceber.View
                    
                 }
             }
+        }
+
+        private void tbnInserirCliente_Click(object sender, EventArgs e)
+        {
+            FrmOperacoesClientes opClientes = new FrmOperacoesClientes(this);
+            opClientes.ShowDialog();
         }
     }
 }

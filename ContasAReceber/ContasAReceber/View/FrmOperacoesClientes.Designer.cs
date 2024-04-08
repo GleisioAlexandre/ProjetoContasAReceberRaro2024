@@ -108,6 +108,7 @@
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(66, 29);
             this.txtNumero.TabIndex = 4;
+            this.txtNumero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumero_KeyPress);
             // 
             // label6
             // 
@@ -240,9 +241,9 @@
             // txtCpfCnpj
             // 
             this.txtCpfCnpj.Location = new System.Drawing.Point(14, 122);
-            this.txtCpfCnpj.Mask = "###,###,###-##";
+            this.txtCpfCnpj.Mask = "##.###.###/####-##";
             this.txtCpfCnpj.Name = "txtCpfCnpj";
-            this.txtCpfCnpj.Size = new System.Drawing.Size(135, 29);
+            this.txtCpfCnpj.Size = new System.Drawing.Size(170, 29);
             this.txtCpfCnpj.TabIndex = 2;
             // 
             // lblTipoPessoa
@@ -250,9 +251,9 @@
             this.lblTipoPessoa.AutoSize = true;
             this.lblTipoPessoa.Location = new System.Drawing.Point(8, 95);
             this.lblTipoPessoa.Name = "lblTipoPessoa";
-            this.lblTipoPessoa.Size = new System.Drawing.Size(47, 24);
+            this.lblTipoPessoa.Size = new System.Drawing.Size(58, 24);
             this.lblTipoPessoa.TabIndex = 2;
-            this.lblTipoPessoa.Text = "CPF";
+            this.lblTipoPessoa.Text = "CNPJ";
             // 
             // txtCliente
             // 
@@ -265,6 +266,8 @@
             // cbxPj
             // 
             this.cbxPj.AutoSize = true;
+            this.cbxPj.Checked = true;
+            this.cbxPj.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbxPj.Location = new System.Drawing.Point(540, 21);
             this.cbxPj.Name = "cbxPj";
             this.cbxPj.Size = new System.Drawing.Size(161, 28);
@@ -278,9 +281,9 @@
             this.lblNomePessoa.AutoSize = true;
             this.lblNomePessoa.Location = new System.Drawing.Point(8, 25);
             this.lblNomePessoa.Name = "lblNomePessoa";
-            this.lblNomePessoa.Size = new System.Drawing.Size(62, 24);
+            this.lblNomePessoa.Size = new System.Drawing.Size(119, 24);
             this.lblNomePessoa.TabIndex = 0;
-            this.lblNomePessoa.Text = "Nome";
+            this.lblNomePessoa.Text = "Razão Social";
             // 
             // btnNovoCliente
             // 
