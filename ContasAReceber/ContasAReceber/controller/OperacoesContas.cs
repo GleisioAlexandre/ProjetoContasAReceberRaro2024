@@ -11,6 +11,7 @@ using iTextSharp.text;
 using iTextSharp.text.pdf;
 using System.IO;
 using System.Diagnostics;
+using System.Configuration;
 
 namespace ContasAReceber.controller
 {
@@ -107,12 +108,12 @@ namespace ContasAReceber.controller
             headerTable.TotalWidth = 560;
             headerTable.LockedWidth = true;
             headerTable.HorizontalAlignment = Element.ALIGN_CENTER;
-           /* Image logo = Image.GetInstance(@"C:\Program Files (x86)\Raro Do Ser\Contas a Receber\Logo\logo.png");
+            Image logo = Image.GetInstance(ConfigurationManager.AppSettings["Logo"]);
             logo.ScaleAbsolute(100f, 40f);
             PdfPCell logoCell = new PdfPCell(logo);
             logoCell.HorizontalAlignment = Element.ALIGN_LEFT;
             logoCell.Border = PdfPCell.NO_BORDER;
-            headerTable.AddCell(logoCell);*/
+            headerTable.AddCell(logoCell);
             PdfPCell headerCell = new PdfPCell();
             headerCell.HorizontalAlignment = Element.ALIGN_RIGHT;
             headerCell.VerticalAlignment = Element.ALIGN_MIDDLE;

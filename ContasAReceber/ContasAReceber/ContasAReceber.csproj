@@ -295,8 +295,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Banco de Dados\" />
-    <Folder Include="Img\" />
     <Folder Include="Instalador\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\pasta.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

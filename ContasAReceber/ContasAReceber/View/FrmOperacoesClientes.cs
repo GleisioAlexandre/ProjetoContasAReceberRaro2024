@@ -257,5 +257,17 @@ namespace ContasAReceber.View
                 e.Handled = true;
             }
         }
+
+        private void txtNomeContato_TextChanged(object sender, EventArgs e)
+        {
+            txtNomeContato.Text = txtNomeContato.Text.ToUpper();
+            txtNomeContato.SelectionStart = txtNomeContato.Text.Length;
+        }
+
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+            txtEmail.Text = txtEmail.Text.ToUpper();
+            txtEmail.SelectionStart = txtEmail.Text.Length;
+        }
     }
 }

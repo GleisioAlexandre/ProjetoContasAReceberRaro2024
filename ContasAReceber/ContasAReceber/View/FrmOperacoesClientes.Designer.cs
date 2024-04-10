@@ -414,6 +414,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(427, 26);
             this.txtEmail.TabIndex = 7;
+            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
             // label11
             // 
@@ -464,6 +465,7 @@
             this.txtNomeContato.Name = "txtNomeContato";
             this.txtNomeContato.Size = new System.Drawing.Size(427, 26);
             this.txtNomeContato.TabIndex = 1;
+            this.txtNomeContato.TextChanged += new System.EventHandler(this.txtNomeContato_TextChanged);
             // 
             // label8
             // 
