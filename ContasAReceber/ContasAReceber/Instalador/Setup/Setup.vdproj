@@ -1179,12 +1179,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_996EBC7B306B4D60A0CC75E2F5808AE2"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_9ABA29754C3BAFFCFEF109B191E7E45D"
         "OwnerKey" = "8:_C166A6287A6A46F086C8C6875A345679"
         "MsmSig" = "8:_UNDEFINED"
@@ -1443,6 +1437,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_B99A08F4896C46879C8A547D456EEAFD"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_BAC5612D698348D6AEA2A4DB5B57AAD3"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -1463,6 +1463,12 @@
         {
         "MsmKey" = "8:_BDDD37FC08010DEC50C748E3F120E0B9"
         "OwnerKey" = "8:_C166A6287A6A46F086C8C6875A345679"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_BE7CD8A04C3A451B87EADA5484682A4C"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -1823,12 +1829,6 @@
         {
         "MsmKey" = "8:_E504B7D32D9188A44D4F92C36E211930"
         "OwnerKey" = "8:_6AB322E335F416F519ABAC6E4946BF16"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_EB8C7CC8A95F46978EAE64B8702B6C9D"
-        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -5903,26 +5903,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_996EBC7B306B4D60A0CC75E2F5808AE2"
-            {
-            "SourcePath" = "8:E:\\Download\\receber-dinheiro.ico"
-            "TargetName" = "8:receber-dinheiro.ico"
-            "Tag" = "8:"
-            "Folder" = "8:_B60FD27EFB974127BAC581760E5EB2B4"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_9ABA29754C3BAFFCFEF109B191E7E45D"
             {
             "AssemblyRegister" = "3:1"
@@ -6636,6 +6616,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B99A08F4896C46879C8A547D456EEAFD"
+            {
+            "SourcePath" = "8:..\\..\\Img\\receber-dinheiro.ico"
+            "TargetName" = "8:receber-dinheiro.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_B60FD27EFB974127BAC581760E5EB2B4"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_BAC5612D698348D6AEA2A4DB5B57AAD3"
             {
             "AssemblyRegister" = "3:1"
@@ -6727,6 +6727,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BE7CD8A04C3A451B87EADA5484682A4C"
+            {
+            "SourcePath" = "8:..\\..\\Banco de Dados\\BD.FDB"
+            "TargetName" = "8:BD.FDB"
+            "Tag" = "8:"
+            "Folder" = "8:_81B3A8F598CF406C8EC7E2C48C4C26C8"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_BEA29A6BD0E99AC068F361D9BE18C4AE"
@@ -7690,26 +7710,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_EB8C7CC8A95F46978EAE64B8702B6C9D"
-            {
-            "SourcePath" = "8:E:\\Desktop\\bd\\BD.FDB"
-            "TargetName" = "8:BD.FDB"
-            "Tag" = "8:"
-            "Folder" = "8:_81B3A8F598CF406C8EC7E2C48C4C26C8"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_F08602635940ECE575B979843C238B56"
             {
             "AssemblyRegister" = "3:1"
@@ -8230,15 +8230,15 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_360CD0BB0088492A913D765516B0CAE1"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_715E31B8BA3247408705AC95FB634104"
             {
-            "Name" = "8:Contas a Receber"
+            "Name" = "8:Shortcut to Saída Primária from ContasAReceber (Active)"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_BAC5612D698348D6AEA2A4DB5B57AAD3"
+            "Target" = "8:_C166A6287A6A46F086C8C6875A345679"
             "Folder" = "8:_07E08EA6F86D41A6BEE48D921ED6B29D"
             "WorkingFolder" = "8:_50D92D7D51F44F04B9C97AAEB656E161"
             "Icon" = "8:"
