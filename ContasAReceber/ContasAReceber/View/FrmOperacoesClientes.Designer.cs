@@ -45,8 +45,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtCep = new System.Windows.Forms.MaskedTextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.lblIdCliente = new System.Windows.Forms.Label();
             this.txtCpfCnpj = new System.Windows.Forms.MaskedTextBox();
+            this.lblIdCliente = new System.Windows.Forms.Label();
             this.lblTipoPessoa = new System.Windows.Forms.Label();
             this.txtCliente = new System.Windows.Forms.TextBox();
             this.cbxPj = new System.Windows.Forms.CheckBox();
@@ -56,8 +56,24 @@
             this.btnPesquisarCliente = new System.Windows.Forms.Button();
             this.btnEditarCliente = new System.Windows.Forms.Button();
             this.btnDeletarCliente = new System.Windows.Forms.Button();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtCelular = new System.Windows.Forms.MaskedTextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtNomeContato = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -78,7 +94,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtCep);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 198);
+            this.groupBox1.Location = new System.Drawing.Point(7, 192);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(719, 365);
             this.groupBox1.TabIndex = 1;
@@ -215,19 +231,27 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.lblIdCliente);
             this.groupBox2.Controls.Add(this.txtCpfCnpj);
+            this.groupBox2.Controls.Add(this.lblIdCliente);
             this.groupBox2.Controls.Add(this.lblTipoPessoa);
             this.groupBox2.Controls.Add(this.txtCliente);
             this.groupBox2.Controls.Add(this.cbxPj);
             this.groupBox2.Controls.Add(this.lblNomePessoa);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(12, 12);
+            this.groupBox2.Location = new System.Drawing.Point(7, 6);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(719, 180);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Dados Pessoais";
+            // 
+            // txtCpfCnpj
+            // 
+            this.txtCpfCnpj.Location = new System.Drawing.Point(14, 122);
+            this.txtCpfCnpj.Mask = "##,###,###/####-##";
+            this.txtCpfCnpj.Name = "txtCpfCnpj";
+            this.txtCpfCnpj.Size = new System.Drawing.Size(170, 29);
+            this.txtCpfCnpj.TabIndex = 4;
             // 
             // lblIdCliente
             // 
@@ -237,14 +261,7 @@
             this.lblIdCliente.Size = new System.Drawing.Size(20, 24);
             this.lblIdCliente.TabIndex = 3;
             this.lblIdCliente.Text = "0";
-            // 
-            // txtCpfCnpj
-            // 
-            this.txtCpfCnpj.Location = new System.Drawing.Point(14, 122);
-            this.txtCpfCnpj.Mask = "##.###.###/####-##";
-            this.txtCpfCnpj.Name = "txtCpfCnpj";
-            this.txtCpfCnpj.Size = new System.Drawing.Size(170, 29);
-            this.txtCpfCnpj.TabIndex = 2;
+            this.lblIdCliente.Visible = false;
             // 
             // lblTipoPessoa
             // 
@@ -288,7 +305,7 @@
             // btnNovoCliente
             // 
             this.btnNovoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNovoCliente.Location = new System.Drawing.Point(12, 581);
+            this.btnNovoCliente.Location = new System.Drawing.Point(12, 598);
             this.btnNovoCliente.Name = "btnNovoCliente";
             this.btnNovoCliente.Size = new System.Drawing.Size(97, 32);
             this.btnNovoCliente.TabIndex = 2;
@@ -299,7 +316,7 @@
             // btnCadastrarCliente
             // 
             this.btnCadastrarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrarCliente.Location = new System.Drawing.Point(167, 581);
+            this.btnCadastrarCliente.Location = new System.Drawing.Point(167, 598);
             this.btnCadastrarCliente.Name = "btnCadastrarCliente";
             this.btnCadastrarCliente.Size = new System.Drawing.Size(97, 32);
             this.btnCadastrarCliente.TabIndex = 3;
@@ -310,7 +327,7 @@
             // btnPesquisarCliente
             // 
             this.btnPesquisarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPesquisarCliente.Location = new System.Drawing.Point(322, 581);
+            this.btnPesquisarCliente.Location = new System.Drawing.Point(322, 598);
             this.btnPesquisarCliente.Name = "btnPesquisarCliente";
             this.btnPesquisarCliente.Size = new System.Drawing.Size(97, 32);
             this.btnPesquisarCliente.TabIndex = 4;
@@ -321,7 +338,7 @@
             // btnEditarCliente
             // 
             this.btnEditarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditarCliente.Location = new System.Drawing.Point(477, 581);
+            this.btnEditarCliente.Location = new System.Drawing.Point(477, 598);
             this.btnEditarCliente.Name = "btnEditarCliente";
             this.btnEditarCliente.Size = new System.Drawing.Size(97, 32);
             this.btnEditarCliente.TabIndex = 5;
@@ -332,7 +349,7 @@
             // btnDeletarCliente
             // 
             this.btnDeletarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeletarCliente.Location = new System.Drawing.Point(632, 581);
+            this.btnDeletarCliente.Location = new System.Drawing.Point(632, 598);
             this.btnDeletarCliente.Name = "btnDeletarCliente";
             this.btnDeletarCliente.Size = new System.Drawing.Size(97, 32);
             this.btnDeletarCliente.TabIndex = 6;
@@ -340,18 +357,134 @@
             this.btnDeletarCliente.UseVisualStyleBackColor = true;
             this.btnDeletarCliente.Click += new System.EventHandler(this.btnDeletarCliente_Click);
             // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(2, 0);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(743, 592);
+            this.tabControl1.TabIndex = 7;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.groupBox2);
+            this.tabPage1.Controls.Add(this.groupBox1);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(735, 566);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Dados Cadastrais";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.groupBox3);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(735, 566);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Contato";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.txtEmail);
+            this.groupBox3.Controls.Add(this.label11);
+            this.groupBox3.Controls.Add(this.txtCelular);
+            this.groupBox3.Controls.Add(this.label10);
+            this.groupBox3.Controls.Add(this.txtTelefone);
+            this.groupBox3.Controls.Add(this.label9);
+            this.groupBox3.Controls.Add(this.txtNomeContato);
+            this.groupBox3.Controls.Add(this.label8);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(130, 124);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(449, 267);
+            this.groupBox3.TabIndex = 0;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Contato";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(10, 210);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(427, 26);
+            this.txtEmail.TabIndex = 7;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(6, 187);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(53, 20);
+            this.label11.TabIndex = 6;
+            this.label11.Text = "Email";
+            // 
+            // txtCelular
+            // 
+            this.txtCelular.Location = new System.Drawing.Point(290, 129);
+            this.txtCelular.Mask = "(##) # ####-####";
+            this.txtCelular.Name = "txtCelular";
+            this.txtCelular.Size = new System.Drawing.Size(147, 26);
+            this.txtCelular.TabIndex = 5;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(286, 106);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(65, 20);
+            this.label10.TabIndex = 4;
+            this.label10.Text = "Celular";
+            // 
+            // txtTelefone
+            // 
+            this.txtTelefone.Location = new System.Drawing.Point(10, 129);
+            this.txtTelefone.Mask = "(##) ####-####";
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(134, 26);
+            this.txtTelefone.TabIndex = 3;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(6, 106);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(79, 20);
+            this.label9.TabIndex = 2;
+            this.label9.Text = "Telefone";
+            // 
+            // txtNomeContato
+            // 
+            this.txtNomeContato.Location = new System.Drawing.Point(10, 60);
+            this.txtNomeContato.Name = "txtNomeContato";
+            this.txtNomeContato.Size = new System.Drawing.Size(427, 26);
+            this.txtNomeContato.TabIndex = 1;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 37);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(149, 20);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Nome do Contato";
+            // 
             // FrmOperacoesClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(745, 625);
+            this.ClientSize = new System.Drawing.Size(745, 639);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.btnDeletarCliente);
             this.Controls.Add(this.btnEditarCliente);
             this.Controls.Add(this.btnPesquisarCliente);
             this.Controls.Add(this.btnCadastrarCliente);
             this.Controls.Add(this.btnNovoCliente);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
             this.MaximizeBox = false;
             this.Name = "FrmOperacoesClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -364,6 +497,11 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -391,12 +529,24 @@
         private System.Windows.Forms.Label lblNomePessoa;
         private System.Windows.Forms.Label lblTipoPessoa;
         private System.Windows.Forms.TextBox txtCliente;
-        private System.Windows.Forms.MaskedTextBox txtCpfCnpj;
         private System.Windows.Forms.Button btnNovoCliente;
         private System.Windows.Forms.Button btnCadastrarCliente;
         private System.Windows.Forms.Button btnPesquisarCliente;
         private System.Windows.Forms.Button btnEditarCliente;
         private System.Windows.Forms.Button btnDeletarCliente;
         private System.Windows.Forms.Label lblIdCliente;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.MaskedTextBox txtCelular;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.MaskedTextBox txtTelefone;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtNomeContato;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.MaskedTextBox txtCpfCnpj;
     }
 }

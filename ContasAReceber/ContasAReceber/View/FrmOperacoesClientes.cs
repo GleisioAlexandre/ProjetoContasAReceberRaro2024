@@ -34,14 +34,19 @@ namespace ContasAReceber.View
             OperacoesClientes opClientes = new OperacoesClientes();
             lblIdCliente.Text = opClientes.PesquisaCliente(nome)[0].ToString();
             txtCliente.Text = opClientes.PesquisaCliente(nome)[1].ToString();
-            txtCep.Text = opClientes.PesquisaCliente(nome)[3].ToString();
-            txtLogradouro.Text = opClientes.PesquisaCliente(nome)[4].ToString();
-            txtNumero.Text = opClientes.PesquisaCliente(nome)[5].ToString();
-            txtComplemento.Text = opClientes.PesquisaCliente(nome)[6].ToString();
-            txtBairro.Text = opClientes.PesquisaCliente(nome)[7].ToString();
-            txtCidade.Text = opClientes.PesquisaCliente(nome)[8].ToString();
-            txtUf.Text = opClientes.PesquisaCliente(nome)[9].ToString();
-            if (opClientes.PesquisaCliente(nome)[10].Equals(1))
+           
+            txtNomeContato.Text = opClientes.PesquisaCliente(nome)[3].ToString();
+            txtTelefone.Text = opClientes.PesquisaCliente(nome)[4].ToString();
+            txtCelular.Text = opClientes.PesquisaCliente(nome)[5].ToString();
+            txtEmail.Text = opClientes.PesquisaCliente(nome)[6].ToString();
+            txtCep.Text = opClientes.PesquisaCliente(nome)[7].ToString();
+            txtLogradouro.Text = opClientes.PesquisaCliente(nome)[8].ToString();
+            txtNumero.Text = opClientes.PesquisaCliente(nome)[9].ToString();
+            txtComplemento.Text = opClientes.PesquisaCliente(nome)[10].ToString();
+            txtBairro.Text = opClientes.PesquisaCliente(nome)[11].ToString();
+            txtCidade.Text = opClientes.PesquisaCliente(nome)[12].ToString();
+            txtUf.Text = opClientes.PesquisaCliente(nome)[13].ToString();
+            if (opClientes.PesquisaCliente(nome)[14].Equals(1)/*cbxPj*/)
             {
                 cbxPj.Checked = true;
             }
@@ -49,11 +54,16 @@ namespace ContasAReceber.View
             {
                 cbxPj.Checked = false;
             }
-            txtCpfCnpj.Text = opClientes.PesquisaCliente(nome)[2].ToString();
+             txtCpfCnpj.Text = opClientes.PesquisaCliente(nome)[2].ToString();
         }
         private void FrmOperacoesClientes_Load(object sender, EventArgs e)
         {
-
+            if (txtCliente.Text != "")
+            {
+                btnNovoCliente.Enabled = false;
+                btnCadastrarCliente.Enabled = false;
+                btnPesquisarCliente.Enabled = false;
+            }
         }
 
         private void FrmOperacoesClientes_Move(object sender, EventArgs e)
@@ -131,7 +141,7 @@ namespace ContasAReceber.View
                     pj = 0;
                 }
                 OperacoesClientes opCliente = new OperacoesClientes();
-                opCliente.InseirClinete(txtCliente.Text, txtCpfCnpj.Text, txtCep.Text, txtLogradouro.Text, Int32.Parse(txtNumero.Text), txtComplemento.Text, txtBairro.Text, txtCidade.Text, txtUf.Text, pj);
+                opCliente.InseirClinete(txtCliente.Text, txtCpfCnpj.Text, txtNomeContato.Text, txtTelefone.Text, txtCelular.Text, txtEmail.Text,txtCep.Text, txtLogradouro.Text, Int32.Parse(txtNumero.Text), txtComplemento.Text, txtBairro.Text, txtCidade.Text, txtUf.Text, pj);
                 clientes.AtualizaGriCliente();
                 this.Close();
             } catch (Exception ex)

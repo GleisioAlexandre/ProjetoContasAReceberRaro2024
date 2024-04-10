@@ -39,12 +39,16 @@ namespace ContasAReceber.model
             bd.Fechaconexao();
             return dt;
         }
-        public void InserirClientes(String nome, String cadastropessoa, String cep, String logradouro, int numero, String complemento, String bairro, String cidade, String uf, int pj)
+        public void InserirClientes(String nome, String cadastropessoa, String nomeContato, String telefone, String celular, String email ,String cep, String logradouro, int numero, String complemento, String bairro, String cidade, String uf, int pj)
         {
             BancoDeDados bd = new BancoDeDados(stringDeConexao);
-            FbCommand comando = new FbCommand($"insert into pessoa (nome, cadastrodepessoa, cep, logradouro, numero, complemento, bairro, cidade, uf, pj) values ('{nome}', '{cadastropessoa}', '{cep}', '{logradouro}', {numero}, '{complemento}', '{bairro}', '{cidade}', '{uf}', {pj});", bd.conexao(stringDeConexao));
+            FbCommand comando = new FbCommand($"insert into pessoa (nome, cadastrodepessoa, nomecontato, telefone, celular, email, cep, logradouro, numero, complemento, bairro, cidade, uf, pj) values ('{nome}', '{cadastropessoa}', '{nomeContato}', '{telefone}', '{celular}', '{email}', '{cep}', '{logradouro}', {numero}, '{complemento}', '{bairro}', '{cidade}', '{uf}', {pj});", bd.conexao(stringDeConexao));
             comando.Parameters.AddWithValue($"{nome}", nome);
             comando.Parameters.AddWithValue($"{cadastropessoa}", cadastropessoa);
+            comando.Parameters.AddWithValue($"{nomeContato}", nomeContato);
+            comando.Parameters.AddWithValue($"{telefone}", telefone);
+            comando.Parameters.AddWithValue($"{celular}", celular);
+            comando.Parameters.AddWithValue($"{email}", email);
             comando.Parameters.AddWithValue($"{cep}", cep);
             comando.Parameters.AddWithValue($"{logradouro}", logradouro);
             comando.Parameters.AddWithValue($"{numero}", numero);
@@ -59,7 +63,7 @@ namespace ContasAReceber.model
         }
         public object[] PesquisarCliente(String nome)
         {
-            object[] obj = new object[11];
+            object[] obj = new object[15];
             BancoDeDados bd = new BancoDeDados(stringDeConexao);
             FbCommand comando = new FbCommand("select * from pessoa where nome like @nome", bd.conexao(stringDeConexao));
             comando.Parameters.AddWithValue("@nome", '%' + nome + '%');
@@ -78,6 +82,10 @@ namespace ContasAReceber.model
                 obj[8] = leitor[8];
                 obj[9] = leitor[9];
                 obj[10] = leitor[10];
+                obj[11] = leitor[11];
+                obj[12] = leitor[12];
+                obj[13] = leitor[13];
+                obj[14] = leitor[14];
             }
             bd.Fechaconexao();
             return obj;

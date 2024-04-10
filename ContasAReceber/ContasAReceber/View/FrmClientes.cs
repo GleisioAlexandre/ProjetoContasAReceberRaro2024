@@ -77,6 +77,11 @@ namespace ContasAReceber.View
             FrmOperacoesClientes opClientes = new FrmOperacoesClientes(this);
             opClientes.ShowDialog();
         }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            op.GerarRelatorio(dtgClientes);
+        }
     }
 }
 

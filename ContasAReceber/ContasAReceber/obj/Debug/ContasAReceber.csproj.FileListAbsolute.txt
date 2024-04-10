@@ -1216,3 +1216,4 @@ C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasA
 C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\System.Memory.xml
 C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\System.ValueTuple.xml
+D:\Projetos 2024\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.csprojAssemblyReference.cache

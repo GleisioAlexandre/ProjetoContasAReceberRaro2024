@@ -54,17 +54,18 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.BntImprimir = new System.Windows.Forms.ToolStripButton();
+            this.BntPrint = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.TxtNomeCliente = new System.Windows.Forms.ToolStripTextBox();
             this.CbxSituacao = new System.Windows.Forms.ToolStripComboBox();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.btnPesquisar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
             this.BtnInserir = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.lblValor = new System.Windows.Forms.ToolStripLabel();
+            this.cKFiltro = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgContas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
@@ -202,7 +203,7 @@
             this.bindingNavigatorMoveNextItem,
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2,
-            this.BntImprimir,
+            this.BntPrint,
             this.toolStripSeparator1,
             this.TxtNomeCliente,
             this.CbxSituacao,
@@ -286,15 +287,15 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
-            // BntImprimir
+            // BntPrint
             // 
-            this.BntImprimir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.BntImprimir.Image = global::ContasAReceber.Properties.Resources.icons8_print_16;
-            this.BntImprimir.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.BntImprimir.Name = "BntImprimir";
-            this.BntImprimir.Size = new System.Drawing.Size(24, 24);
-            this.BntImprimir.Text = "Imprimir";
-            this.BntImprimir.Click += new System.EventHandler(this.BntImprimir_Click);
+            this.BntPrint.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.BntPrint.Image = global::ContasAReceber.Properties.Resources.icons8_print_16;
+            this.BntPrint.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BntPrint.Name = "BntPrint";
+            this.BntPrint.Size = new System.Drawing.Size(24, 24);
+            this.BntPrint.Text = "Imprimir";
+            this.BntPrint.Click += new System.EventHandler(this.BntImprimir_Click);
             // 
             // toolStripSeparator1
             // 
@@ -320,11 +321,6 @@
             this.CbxSituacao.Tag = "";
             this.CbxSituacao.SelectedIndexChanged += new System.EventHandler(this.CbxSituacao_SelectedIndexChanged);
             // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 27);
-            // 
             // btnPesquisar
             // 
             this.btnPesquisar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -334,6 +330,11 @@
             this.btnPesquisar.Size = new System.Drawing.Size(24, 24);
             this.btnPesquisar.Text = "toolStripButton1";
             this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 27);
             // 
             // toolStrip
             // 
@@ -379,10 +380,23 @@
             this.lblValor.Size = new System.Drawing.Size(82, 22);
             this.lblValor.Text = "Total: R$ 0,00";
             // 
+            // cKFiltro
+            // 
+            this.cKFiltro.AutoSize = true;
+            this.cKFiltro.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.cKFiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cKFiltro.Location = new System.Drawing.Point(817, 5);
+            this.cKFiltro.Name = "cKFiltro";
+            this.cKFiltro.Size = new System.Drawing.Size(113, 17);
+            this.cKFiltro.TabIndex = 8;
+            this.cKFiltro.Text = "Filtro Composto";
+            this.cKFiltro.UseVisualStyleBackColor = false;
+            // 
             // FrmContas
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.ClientSize = new System.Drawing.Size(1106, 503);
+            this.Controls.Add(this.cKFiltro);
             this.Controls.Add(this.toolStrip);
             this.Controls.Add(this.bindingNavigator1);
             this.Controls.Add(this.dtgContas);
@@ -430,12 +444,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn vencimento;
         private System.Windows.Forms.DataGridViewTextBoxColumn pagamento;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripButton BntImprimir;
+        private System.Windows.Forms.ToolStripButton BntPrint;
         private System.Windows.Forms.ToolStrip toolStrip;
         private System.Windows.Forms.ToolStripButton BtnInserir;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripLabel lblValor;
         private System.Windows.Forms.ToolStripButton btnPesquisar;
+        private System.Windows.Forms.CheckBox cKFiltro;
     }
 }

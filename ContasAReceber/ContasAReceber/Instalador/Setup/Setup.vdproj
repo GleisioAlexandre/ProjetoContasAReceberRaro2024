@@ -1179,6 +1179,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_996EBC7B306B4D60A0CC75E2F5808AE2"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_9ABA29754C3BAFFCFEF109B191E7E45D"
         "OwnerKey" = "8:_C166A6287A6A46F086C8C6875A345679"
         "MsmSig" = "8:_UNDEFINED"
@@ -1955,12 +1961,6 @@
         {
         "MsmKey" = "8:_F526DFB110B7877404D630D2CD2D7E46"
         "OwnerKey" = "8:_A7CA5C3C0207F78CAFCEFF918ACD4ED1"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_F6A87E5440C947F9B430201BB6959D39"
-        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -5903,6 +5903,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_996EBC7B306B4D60A0CC75E2F5808AE2"
+            {
+            "SourcePath" = "8:E:\\Download\\receber-dinheiro.ico"
+            "TargetName" = "8:receber-dinheiro.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_B60FD27EFB974127BAC581760E5EB2B4"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_9ABA29754C3BAFFCFEF109B191E7E45D"
             {
             "AssemblyRegister" = "3:1"
@@ -7907,26 +7927,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F6A87E5440C947F9B430201BB6959D39"
-            {
-            "SourcePath" = "8:E:\\Download\\receber-dinheiro.ico"
-            "TargetName" = "8:receber-dinheiro.ico"
-            "Tag" = "8:"
-            "Folder" = "8:_B60FD27EFB974127BAC581760E5EB2B4"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_F96597889B6E83A11916B3F994F713E3"
             {
             "AssemblyRegister" = "3:1"
@@ -8241,12 +8241,12 @@
             "Target" = "8:_BAC5612D698348D6AEA2A4DB5B57AAD3"
             "Folder" = "8:_07E08EA6F86D41A6BEE48D921ED6B29D"
             "WorkingFolder" = "8:_50D92D7D51F44F04B9C97AAEB656E161"
-            "Icon" = "8:_F6A87E5440C947F9B430201BB6959D39"
+            "Icon" = "8:"
             "Feature" = "8:"
             }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_DC4F996A00E442499A7F91555600784D"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_7A88719A04574A9D895856EAB79E8156"
             {
-            "Name" = "8:Contas a Receber"
+            "Name" = "8:Shortcut to ContasAReceber.exe"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
@@ -8255,7 +8255,7 @@
             "Target" = "8:_BAC5612D698348D6AEA2A4DB5B57AAD3"
             "Folder" = "8:_94E9EFD3E68645AB858B9438A6F0AE31"
             "WorkingFolder" = "8:_50D92D7D51F44F04B9C97AAEB656E161"
-            "Icon" = "8:_F6A87E5440C947F9B430201BB6959D39"
+            "Icon" = "8:"
             "Feature" = "8:"
             }
         }

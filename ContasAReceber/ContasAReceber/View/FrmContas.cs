@@ -52,10 +52,7 @@ namespace ContasAReceber.View
             }
         }
        
-        private void toolStripButton2_Click(object sender, EventArgs e)
-        {
-            dtgContas.CurrentRow.DefaultCellStyle.BackColor = Color.Red;
-        }
+        
         private void dtgContas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
            if (e.RowIndex >= 0 && e.RowIndex < dtgContas.Rows.Count)
@@ -77,12 +74,12 @@ namespace ContasAReceber.View
         }
         private void TxtNomeCliente_TextChanged(object sender, EventArgs e)
         {
-            AplicarFiltroNomeCliente();
+           // AplicarFiltroNomeCliente();
         }
 
         private void CbxSituacao_SelectedIndexChanged(object sender, EventArgs e)
         {
-            AplicarFiltroSituacao();
+            //AplicarFiltroSituacao();
         }
         private void BntImprimir_Click(object sender, EventArgs e)
         {
@@ -92,34 +89,35 @@ namespace ContasAReceber.View
         {
             CorGrid();           
         }
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+
+            if (cKFiltro.Checked == true)
+            {
+                Filtro();
+            }else if (cKFiltro.Checked == false && TxtNomeCliente.Text != "")
+            {
+                FiltroNomeCliente();
+            }
+            else
+            {
+                FiltroSituacao();
+            }
+        }
         //I*************************************Inicio dos metodos criados manualmenet*************************************************************************
         private void Filtro()
         {
             string filtro = TxtNomeCliente.Text;
             string situacao = CbxSituacao.SelectedItem?.ToString();
-
-            if(!string.IsNullOrEmpty(situacao))
+            if (!string.IsNullOrEmpty(filtro) && !string.IsNullOrEmpty(situacao))
             {
-                string filtroExistente = bindingSource1.Filter;
-
-                if (string.IsNullOrEmpty(filtroExistente))
-                {
-                    filtro = $"situacao = '{situacao}'";
-                }
-                else
-                {
-                    filtro = $"({filtroExistente}) and (situacao = '{situacao}')";
-                }
-                bindingSource1.Filter = filtro;
+                // Use aspas simples (' ') ao redor do valor da situação
+                bindingSource1.Filter = $"Nome LIKE '%{filtro}%' AND Situacao = '{situacao}'";
+                SomaValor();
+                ColoreValor();
             }
-            else
-            {
-                bindingSource1.RemoveFilter();
-            }
-
-
         }
-        private void AplicarFiltroNomeCliente()
+        private void FiltroNomeCliente()
         {
             string filtro = TxtNomeCliente.Text;
             if (bindingSource1.DataSource != null)
@@ -139,7 +137,7 @@ namespace ContasAReceber.View
                 }
             }
         }
-        private void AplicarFiltroSituacao()
+        private void FiltroSituacao()
         {
             string situacao = CbxSituacao.SelectedItem?.ToString();
             if (string.IsNullOrEmpty(situacao))
@@ -236,10 +234,7 @@ namespace ContasAReceber.View
             frmInserirContas.ShowDialog();
         }
 
-        private void btnPesquisar_Click(object sender, EventArgs e)
-        {
-            Filtro();
-        }
+       
     }
 }
 

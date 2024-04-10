@@ -107,12 +107,12 @@ namespace ContasAReceber.controller
             headerTable.TotalWidth = 560;
             headerTable.LockedWidth = true;
             headerTable.HorizontalAlignment = Element.ALIGN_CENTER;
-            Image logo = Image.GetInstance(@"C:\Program Files (x86)\Raro Do Ser\Contas a Receber\Logo\logo.png");
+           /* Image logo = Image.GetInstance(@"C:\Program Files (x86)\Raro Do Ser\Contas a Receber\Logo\logo.png");
             logo.ScaleAbsolute(100f, 40f);
             PdfPCell logoCell = new PdfPCell(logo);
             logoCell.HorizontalAlignment = Element.ALIGN_LEFT;
             logoCell.Border = PdfPCell.NO_BORDER;
-            headerTable.AddCell(logoCell);
+            headerTable.AddCell(logoCell);*/
             PdfPCell headerCell = new PdfPCell();
             headerCell.HorizontalAlignment = Element.ALIGN_RIGHT;
             headerCell.VerticalAlignment = Element.ALIGN_MIDDLE;
@@ -157,7 +157,7 @@ namespace ContasAReceber.controller
         private void Titulo(Document doc)
         {
             Font fontTitulo = new Font(BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, BaseFont.NOT_EMBEDDED), 30);
-            Paragraph titulo = new Paragraph("\n\nRelatório de Clientes \n\n", fontTitulo);
+            Paragraph titulo = new Paragraph("\n\nContas a Receber \n\n", fontTitulo);
             titulo.Alignment = Element.ALIGN_CENTER;
             titulo.SpacingBefore = -100f;
             titulo.SpacingAfter = -20f;
