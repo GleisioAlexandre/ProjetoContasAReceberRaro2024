@@ -213,7 +213,7 @@ namespace ContasAReceber.View
                     pj = 0;
                 }
                 OperacoesClientes opcliente = new OperacoesClientes();
-                opcliente.AtualizarCliente(txtCliente.Text, txtCpfCnpj.Text, txtCep.Text, txtLogradouro.Text, txtNumero.Text, txtComplemento.Text, txtBairro.Text, txtCidade.Text, txtUf.Text, pj, Int32.Parse(lblIdCliente.Text));
+                opcliente.AtualizarCliente(txtCliente.Text, txtCpfCnpj.Text, txtNomeContato.Text, txtTelefone.Text, txtCelular.Text, txtEmail.Text ,txtCep.Text, txtLogradouro.Text, Int32.Parse(txtNumero.Text), txtComplemento.Text, txtBairro.Text, txtCidade.Text, txtUf.Text, pj, Int32.Parse(lblIdCliente.Text));
                 clientes.AtualizaGriCliente();
                 this.Close();
             }

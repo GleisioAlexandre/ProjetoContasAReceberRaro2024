@@ -108,6 +108,7 @@
             this.dtgContas.Location = new System.Drawing.Point(0, 28);
             this.dtgContas.Name = "dtgContas";
             this.dtgContas.ReadOnly = true;
+            this.dtgContas.RowHeadersVisible = false;
             this.dtgContas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgContas.Size = new System.Drawing.Size(1106, 450);
             this.dtgContas.TabIndex = 2;

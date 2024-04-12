@@ -427,16 +427,16 @@
             // 
             // txtCelular
             // 
-            this.txtCelular.Location = new System.Drawing.Point(290, 129);
-            this.txtCelular.Mask = "(##) # ####-####";
+            this.txtCelular.Location = new System.Drawing.Point(300, 129);
+            this.txtCelular.Mask = "(##)#####-####";
             this.txtCelular.Name = "txtCelular";
-            this.txtCelular.Size = new System.Drawing.Size(147, 26);
+            this.txtCelular.Size = new System.Drawing.Size(137, 26);
             this.txtCelular.TabIndex = 5;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(286, 106);
+            this.label10.Location = new System.Drawing.Point(296, 106);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(65, 20);
             this.label10.TabIndex = 4;
@@ -445,9 +445,9 @@
             // txtTelefone
             // 
             this.txtTelefone.Location = new System.Drawing.Point(10, 129);
-            this.txtTelefone.Mask = "(##) ####-####";
+            this.txtTelefone.Mask = "(##)####-####";
             this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(134, 26);
+            this.txtTelefone.Size = new System.Drawing.Size(126, 26);
             this.txtTelefone.TabIndex = 3;
             // 
             // label9

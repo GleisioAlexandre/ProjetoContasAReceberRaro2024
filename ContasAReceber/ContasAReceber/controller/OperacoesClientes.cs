@@ -2,14 +2,10 @@
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 using System;
-using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ContasAReceber.controller
@@ -26,9 +22,9 @@ namespace ContasAReceber.controller
         {
             return cliente.ExibeGridClientes();
         }
-        public void InseirClinete(String nome, String cadastropessoa, String nomeContato, String telefone, String celular, String email,String cep, String logradouro, int numero, String complemento, String bairro, String cidade, String uf, int pj)
+        public void InseirClinete(String nome, String cadastropessoa, String nomeContato, String telefone, String celular, String email, String cep, String logradouro, Int32 numero, String complemento, String bairro, String cidade, String uf, Int32 pj)
         {
-            cliente.InserirClientes(nome, cadastropessoa, nomeContato, telefone, celular, email ,cep, logradouro, numero, complemento, bairro, cidade, uf, pj);
+            cliente.InserirClientes(nome, cadastropessoa, nomeContato, telefone, celular, email, cep, logradouro, numero, complemento, bairro, cidade, uf, pj);
         }
         public object[] PesquisaCliente(String nome)
         {
@@ -54,9 +50,9 @@ namespace ContasAReceber.controller
         {
             cliente.DeletarCliente(idcliente);
         }
-        public void AtualizarCliente(String nome, String cadastrodepessoa, String cep, String logradouro, String numero, String complemento, String bairro, String cidade, String uf, Int32 pj, Int32 idpessoa)
+        public void AtualizarCliente(String nome, String cadastropessoa, String nomeContato, String telefone, String celular, String email, String cep, String logradouro, Int32 numero, String complemento, String bairro, String cidade, String uf, Int32 pj, Int32 idpessoa)
         {
-            cliente.AtualizarCliente(nome, cadastrodepessoa, cep, logradouro, numero, complemento, bairro, cidade, uf, pj, idpessoa);
+            cliente.AtualizarCliente(nome, cadastropessoa, nomeContato, telefone, celular, email ,cep, logradouro, numero, complemento, bairro, cidade, uf, pj, idpessoa);
         }
         public void GerarRelatorio(DataGridView dtgClientes)
         {
@@ -95,12 +91,12 @@ namespace ContasAReceber.controller
             headerTable.TotalWidth = 560;
             headerTable.LockedWidth = true;
             headerTable.HorizontalAlignment = Element.ALIGN_CENTER;
-             Image logo = Image.GetInstance(ConfigurationManager.AppSettings["Logo"]);
-             logo.ScaleAbsolute(100f, 40f);
-             PdfPCell logoCell = new PdfPCell(logo);
-             logoCell.HorizontalAlignment = Element.ALIGN_LEFT;
-             logoCell.Border = PdfPCell.NO_BORDER;
-             headerTable.AddCell(logoCell);
+            Image logo = Image.GetInstance(ConfigurationManager.AppSettings["Logo"]);
+            logo.ScaleAbsolute(100f, 40f);
+            PdfPCell logoCell = new PdfPCell(logo);
+            logoCell.HorizontalAlignment = Element.ALIGN_LEFT;
+            logoCell.Border = PdfPCell.NO_BORDER;
+            headerTable.AddCell(logoCell);
             PdfPCell headerCell = new PdfPCell();
             headerCell.HorizontalAlignment = Element.ALIGN_RIGHT;
             headerCell.VerticalAlignment = Element.ALIGN_MIDDLE;
@@ -145,7 +141,7 @@ namespace ContasAReceber.controller
         private void Titulo(Document doc)
         {
             Font fontTitulo = new Font(BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, BaseFont.NOT_EMBEDDED), 30);
-            Paragraph titulo = new Paragraph("\n\nContas a Receber \n\n", fontTitulo);
+            Paragraph titulo = new Paragraph("\n\n Clientes \n\n", fontTitulo);
             titulo.Alignment = Element.ALIGN_CENTER;
             titulo.SpacingBefore = -100f;
             titulo.SpacingAfter = -20f;
@@ -182,46 +178,11 @@ namespace ContasAReceber.controller
                 foreach (DataGridViewCell cell in row.Cells)
                 {
                     PdfPCell cellPdf = new PdfPCell(new Phrase(cell.Value != null ? cell.Value.ToString() : string.Empty, fonteConteudo));
-                   // AjustarFormatoCelula(cell, cellPdf);
+                    // AjustarFormatoCelula(cell, cellPdf);
                     table.AddCell(cellPdf);
                 }
             }
         }
-       /* private void AjustarFormatoCelula(DataGridViewCell cell, PdfPCell cellPdf)
-        {
-            string dataFormatada = (cell.Value != null && cell.Value != DBNull.Value && DateTime.TryParse(cell.Value.ToString(), out DateTime data)) ? data.ToString("dd/MM/yyyy") : string.Empty;
-            switch (cell.OwningColumn.Name)
-            {
-                case "entrada":
-                    cellPdf.Phrase = new Phrase(dataFormatada, cellPdf.Phrase.Font);
-                    cellPdf.HorizontalAlignment = Element.ALIGN_CENTER;
-                    break;
-                case "valor":
-                    string valorMonetario = string.Format("{0:C}", cell.Value != null ? cell.Value : 0);
-                    cellPdf.Phrase = new Phrase(valorMonetario, cellPdf.Phrase.Font);
-                    cellPdf.HorizontalAlignment = Element.ALIGN_RIGHT;
-                    break;
-                case "documento":
-                    cellPdf.HorizontalAlignment = Element.ALIGN_CENTER;
-                    break;
-                case "tipo":
-                    cellPdf.HorizontalAlignment = Element.ALIGN_CENTER;
-                    break;
-                case "situacao":
-                    cellPdf.HorizontalAlignment = Element.ALIGN_CENTER;
-                    break;
-                case "vencimento":
-                    cellPdf.Phrase = new Phrase(dataFormatada, cellPdf.Phrase.Font);
-                    cellPdf.HorizontalAlignment = Element.ALIGN_CENTER;
-                    break;
-                case "pagamento":
-                    cellPdf.Phrase = new Phrase(dataFormatada, cellPdf.Phrase.Font);
-                    cellPdf.HorizontalAlignment = Element.ALIGN_CENTER;
-                    break;
-            }
-
-        }*/
-
         private string PegarCaminho()
         {
             string caminho = "";

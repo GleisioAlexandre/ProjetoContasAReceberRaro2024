@@ -39,24 +39,24 @@ namespace ContasAReceber.model
             bd.Fechaconexao();
             return dt;
         }
-        public void InserirClientes(String nome, String cadastropessoa, String nomeContato, String telefone, String celular, String email ,String cep, String logradouro, int numero, String complemento, String bairro, String cidade, String uf, int pj)
+        public void InserirClientes(String nome, String cadastropessoa, String nomecontato, String telefone, String celular, String email ,String cep, String logradouro, int numero, String complemento, String bairro, String cidade, String uf, int pj)
         {
             BancoDeDados bd = new BancoDeDados(stringDeConexao);
             FbCommand comando = new FbCommand($"insert into pessoa (nome, cadastrodepessoa, nomecontato, telefone, celular, email, cep, logradouro, numero, complemento, bairro, cidade, uf, pj) values ('{nome}', '{cadastropessoa}', '{nomeContato}', '{telefone}', '{celular}', '{email}', '{cep}', '{logradouro}', {numero}, '{complemento}', '{bairro}', '{cidade}', '{uf}', {pj});", bd.conexao(stringDeConexao));
-            comando.Parameters.AddWithValue($"{nome}", nome);
-            comando.Parameters.AddWithValue($"{cadastropessoa}", cadastropessoa);
-            comando.Parameters.AddWithValue($"{nomeContato}", nomeContato);
-            comando.Parameters.AddWithValue($"{telefone}", telefone);
-            comando.Parameters.AddWithValue($"{celular}", celular);
-            comando.Parameters.AddWithValue($"{email}", email);
-            comando.Parameters.AddWithValue($"{cep}", cep);
-            comando.Parameters.AddWithValue($"{logradouro}", logradouro);
-            comando.Parameters.AddWithValue($"{numero}", numero);
-            comando.Parameters.AddWithValue($"{complemento}", complemento);
-            comando.Parameters.AddWithValue($"{bairro}", bairro);
-            comando.Parameters.AddWithValue($"{cidade}", cidade);
-            comando.Parameters.AddWithValue($"{uf}", uf);
-            comando.Parameters.AddWithValue($"{pj}", pj);
+            comando.Parameters.AddWithValue("@nome", nome);
+            comando.Parameters.AddWithValue("@cadastrodepessoa", cadastropessoa);
+            comando.Parameters.AddWithValue("@nomecontato", nomecontato);
+            comando.Parameters.AddWithValue("@telefone", telefone);
+            comando.Parameters.AddWithValue("@celular", celular);
+            comando.Parameters.AddWithValue("@email", email);
+            comando.Parameters.AddWithValue("@cep", cep);
+            comando.Parameters.AddWithValue("@logradouro", logradouro);
+            comando.Parameters.AddWithValue("@numero", numero);
+            comando.Parameters.AddWithValue("@complemento", complemento);
+            comando.Parameters.AddWithValue("@bairro", bairro);
+            comando.Parameters.AddWithValue("@cidade", cidade);
+            comando.Parameters.AddWithValue("@uf", uf);
+            comando.Parameters.AddWithValue("@pj", pj);
             bd.AbreConexao();
             comando.ExecuteNonQuery();
             bd.Fechaconexao();
@@ -90,14 +90,16 @@ namespace ContasAReceber.model
             bd.Fechaconexao();
             return obj;
         }
-        public void AtualizarCliente(String nome, String cadastrodepessoa, String cep, String logradouro, String numero, String complemento, String bairro, String cidade, String uf, Int32 pj, Int32 idpessoa)
+        public void AtualizarCliente(String nome, String cadastropessoa, String nomecontato, String telefone, String celular, String email ,String cep, String logradouro, Int32 numero, String complemento, String bairro, String cidade, String uf, Int32 pj, Int32 idpessoa)
         {
             BancoDeDados bd = new BancoDeDados(stringDeConexao);
-            FbCommand comando = new FbCommand(@"update pessoa set nome = @nome, cadastrodepessoa = @cadastrodepessoa," +
-                " cep = @cep , logradouro = @logradouro, numero = @numero, complemento = @complemento," +
-                " bairro = @bairro, cidade = @cidade, uf = @uf, pj = @pj where idpessoa = @idpessoa;", bd.conexao(stringDeConexao));
+            FbCommand comando = new FbCommand($"update pessoa set nome = @nome, cadastrodepessoa = @cadastrodepessoa, nomecontato = @nomecontato, telefone = @telefone, celular = @celular, email = @email, cep = @cep , logradouro = @logradouro, numero = @numero, complemento = @complemento, bairro = @bairro, cidade = @cidade, uf = @uf, pj = @pj where idpessoa = @idpessoa;", bd.conexao(stringDeConexao));
             comando.Parameters.AddWithValue("@nome", nome);
-            comando.Parameters.AddWithValue("@cadastrodepessoa", cadastrodepessoa);
+            comando.Parameters.AddWithValue("@cadastrodepessoa", cadastropessoa);
+            comando.Parameters.AddWithValue("@nomecontato", nomecontato);
+            comando.Parameters.AddWithValue("@telefone", telefone);
+            comando.Parameters.AddWithValue("@celular", celular);
+            comando.Parameters.AddWithValue("@email", email);
             comando.Parameters.AddWithValue("@cep", cep);
             comando.Parameters.AddWithValue("@logradouro", logradouro);
             comando.Parameters.AddWithValue("@numero", numero);

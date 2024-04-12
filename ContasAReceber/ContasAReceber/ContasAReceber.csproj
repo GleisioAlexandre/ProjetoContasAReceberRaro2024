@@ -186,6 +186,7 @@
   <ItemGroup>
     <Compile Include="controller\OperacoesClientes.cs" />
     <Compile Include="controller\OperacoesContas.cs" />
+    <Compile Include="controller\Relatorio.cs" />
     <Compile Include="controller\RelatoriosClientes.cs" />
     <Compile Include="model\BancoDeDados.cs" />
     <Compile Include="model\CepInfo.cs" />
