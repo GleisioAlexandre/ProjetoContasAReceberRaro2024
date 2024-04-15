@@ -51,9 +51,7 @@
             this.txtCliente = new System.Windows.Forms.TextBox();
             this.cbxPj = new System.Windows.Forms.CheckBox();
             this.lblNomePessoa = new System.Windows.Forms.Label();
-            this.btnNovoCliente = new System.Windows.Forms.Button();
             this.btnCadastrarCliente = new System.Windows.Forms.Button();
-            this.btnPesquisarCliente = new System.Windows.Forms.Button();
             this.btnEditarCliente = new System.Windows.Forms.Button();
             this.btnDeletarCliente = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -68,6 +66,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtNomeContato = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -141,6 +140,7 @@
             this.txtUf.Name = "txtUf";
             this.txtUf.Size = new System.Drawing.Size(66, 29);
             this.txtUf.TabIndex = 8;
+            this.txtUf.TextChanged += new System.EventHandler(this.txtUf_TextChanged);
             // 
             // label5
             // 
@@ -157,6 +157,7 @@
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(591, 29);
             this.txtCidade.TabIndex = 7;
+            this.txtCidade.TextChanged += new System.EventHandler(this.txtCidade_TextChanged);
             // 
             // label4
             // 
@@ -173,6 +174,7 @@
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(216, 29);
             this.txtBairro.TabIndex = 6;
+            this.txtBairro.TextChanged += new System.EventHandler(this.txtBairro_TextChanged);
             // 
             // label3
             // 
@@ -189,6 +191,7 @@
             this.txtLogradouro.Name = "txtLogradouro";
             this.txtLogradouro.Size = new System.Drawing.Size(589, 29);
             this.txtLogradouro.TabIndex = 3;
+            this.txtLogradouro.TextChanged += new System.EventHandler(this.txtLogradouro_TextChanged);
             // 
             // label2
             // 
@@ -302,21 +305,10 @@
             this.lblNomePessoa.TabIndex = 0;
             this.lblNomePessoa.Text = "Razão Social";
             // 
-            // btnNovoCliente
-            // 
-            this.btnNovoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNovoCliente.Location = new System.Drawing.Point(12, 598);
-            this.btnNovoCliente.Name = "btnNovoCliente";
-            this.btnNovoCliente.Size = new System.Drawing.Size(97, 32);
-            this.btnNovoCliente.TabIndex = 2;
-            this.btnNovoCliente.Text = "Novo";
-            this.btnNovoCliente.UseVisualStyleBackColor = true;
-            this.btnNovoCliente.Click += new System.EventHandler(this.btnNovoCliente_Click);
-            // 
             // btnCadastrarCliente
             // 
             this.btnCadastrarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrarCliente.Location = new System.Drawing.Point(167, 598);
+            this.btnCadastrarCliente.Location = new System.Drawing.Point(13, 598);
             this.btnCadastrarCliente.Name = "btnCadastrarCliente";
             this.btnCadastrarCliente.Size = new System.Drawing.Size(97, 32);
             this.btnCadastrarCliente.TabIndex = 3;
@@ -324,21 +316,10 @@
             this.btnCadastrarCliente.UseVisualStyleBackColor = true;
             this.btnCadastrarCliente.Click += new System.EventHandler(this.btnCadastrarCliente_Click);
             // 
-            // btnPesquisarCliente
-            // 
-            this.btnPesquisarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPesquisarCliente.Location = new System.Drawing.Point(322, 598);
-            this.btnPesquisarCliente.Name = "btnPesquisarCliente";
-            this.btnPesquisarCliente.Size = new System.Drawing.Size(97, 32);
-            this.btnPesquisarCliente.TabIndex = 4;
-            this.btnPesquisarCliente.Text = "Pesquisar";
-            this.btnPesquisarCliente.UseVisualStyleBackColor = true;
-            this.btnPesquisarCliente.Click += new System.EventHandler(this.btnPesquisarCliente_Click);
-            // 
             // btnEditarCliente
             // 
             this.btnEditarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditarCliente.Location = new System.Drawing.Point(477, 598);
+            this.btnEditarCliente.Location = new System.Drawing.Point(220, 598);
             this.btnEditarCliente.Name = "btnEditarCliente";
             this.btnEditarCliente.Size = new System.Drawing.Size(97, 32);
             this.btnEditarCliente.TabIndex = 5;
@@ -349,7 +330,7 @@
             // btnDeletarCliente
             // 
             this.btnDeletarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeletarCliente.Location = new System.Drawing.Point(632, 598);
+            this.btnDeletarCliente.Location = new System.Drawing.Point(427, 598);
             this.btnDeletarCliente.Name = "btnDeletarCliente";
             this.btnDeletarCliente.Size = new System.Drawing.Size(97, 32);
             this.btnDeletarCliente.TabIndex = 6;
@@ -476,17 +457,27 @@
             this.label8.TabIndex = 0;
             this.label8.Text = "Nome do Contato";
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Location = new System.Drawing.Point(634, 598);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(97, 32);
+            this.btnCancelar.TabIndex = 8;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
             // FrmOperacoesClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(745, 639);
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.btnDeletarCliente);
             this.Controls.Add(this.btnEditarCliente);
-            this.Controls.Add(this.btnPesquisarCliente);
             this.Controls.Add(this.btnCadastrarCliente);
-            this.Controls.Add(this.btnNovoCliente);
             this.MaximizeBox = false;
             this.Name = "FrmOperacoesClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -531,9 +522,7 @@
         private System.Windows.Forms.Label lblNomePessoa;
         private System.Windows.Forms.Label lblTipoPessoa;
         private System.Windows.Forms.TextBox txtCliente;
-        private System.Windows.Forms.Button btnNovoCliente;
         private System.Windows.Forms.Button btnCadastrarCliente;
-        private System.Windows.Forms.Button btnPesquisarCliente;
         private System.Windows.Forms.Button btnEditarCliente;
         private System.Windows.Forms.Button btnDeletarCliente;
         private System.Windows.Forms.Label lblIdCliente;
@@ -550,5 +539,6 @@
         private System.Windows.Forms.TextBox txtNomeContato;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.MaskedTextBox txtCpfCnpj;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }

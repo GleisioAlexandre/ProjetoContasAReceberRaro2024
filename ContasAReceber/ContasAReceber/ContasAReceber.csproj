@@ -184,6 +184,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="controller\ManipuladorTextBox.cs" />
     <Compile Include="controller\OperacoesClientes.cs" />
     <Compile Include="controller\OperacoesContas.cs" />
     <Compile Include="controller\Relatorio.cs" />

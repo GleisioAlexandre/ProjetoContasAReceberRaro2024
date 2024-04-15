@@ -18,6 +18,8 @@ namespace ContasAReceber.View
         private FrmContas contas;
         private int LocalizacaoX;
         private int LocalizacaoY;
+        OperacoesContas op = new OperacoesContas();
+        ManipuladorTextBox manipuladorText = new ManipuladorTextBox();
         public FrmOperacoesContas(FrmContas frmContas)
         {
             InitializeComponent();
@@ -28,26 +30,23 @@ namespace ContasAReceber.View
         }
         public void DadosDoFormContas(string stringDoFormContas)
         {
-            
                     string documento = stringDoFormContas;
-                    OperacoesContas opContas = new OperacoesContas();
-                    lblConta.Text = opContas.PesquisarDivida(documento)[0].ToString();
-                    dtEntrada.Text = opContas.PesquisarDivida(documento)[1].ToString();
-                    txtCodigoCliente.Text = opContas.PesquisarDivida(documento)[2].ToString();
-                    txtNomeCliente.Text = opContas.PesquisarDivida(documento)[3].ToString();
-                    txtValor.Text = opContas.PesquisarDivida(documento)[4].ToString();
-                    txtDocumento.Text = opContas.PesquisarDivida(documento)[5].ToString();
-                    cbxClass.SelectedIndex = Int32.Parse(opContas.PesquisarDivida(documento)[6].ToString()) - 1;
-                    cbxSituacao.SelectedIndex = Int32.Parse(opContas.PesquisarDivida(documento)[7].ToString()) - 1;
-                    dtVencimento.Text = opContas.PesquisarDivida(documento)[8].ToString();
-                    dtPagamento.Text = opContas.PesquisarDivida(documento)[9].ToString();
+                    lblConta.Text = op.PesquisarDivida(documento)[0].ToString();
+                    dtEntrada.Text = op.PesquisarDivida(documento)[1].ToString();
+                    txtCodigoCliente.Text = op.PesquisarDivida(documento)[2].ToString();
+                    txtNomeCliente.Text = op.PesquisarDivida(documento)[3].ToString();
+                    txtValor.Text = op.PesquisarDivida(documento)[4].ToString();
+                    txtDocumento.Text = op.PesquisarDivida(documento)[5].ToString();
+                    cbxClass.SelectedIndex = Int32.Parse(op.PesquisarDivida(documento)[6].ToString()) - 1;
+                    cbxSituacao.SelectedIndex = Int32.Parse(op.PesquisarDivida(documento)[7].ToString()) - 1;
+                    dtVencimento.Text = op.PesquisarDivida(documento)[8].ToString();
+                    dtPagamento.Text = op.PesquisarDivida(documento)[9].ToString();
                     btnDeletar.Enabled = true;
                     btnAtualizar.Enabled = true;
                     btnInserir.Enabled = false;
                     txtValor.Focus();
                     txtDocumento.Focus();
         }
-
         private void FrmInserirContas_Load(object sender, EventArgs e)
         {
             if (txtDocumento.Text.Equals(""))
@@ -57,13 +56,7 @@ namespace ContasAReceber.View
                 dtPagamento.Text = DateTime.Now.ToString("dd/MM/yyyy");
                 txtValor.Text = "0,00";
             }
-            /*if (dtPagamento.Text > dtVencimento.Value.Date)
-            {
-                cbxSituacao.SelectedIndex = 1;
-            }*/
-
         }
-
         private void btnPesquisarCliente_Click(object sender, EventArgs e)
         {
            if (txtNomeCliente.Text.Equals(""))
@@ -74,7 +67,7 @@ namespace ContasAReceber.View
             {
                 try
                 {
-                    OperacoesContas op = new OperacoesContas();
+                    
                     txtCodigoCliente.Text = op.PesquisarCliente(txtNomeCliente.Text)[0].ToString();
                     txtNomeCliente.Text = op.PesquisarCliente(txtNomeCliente.Text)[1].ToString();
                 }
@@ -86,8 +79,7 @@ namespace ContasAReceber.View
         }
         private void txtNomeCliente_TextChanged(object sender, EventArgs e)
         {
-            txtNomeCliente.Text = txtNomeCliente.Text.ToUpper();
-            txtNomeCliente.SelectionStart = txtNomeCliente.Text.Length;
+            manipuladorText.TextoMaiusculo(txtNomeCliente);
         }
         private void txtValor_Validated(object sender, EventArgs e)
         {
@@ -100,8 +92,6 @@ namespace ContasAReceber.View
                 txtValor.Text = double.Parse(txtValor.Text).ToString("N2");
             }
         }
-
-
         private void txtValor_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.' && e.KeyChar != ','))
@@ -109,22 +99,16 @@ namespace ContasAReceber.View
                 e.Handled = true;
             }
         }
-
         private void txtDocumento_TextChanged(object sender, EventArgs e)
         {
-            txtDocumento.Text = txtDocumento.Text.ToUpper();
-            txtDocumento.SelectionStart = txtDocumento.Text.Length;
+            manipuladorText.TextoMaiusculo(txtDocumento);
         }
-
-
         private void txtNomeCliente_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
                 try
                 {
-
-                    OperacoesContas op = new OperacoesContas();
                     txtCodigoCliente.Text = op.PesquisarCliente(txtNomeCliente.Text)[0].ToString();
                     txtNomeCliente.Text = op.PesquisarCliente(txtNomeCliente.Text)[1].ToString();
                     txtValor.Focus();
@@ -135,7 +119,6 @@ namespace ContasAReceber.View
                 }
             }
         }
-
         private void btnInserir_Click(object sender, EventArgs e)
         {
             try
@@ -148,7 +131,6 @@ namespace ContasAReceber.View
                 {
                     if (MessageBox.Show("Verifique se todos os dados foram inseridos corretamente! \n Se tudo estiver correto clique em SIM", "Informação!", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                     {
-                        OperacoesContas op = new OperacoesContas();
                         op.InserirConta(dtEntrada.Text, Int32.Parse(txtCodigoCliente.Text), Double.Parse(txtValor.Text), txtDocumento.Text, (cbxClass.SelectedIndex)+1, (cbxSituacao.SelectedIndex)+1, dtVencimento.Text, dtPagamento.Text);
                         this.Close();
                         contas.AtualizaGridContas();
@@ -157,68 +139,64 @@ namespace ContasAReceber.View
                     {
                         this.Close();
                     }
+                    MessageBox.Show("Dados inseridos com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro: " + ex, "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Erro ao Tentar Salvar as informações!\n" + ex, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        
-
         private void btnDeletar_Click(object sender, EventArgs e)
         {
-            if (txtDocumento.Text.Equals(""))
+            try
             {
-                MessageBox.Show("Todos os campos devem ser preenchidos para a exclusão do registro!", "Informação!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (txtDocumento.Text.Equals(""))
+                {
+                    MessageBox.Show("Todos os campos devem ser preenchidos para a exclusão do registro!", "Informação!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+                else
+                {
+                        if (MessageBox.Show("Tem certeza de que quer excluir este registro ?", "Alerta", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+                        {
+                            op.DeletarContas(Int32.Parse(lblConta.Text));
+                            contas.AtualizaGridContas();
+                            this.Close();
+                        }
+                        else
+                        {
+                            this.Close();
+                        }
+                    MessageBox.Show("Registro excluido com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                try
-                {
-                    if (MessageBox.Show("Tem certeza de que quer excluir este registro ?", "Alerta", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
-                    {
-                        OperacoesContas op = new OperacoesContas();
-                        op.DeletarContas(Int32.Parse(lblConta.Text));
-                        contas.AtualizaGridContas();
-                        this.Close();
-                    }
-                    else
-                    {
-                        this.Close();
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Erro: " + ex, "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                        MessageBox.Show("Erro: " + ex, "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         private void btnAtualizar_Click(object sender, EventArgs e)
         {
             try
             {
-                OperacoesContas op = new OperacoesContas();
                 op.AtualizaContas(dtEntrada.Text , Int32.Parse(txtCodigoCliente.Text), Double.Parse(txtValor.Text), txtDocumento.Text, (cbxClass.SelectedIndex + 1), (cbxSituacao.SelectedIndex + 1), dtVencimento.Text, dtPagamento.Text, Int32.Parse(lblConta.Text));
                 this.Close();
                 contas.AtualizaGridContas();
+                MessageBox.Show("Registro atualizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Erro: " + ex, "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         private void FrmOperacoesContas_Move(object sender, EventArgs e)
         {
             this.Location = new System.Drawing.Point(LocalizacaoX, LocalizacaoY);
         }
-
-        private void dtPagamento_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        private void btnCancelar_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }

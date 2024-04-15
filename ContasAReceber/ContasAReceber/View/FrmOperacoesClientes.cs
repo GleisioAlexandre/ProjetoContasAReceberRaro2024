@@ -20,7 +20,10 @@ namespace ContasAReceber.View
         private FrmClientes clientes;
         private int LocalizacaoX;
         private int LocalizacaoY;
+        OperacoesClientes operacoesClientes = new OperacoesClientes();
+        ManipuladorTextBox manipuladorTextBox = new ManipuladorTextBox();
         public FrmOperacoesClientes(FrmClientes frmClientes)
+
         {
             InitializeComponent();
             LocalizacaoX = (Screen.PrimaryScreen.Bounds.Width - this.Width)/2;
@@ -31,22 +34,22 @@ namespace ContasAReceber.View
         public void DadosDoFormClientes(string stringDoFormClientes)
         {
             string nome = stringDoFormClientes;
-            OperacoesClientes opClientes = new OperacoesClientes();
-            lblIdCliente.Text = opClientes.PesquisaCliente(nome)[0].ToString();
-            txtCliente.Text = opClientes.PesquisaCliente(nome)[1].ToString();
            
-            txtNomeContato.Text = opClientes.PesquisaCliente(nome)[3].ToString();
-            txtTelefone.Text = opClientes.PesquisaCliente(nome)[4].ToString();
-            txtCelular.Text = opClientes.PesquisaCliente(nome)[5].ToString();
-            txtEmail.Text = opClientes.PesquisaCliente(nome)[6].ToString();
-            txtCep.Text = opClientes.PesquisaCliente(nome)[7].ToString();
-            txtLogradouro.Text = opClientes.PesquisaCliente(nome)[8].ToString();
-            txtNumero.Text = opClientes.PesquisaCliente(nome)[9].ToString();
-            txtComplemento.Text = opClientes.PesquisaCliente(nome)[10].ToString();
-            txtBairro.Text = opClientes.PesquisaCliente(nome)[11].ToString();
-            txtCidade.Text = opClientes.PesquisaCliente(nome)[12].ToString();
-            txtUf.Text = opClientes.PesquisaCliente(nome)[13].ToString();
-            if (opClientes.PesquisaCliente(nome)[14].Equals(1)/*cbxPj*/)
+            lblIdCliente.Text = operacoesClientes.PesquisaCliente(nome)[0].ToString();
+            txtCliente.Text = operacoesClientes.PesquisaCliente(nome)[1].ToString();
+           
+            txtNomeContato.Text = operacoesClientes.PesquisaCliente(nome)[3].ToString();
+            txtTelefone.Text = operacoesClientes.PesquisaCliente(nome)[4].ToString();
+            txtCelular.Text = operacoesClientes.PesquisaCliente(nome)[5].ToString();
+            txtEmail.Text = operacoesClientes .PesquisaCliente(nome)[6].ToString();
+            txtCep.Text = operacoesClientes .PesquisaCliente(nome)[7].ToString();
+            txtLogradouro.Text = operacoesClientes .PesquisaCliente(nome)[8].ToString();
+            txtNumero.Text = operacoesClientes .PesquisaCliente(nome)[9].ToString();
+            txtComplemento.Text = operacoesClientes .PesquisaCliente(nome)[10].ToString();
+            txtBairro.Text = operacoesClientes .PesquisaCliente(nome)[11].ToString();
+            txtCidade.Text = operacoesClientes .PesquisaCliente(nome)[12].ToString();
+            txtUf.Text = operacoesClientes .PesquisaCliente(nome)[13].ToString();
+            if (operacoesClientes .PesquisaCliente(nome)[14].Equals(1)/*cbxPj*/)
             {
                 cbxPj.Checked = true;
             }
@@ -54,23 +57,24 @@ namespace ContasAReceber.View
             {
                 cbxPj.Checked = false;
             }
-             txtCpfCnpj.Text = opClientes.PesquisaCliente(nome)[2].ToString();
+             txtCpfCnpj.Text = operacoesClientes .PesquisaCliente(nome)[2].ToString();
         }
         private void FrmOperacoesClientes_Load(object sender, EventArgs e)
         {
-            if (txtCliente.Text != "")
+            if (txtCliente.Text.Equals(""))
             {
-                btnNovoCliente.Enabled = false;
+                btnEditarCliente.Enabled = false;
+                btnDeletarCliente.Enabled = false;
+            }
+            else
+            {
                 btnCadastrarCliente.Enabled = false;
-                btnPesquisarCliente.Enabled = false;
             }
         }
-
         private void FrmOperacoesClientes_Move(object sender, EventArgs e)
         {
             this.Location = new System.Drawing.Point(LocalizacaoX, LocalizacaoY);
         }
-
         private void btnPesquisaCep(object sender, EventArgs e)
         {
             try
@@ -92,38 +96,52 @@ namespace ContasAReceber.View
 
         private void cbxPj_CheckedChanged(object sender, EventArgs e)
         {
-            if (cbxPj.Checked == true)
+            manipuladorTextBox.PersonalizaDadosPessoais(cbxPj.Checked, lblNomePessoa, lblTipoPessoa, txtCpfCnpj);
+        }
+
+        private void btnEditarCliente_Click(object sender, EventArgs e)
+        {
+            int pj;
+            try
             {
-                lblNomePessoa.Text = "Razão Social";
-                lblTipoPessoa.Text = "CNPJ";
-                txtCpfCnpj.Mask = "##,###,###/####-##";
-                txtCpfCnpj.Width = 171;
+                if (cbxPj.Checked == true)
+                {
+                    pj = 1;
+                }
+                else
+                {
+                    pj = 0;
+                }
+                OperacoesClientes opcliente = new OperacoesClientes();
+                opcliente.AtualizarCliente(txtCliente.Text, txtCpfCnpj.Text, txtNomeContato.Text, txtTelefone.Text, txtCelular.Text, txtEmail.Text, txtCep.Text, txtLogradouro.Text, Int32.Parse(txtNumero.Text), txtComplemento.Text, txtBairro.Text, txtCidade.Text, txtUf.Text, pj, Int32.Parse(lblIdCliente.Text));
+                clientes.AtualizaGriCliente();
+                this.Close();
             }
-            else
+            catch (Exception ex)
             {
-                lblNomePessoa.Text = "Nome";
-                lblTipoPessoa.Text = "CPF";
-                txtCpfCnpj.Mask = "###,###,###-##";
-                txtCpfCnpj.Width = 135;
+                MessageBox.Show("Erro: " + ex, "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private void btnNovoCliente_Click(object sender, EventArgs e)
+        private void btnDeletarCliente_Click(object sender, EventArgs e)
         {
-            lblIdCliente.Text = "";
-            cbxPj.Checked = false;
-            txtCliente.Clear();
-            txtCpfCnpj.Clear();
-            txtCep.Clear();
-            txtLogradouro.Clear();
-            txtNumero.Clear();
-            txtComplemento.Clear();
-            txtBairro.Clear();
-            txtCidade.Clear();
-            txtUf.Clear();
-            if (btnCadastrarCliente.Enabled == false)
+            if (MessageBox.Show("Tem Certeza que deseja remover o registro?", "Alerta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                btnCadastrarCliente.Enabled = true;
+                try
+                {
+                    OperacoesClientes opclinete = new OperacoesClientes();
+                    opclinete.DeletaCliente(Int32.Parse(lblIdCliente.Text));
+
+                    this.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro: " + ex, "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+
             }
         }
 
@@ -150,124 +168,60 @@ namespace ContasAReceber.View
                 MessageBox.Show("Erro: " + ex, "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        private void txtCliente_TextChanged(object sender, EventArgs e)
-        {
-            txtCliente.Text = txtCliente.Text.ToUpper();
-            txtCliente.SelectionStart = txtCliente.Text.Length;
-        }
-
-        private void txtComplemento_TextChanged(object sender, EventArgs e)
-        {
-            txtComplemento.Text = txtComplemento.Text.ToUpper();
-            txtComplemento.SelectionStart = txtComplemento.Text.Length;
-        }
-
-        private void btnPesquisarCliente_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Int32 pj;
-                String cliente = txtCliente.Text;
-                OperacoesClientes opcliente = new OperacoesClientes();
-                lblIdCliente.Text = opcliente.PesquisaCliente(cliente)[0].ToString();
-                txtCliente.Text = opcliente.PesquisaCliente(cliente)[1].ToString();
-                txtCep.Text = opcliente.PesquisaCliente(cliente)[3].ToString();
-                txtLogradouro.Text = opcliente.PesquisaCliente(cliente)[4].ToString();
-                txtNumero.Text = opcliente.PesquisaCliente(cliente)[5].ToString();
-                txtComplemento.Text = opcliente.PesquisaCliente(cliente)[6].ToString();
-                txtBairro.Text = opcliente.PesquisaCliente(cliente)[7].ToString();
-                txtCidade.Text = opcliente.PesquisaCliente(cliente)[8].ToString();
-                txtUf.Text = opcliente.PesquisaCliente(cliente)[9].ToString();
-                pj = Int32.Parse(opcliente.PesquisaCliente(cliente)[10].ToString());
-                if (pj == 1)
-                {
-                    cbxPj.Checked = true;
-                }
-                else
-                {
-                    cbxPj.Checked = false;
-                }
-                txtCpfCnpj.Text = opcliente.PesquisaCliente(cliente)[2].ToString();
-               
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro: " + ex, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            btnCadastrarCliente.Enabled = false;
-        }
-
-        private void btnEditarCliente_Click(object sender, EventArgs e)
-        {
-            int pj;
-            try
-            {
-                
-                if (cbxPj.Checked == true)
-                {
-                    pj = 1;
-                }
-                else
-                {
-                    pj = 0;
-                }
-                OperacoesClientes opcliente = new OperacoesClientes();
-                opcliente.AtualizarCliente(txtCliente.Text, txtCpfCnpj.Text, txtNomeContato.Text, txtTelefone.Text, txtCelular.Text, txtEmail.Text ,txtCep.Text, txtLogradouro.Text, Int32.Parse(txtNumero.Text), txtComplemento.Text, txtBairro.Text, txtCidade.Text, txtUf.Text, pj, Int32.Parse(lblIdCliente.Text));
-                clientes.AtualizaGriCliente();
-                this.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro: " + ex, "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void btnDeletarCliente_Click(object sender, EventArgs e)
-        {
-           if (MessageBox.Show("Tem Certeza que deseja remover o registro?","Alerta",MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                try
-                {
-                    OperacoesClientes opclinete = new OperacoesClientes();
-                    opclinete.DeletaCliente(Int32.Parse(lblIdCliente.Text));
-                   
-                    this.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Erro: " + ex, "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            else
-            {
-
-            }
-        }
-
         private void FrmOperacoesClientes_FormClosed(object sender, FormClosedEventArgs e)
         {
             clientes.AtualizaGriCliente();
         }
 
+        private void txtCliente_TextChanged(object sender, EventArgs e)
+        {
+            manipuladorTextBox.TextoMaiusculo(txtCliente);
+        }
+
+        private void txtComplemento_TextChanged(object sender, EventArgs e)
+        {
+            manipuladorTextBox.TextoMaiusculo(txtComplemento);
+        }
+
         private void txtNumero_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
-            {
-                e.Handled = true;
-            }
+            txtNumero.KeyPress += manipuladorTextBox.TextBoxNumerico;
         }
 
         private void txtNomeContato_TextChanged(object sender, EventArgs e)
         {
-            txtNomeContato.Text = txtNomeContato.Text.ToUpper();
-            txtNomeContato.SelectionStart = txtNomeContato.Text.Length;
+            manipuladorTextBox.TextoMaiusculo(txtNomeContato);
         }
 
         private void txtEmail_TextChanged(object sender, EventArgs e)
         {
-            txtEmail.Text = txtEmail.Text.ToUpper();
-            txtEmail.SelectionStart = txtEmail.Text.Length;
+            manipuladorTextBox.TextoMaiusculo(txtEmail);
+        }
+
+        private void txtLogradouro_TextChanged(object sender, EventArgs e)
+        {
+            manipuladorTextBox.TextoMaiusculo(txtLogradouro);
+        }
+
+        private void txtBairro_TextChanged(object sender, EventArgs e)
+        {
+
+            manipuladorTextBox.TextoMaiusculo(txtBairro);
+        }
+
+        private void txtCidade_TextChanged(object sender, EventArgs e)
+        {
+            manipuladorTextBox.TextoMaiusculo(txtCidade);
+        }
+
+        private void txtUf_TextChanged(object sender, EventArgs e)
+        {
+            manipuladorTextBox.TextoMaiusculo(txtUf);
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

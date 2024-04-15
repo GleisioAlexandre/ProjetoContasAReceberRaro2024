@@ -37,6 +37,8 @@
             this.txtNomeCliente = new System.Windows.Forms.TextBox();
             this.btnInserir = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dtPagamento = new System.Windows.Forms.TextBox();
+            this.dtVencimento = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -49,10 +51,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnDeletar = new System.Windows.Forms.Button();
             this.btnAtualizar = new System.Windows.Forms.Button();
-            this.lblConta = new System.Windows.Forms.Label();
             this.dtEntrada = new System.Windows.Forms.TextBox();
-            this.dtVencimento = new System.Windows.Forms.TextBox();
-            this.dtPagamento = new System.Windows.Forms.TextBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.lblConta = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -132,7 +133,7 @@
             // btnInserir
             // 
             this.btnInserir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInserir.Location = new System.Drawing.Point(12, 479);
+            this.btnInserir.Location = new System.Drawing.Point(15, 479);
             this.btnInserir.Name = "btnInserir";
             this.btnInserir.Size = new System.Drawing.Size(101, 37);
             this.btnInserir.TabIndex = 22;
@@ -161,6 +162,22 @@
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Informações da Divida";
+            // 
+            // dtPagamento
+            // 
+            this.dtPagamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtPagamento.Location = new System.Drawing.Point(639, 142);
+            this.dtPagamento.Name = "dtPagamento";
+            this.dtPagamento.Size = new System.Drawing.Size(100, 29);
+            this.dtPagamento.TabIndex = 31;
+            // 
+            // dtVencimento
+            // 
+            this.dtVencimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtVencimento.Location = new System.Drawing.Point(18, 142);
+            this.dtVencimento.Name = "dtVencimento";
+            this.dtVencimento.Size = new System.Drawing.Size(100, 29);
+            this.dtVencimento.TabIndex = 30;
             // 
             // label9
             // 
@@ -271,7 +288,7 @@
             // 
             this.btnDeletar.Enabled = false;
             this.btnDeletar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeletar.Location = new System.Drawing.Point(686, 477);
+            this.btnDeletar.Location = new System.Drawing.Point(462, 479);
             this.btnDeletar.Name = "btnDeletar";
             this.btnDeletar.Size = new System.Drawing.Size(101, 37);
             this.btnDeletar.TabIndex = 25;
@@ -283,13 +300,32 @@
             // 
             this.btnAtualizar.Enabled = false;
             this.btnAtualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtualizar.Location = new System.Drawing.Point(349, 479);
+            this.btnAtualizar.Location = new System.Drawing.Point(237, 479);
             this.btnAtualizar.Name = "btnAtualizar";
             this.btnAtualizar.Size = new System.Drawing.Size(101, 37);
             this.btnAtualizar.TabIndex = 24;
             this.btnAtualizar.Text = "Atualizar";
             this.btnAtualizar.UseVisualStyleBackColor = true;
             this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
+            // 
+            // dtEntrada
+            // 
+            this.dtEntrada.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtEntrada.Location = new System.Drawing.Point(651, 37);
+            this.dtEntrada.Name = "dtEntrada";
+            this.dtEntrada.Size = new System.Drawing.Size(100, 29);
+            this.dtEntrada.TabIndex = 28;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Location = new System.Drawing.Point(679, 479);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(101, 37);
+            this.btnCancelar.TabIndex = 29;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // lblConta
             // 
@@ -302,35 +338,12 @@
             this.lblConta.Text = "Conta";
             this.lblConta.Visible = false;
             // 
-            // dtEntrada
-            // 
-            this.dtEntrada.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtEntrada.Location = new System.Drawing.Point(651, 37);
-            this.dtEntrada.Name = "dtEntrada";
-            this.dtEntrada.Size = new System.Drawing.Size(100, 29);
-            this.dtEntrada.TabIndex = 28;
-            // 
-            // dtVencimento
-            // 
-            this.dtVencimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtVencimento.Location = new System.Drawing.Point(18, 142);
-            this.dtVencimento.Name = "dtVencimento";
-            this.dtVencimento.Size = new System.Drawing.Size(100, 29);
-            this.dtVencimento.TabIndex = 30;
-            // 
-            // dtPagamento
-            // 
-            this.dtPagamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtPagamento.Location = new System.Drawing.Point(639, 142);
-            this.dtPagamento.Name = "dtPagamento";
-            this.dtPagamento.Size = new System.Drawing.Size(100, 29);
-            this.dtPagamento.TabIndex = 31;
-            // 
             // FrmOperacoesContas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 528);
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.dtEntrada);
             this.Controls.Add(this.lblConta);
             this.Controls.Add(this.btnAtualizar);
@@ -378,9 +391,10 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnDeletar;
         private System.Windows.Forms.Button btnAtualizar;
-        private System.Windows.Forms.Label lblConta;
         private System.Windows.Forms.TextBox dtPagamento;
         private System.Windows.Forms.TextBox dtVencimento;
         private System.Windows.Forms.TextBox dtEntrada;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Label lblConta;
     }
 }

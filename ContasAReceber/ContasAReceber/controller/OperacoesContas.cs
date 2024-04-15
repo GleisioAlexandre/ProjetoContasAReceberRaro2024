@@ -25,13 +25,11 @@ namespace ContasAReceber.controller
         }
         public DataTable ExibGridContas()
         {
-
             return contas.ExibeGridContas();
         }
         public void InserirConta(string entrada, int idCliente, double valor, string documento, int classe, int situacao, string vencimento, string pagamento)
         {
             contas.InserirConta(entrada, idCliente, valor, documento, classe, situacao, vencimento, pagamento);
-
         }
         public object[] PesquisarDivida(String documento)
         {
@@ -56,17 +54,14 @@ namespace ContasAReceber.controller
             retorno[1] = cliente.PesquisarCliente(nome)[1];
             return retorno;
         }
-
         public void DeletarContas(Int32 idcontas)
         {
             contas.DeletarContas(idcontas);
         }
-
         public void AtualizaContas(string entrada, Int32 idcliente, Double valor, String documento, Int32 classe, Int32 situacao, string vencimento, string pagamento, int idcontas)
         {
             contas.AtualizarContas(entrada, idcliente, valor, documento, classe, situacao, vencimento, pagamento, idcontas);
         }
-
         public void GerarRelatorio(DataGridView dtgContas,  string total)
         {
             string data = DateTime.Now.ToString("ddMMyyyyhhmmss");
@@ -126,7 +121,6 @@ namespace ContasAReceber.controller
             Contato(doc);
             Titulo(doc);
         }
-       
         private void Data(Document doc)
         {
             Font fontData = new Font(BaseFont.CreateFont(BaseFont.HELVETICA_BOLD, BaseFont.CP1252, BaseFont.NOT_EMBEDDED), 8);
@@ -164,7 +158,6 @@ namespace ContasAReceber.controller
             titulo.SpacingAfter = -20f;
             doc.Add(titulo);
         }
-
         private void Conteudo(Document doc, DataGridView dtgContas)
         {
             BaseFont baseFont = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
@@ -234,7 +227,6 @@ namespace ContasAReceber.controller
             }
 
         }
-
         private string PegarCaminho()
         {
             string caminho = "";
@@ -261,7 +253,6 @@ namespace ContasAReceber.controller
                 else
                 {
                     MessageBox.Show("O arquivo PDF não foi encontrado!", "Erro ao Abrir o PDF");
-
                 }
             }
             catch (Exception ex)
@@ -280,7 +271,6 @@ namespace ContasAReceber.controller
                 base.OnStartPage(writer, document);
                 totalPaginas++;
             }
-
             // Sobrescreve o método OnEndPage para adicionar o número de página ao rodapé
             public override void OnEndPage(PdfWriter writer, Document document)
             {

@@ -109,7 +109,6 @@ namespace ContasAReceber.controller
             Contato(doc);
             Titulo(doc);
         }
-
         private void Data(Document doc)
         {
             Font fontData = new Font(BaseFont.CreateFont(BaseFont.HELVETICA_BOLD, BaseFont.CP1252, BaseFont.NOT_EMBEDDED), 8);
@@ -147,7 +146,6 @@ namespace ContasAReceber.controller
             titulo.SpacingAfter = -20f;
             doc.Add(titulo);
         }
-
         private void Conteudo(Document doc, DataGridView dtgClientes)
         {
             BaseFont baseFont = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
@@ -178,7 +176,6 @@ namespace ContasAReceber.controller
                 foreach (DataGridViewCell cell in row.Cells)
                 {
                     PdfPCell cellPdf = new PdfPCell(new Phrase(cell.Value != null ? cell.Value.ToString() : string.Empty, fonteConteudo));
-                    // AjustarFormatoCelula(cell, cellPdf);
                     table.AddCell(cellPdf);
                 }
             }
@@ -249,6 +246,9 @@ namespace ContasAReceber.controller
                     document.BottomMargin - 10,
                     0);
             }
+          
         }
+      
+       
     }
 }

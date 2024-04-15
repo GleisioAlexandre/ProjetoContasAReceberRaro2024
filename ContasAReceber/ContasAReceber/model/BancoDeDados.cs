@@ -35,7 +35,7 @@ namespace ContasAReceber.model
             }
             catch (Exception ex)
             {
-                
+                Console.WriteLine(ex);
             }
             
         }
@@ -50,7 +50,7 @@ namespace ContasAReceber.model
             }
             catch (Exception ex)
             {
-
+                Console.WriteLine(ex);
             }
         }
         

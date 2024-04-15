@@ -42,7 +42,7 @@ namespace ContasAReceber.model
         public void InserirClientes(String nome, String cadastropessoa, String nomecontato, String telefone, String celular, String email ,String cep, String logradouro, int numero, String complemento, String bairro, String cidade, String uf, int pj)
         {
             BancoDeDados bd = new BancoDeDados(stringDeConexao);
-            FbCommand comando = new FbCommand($"insert into pessoa (nome, cadastrodepessoa, nomecontato, telefone, celular, email, cep, logradouro, numero, complemento, bairro, cidade, uf, pj) values ('{nome}', '{cadastropessoa}', '{nomeContato}', '{telefone}', '{celular}', '{email}', '{cep}', '{logradouro}', {numero}, '{complemento}', '{bairro}', '{cidade}', '{uf}', {pj});", bd.conexao(stringDeConexao));
+            FbCommand comando = new FbCommand($"insert into pessoa (nome, cadastrodepessoa, nomecontato, telefone, celular, email, cep, logradouro, numero, complemento, bairro, cidade, uf, pj) values ('{nome}', '{cadastropessoa}', '{nomecontato}', '{telefone}', '{celular}', '{email}', '{cep}', '{logradouro}', {numero}, '{complemento}', '{bairro}', '{cidade}', '{uf}', {pj});", bd.conexao(stringDeConexao));
             comando.Parameters.AddWithValue("@nome", nome);
             comando.Parameters.AddWithValue("@cadastrodepessoa", cadastropessoa);
             comando.Parameters.AddWithValue("@nomecontato", nomecontato);
