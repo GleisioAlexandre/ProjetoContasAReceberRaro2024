@@ -72,15 +72,6 @@ namespace ContasAReceber.View
                 }
             }
         }
-        private void TxtNomeCliente_TextChanged(object sender, EventArgs e)
-        {
-           // AplicarFiltroNomeCliente();
-        }
-
-        private void CbxSituacao_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //AplicarFiltroSituacao();
-        }
         private void BntImprimir_Click(object sender, EventArgs e)
         {
             op.GerarRelatorio(dtgContas, lblValor.Text);
@@ -104,7 +95,11 @@ namespace ContasAReceber.View
                 FiltroSituacao();
             }
         }
-        //I*************************************Inicio dos metodos criados manualmenet*************************************************************************
+        private void dataEntrada_ValueChanged(object sender, EventArgs e)
+        {
+            FiltroData(dataEntrada.Value);
+        }
+        //*************************************Inicio dos metodos criados manualmenet*************************************************************************
         private void Filtro()
         {
             string filtro = TxtNomeCliente.Text;
@@ -158,7 +153,11 @@ namespace ContasAReceber.View
             }
         }
 
-        
+        private void FiltroData(DateTime entrada)
+        {
+            string filtroData = string.Format("entrada <= #{0}#", entrada.ToString("dd/MM/yyyy"));
+            bindingSource1.Filter = filtroData;
+        }
         private void SomaValor()
         {
             decimal total = 0;
@@ -234,7 +233,7 @@ namespace ContasAReceber.View
             frmInserirContas.ShowDialog();
         }
 
-       
+      
     }
 }
 

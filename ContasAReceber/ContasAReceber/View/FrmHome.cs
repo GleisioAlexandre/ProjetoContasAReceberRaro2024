@@ -49,5 +49,12 @@ namespace ContasAReceber.View
             configuracao.MdiParent = this;
             configuracao.Show();
         }
+
+        private void TitulosAPagar_Click(object sender, EventArgs e)
+        {
+            FrmContasAPagar contasAPagar = new FrmContasAPagar();
+            contasAPagar.MdiParent = this;
+            contasAPagar.Show();
+        }
     }
 }
