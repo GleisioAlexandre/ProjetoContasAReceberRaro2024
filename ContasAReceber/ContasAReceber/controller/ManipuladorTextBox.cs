@@ -27,6 +27,27 @@ namespace ContasAReceber.controller
             txtCidade.Clear();
             txtUf.Clear();
         }
+        public void NegacaoZero(object sender, KeyPressEventArgs e)
+        {
+            TextBox numero = (TextBox)sender;
+            if (numero.Text.Length == 0 && e.KeyChar == '0')
+            {
+
+                e.Handled = true;
+            }
+        }
+        public void TextoDouble(object sender, KeyPressEventArgs e)
+        {
+            TextBox numero = (TextBox)sender;
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.' && e.KeyChar != ',')
+            {
+                e.Handled = true;
+            }
+            if ((e.KeyChar == '.' || e.KeyChar == ',') && (numero.Text.Contains(".") || numero.Text.Contains(",")))
+            {
+                e.Handled = true;
+            }
+        }
         public void TextBoxNumerico(object sender, KeyPressEventArgs e)
         {
             TextBox numero = (TextBox)sender;
