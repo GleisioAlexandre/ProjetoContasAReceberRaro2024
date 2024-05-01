@@ -48,34 +48,17 @@ namespace ContasAReceber.View
                 txtValor.Clear();
                 txtParcelas.Clear();
                 txtValor.Focus();
+                txtValorParcela.Clear();
             }
         }
-
         private void txtValor_KeyPress(object sender, KeyPressEventArgs e)
         {
 
             txtValor.KeyPress += manipuladorText.TextoDouble;
         }
-
         private void txtParcelas_KeyPress(object sender, KeyPressEventArgs e)
         {
             txtParcelas.KeyPress += manipuladorText.NegacaoZero;
-            /*if (txtParcelas.Text == "0" || txtParcelas.Text == "")
-            {
-                txtParcelas.KeyPress += manipuladorText.TextBoxNumerico;
-            }
-            else
-            {
-                MessageBox.Show("O informe um valor valido para a parcela!", "Valor da Parcela Errado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtParcelas.Clear();
-                txtParcelas.Focus();
-
-            }*/
-        }
-
-        private void FrmContasAPagar_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -56,5 +56,12 @@ namespace ContasAReceber.View
             contasAPagar.MdiParent = this;
             contasAPagar.Show();
         }
+
+        private void fornecedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmFornecedor fornecedor = new FrmFornecedor();
+            fornecedor.MdiParent = this;
+            fornecedor.Show();
+        }
     }
 }

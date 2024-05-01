@@ -220,6 +220,12 @@
     <Compile Include="View\FrmContasAPagar.Designer.cs">
       <DependentUpon>FrmContasAPagar.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FrmFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmFornecedor.Designer.cs">
+      <DependentUpon>FrmFornecedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FrmHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -259,6 +265,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FrmContasAPagar.resx">
       <DependentUpon>FrmContasAPagar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmFornecedor.resx">
+      <DependentUpon>FrmFornecedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FrmHome.resx">
       <DependentUpon>FrmHome.cs</DependentUpon>
