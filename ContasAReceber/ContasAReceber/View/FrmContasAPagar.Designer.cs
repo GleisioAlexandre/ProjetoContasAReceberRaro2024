@@ -38,12 +38,14 @@
             this.valorparcela = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emissao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vencimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.planocontas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.obs = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cbxFornecedot = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtDocumento = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
             this.txtValorParcela = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtParcelas = new System.Windows.Forms.TextBox();
@@ -68,6 +70,7 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgContasAPagar)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
@@ -87,6 +90,7 @@
             this.valorparcela,
             this.emissao,
             this.vencimento,
+            this.planocontas,
             this.obs});
             this.dtgContasAPagar.Location = new System.Drawing.Point(0, 303);
             this.dtgContasAPagar.Name = "dtgContasAPagar";
@@ -136,6 +140,12 @@
             this.vencimento.Name = "vencimento";
             this.vencimento.ReadOnly = true;
             // 
+            // planocontas
+            // 
+            this.planocontas.HeaderText = "Plano Contas";
+            this.planocontas.Name = "planocontas";
+            this.planocontas.ReadOnly = true;
+            // 
             // obs
             // 
             this.obs.HeaderText = "OBS";
@@ -165,7 +175,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 75);
+            this.label2.Location = new System.Drawing.Point(22, 80);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(122, 20);
             this.label2.TabIndex = 0;
@@ -173,13 +183,15 @@
             // 
             // txtDocumento
             // 
-            this.txtDocumento.Location = new System.Drawing.Point(145, 72);
+            this.txtDocumento.Location = new System.Drawing.Point(145, 75);
             this.txtDocumento.Name = "txtDocumento";
             this.txtDocumento.Size = new System.Drawing.Size(100, 26);
             this.txtDocumento.TabIndex = 1;
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.txtValorParcela);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.txtParcelas);
@@ -202,10 +214,19 @@
             this.panel1.Size = new System.Drawing.Size(1165, 263);
             this.panel1.TabIndex = 0;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(13, 156);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(126, 20);
+            this.label9.TabIndex = 9;
+            this.label9.Text = "Plano de Contas";
+            // 
             // txtValorParcela
             // 
             this.txtValorParcela.BackColor = System.Drawing.Color.White;
-            this.txtValorParcela.Location = new System.Drawing.Point(1025, 110);
+            this.txtValorParcela.Location = new System.Drawing.Point(1025, 111);
             this.txtValorParcela.Name = "txtValorParcela";
             this.txtValorParcela.ReadOnly = true;
             this.txtValorParcela.Size = new System.Drawing.Size(117, 26);
@@ -215,7 +236,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(893, 110);
+            this.label8.Location = new System.Drawing.Point(893, 114);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(125, 20);
             this.label8.TabIndex = 0;
@@ -223,7 +244,7 @@
             // 
             // txtParcelas
             // 
-            this.txtParcelas.Location = new System.Drawing.Point(575, 107);
+            this.txtParcelas.Location = new System.Drawing.Point(575, 111);
             this.txtParcelas.Name = "txtParcelas";
             this.txtParcelas.Size = new System.Drawing.Size(117, 26);
             this.txtParcelas.TabIndex = 5;
@@ -234,7 +255,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(489, 110);
+            this.label7.Location = new System.Drawing.Point(489, 113);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(80, 20);
             this.label7.TabIndex = 0;
@@ -243,7 +264,7 @@
             // dataVencimento
             // 
             this.dataVencimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dataVencimento.Location = new System.Drawing.Point(1025, 78);
+            this.dataVencimento.Location = new System.Drawing.Point(1025, 80);
             this.dataVencimento.Name = "dataVencimento";
             this.dataVencimento.Size = new System.Drawing.Size(117, 26);
             this.dataVencimento.TabIndex = 3;
@@ -252,7 +273,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(875, 78);
+            this.label6.Location = new System.Drawing.Point(875, 85);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(143, 20);
             this.label6.TabIndex = 0;
@@ -261,7 +282,7 @@
             // dataEmissão
             // 
             this.dataEmissão.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dataEmissão.Location = new System.Drawing.Point(575, 75);
+            this.dataEmissão.Location = new System.Drawing.Point(575, 80);
             this.dataEmissão.Name = "dataEmissão";
             this.dataEmissão.Size = new System.Drawing.Size(117, 26);
             this.dataEmissão.TabIndex = 2;
@@ -270,7 +291,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(450, 78);
+            this.label5.Location = new System.Drawing.Point(450, 83);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(119, 20);
             this.label5.TabIndex = 0;
@@ -278,16 +299,16 @@
             // 
             // txtObs
             // 
-            this.txtObs.Location = new System.Drawing.Point(145, 148);
+            this.txtObs.Location = new System.Drawing.Point(575, 153);
             this.txtObs.Multiline = true;
             this.txtObs.Name = "txtObs";
-            this.txtObs.Size = new System.Drawing.Size(997, 97);
+            this.txtObs.Size = new System.Drawing.Size(567, 97);
             this.txtObs.TabIndex = 7;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(41, 151);
+            this.label4.Location = new System.Drawing.Point(471, 156);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(94, 20);
             this.label4.TabIndex = 0;
@@ -295,7 +316,7 @@
             // 
             // txtValor
             // 
-            this.txtValor.Location = new System.Drawing.Point(145, 110);
+            this.txtValor.Location = new System.Drawing.Point(145, 114);
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(100, 26);
             this.txtValor.TabIndex = 4;
@@ -306,7 +327,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(41, 113);
+            this.label3.Location = new System.Drawing.Point(41, 117);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(95, 20);
             this.label3.TabIndex = 0;
@@ -425,6 +446,13 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(145, 156);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(295, 26);
+            this.textBox1.TabIndex = 10;
+            // 
             // FrmContasAPagar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -478,6 +506,8 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
+        private System.Windows.Forms.TextBox txtValorParcela;
+        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridViewTextBoxColumn fornecedor;
         private System.Windows.Forms.DataGridViewTextBoxColumn Documento;
         private System.Windows.Forms.DataGridViewTextBoxColumn valor;
@@ -485,8 +515,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn valorparcela;
         private System.Windows.Forms.DataGridViewTextBoxColumn emissao;
         private System.Windows.Forms.DataGridViewTextBoxColumn vencimento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn planocontas;
         private System.Windows.Forms.DataGridViewTextBoxColumn obs;
-        private System.Windows.Forms.TextBox txtValorParcela;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

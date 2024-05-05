@@ -63,5 +63,12 @@ namespace ContasAReceber.View
             fornecedor.MdiParent = this;
             fornecedor.Show();
         }
+
+        private void planoDeContasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmPlanoDeContas planoDeContas = new FrmPlanoDeContas();
+            planoDeContas.MdiParent = this;
+            planoDeContas.Show();
+        }
     }
 }
