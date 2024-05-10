@@ -32,6 +32,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmFornecedor));
             this.dtgFornecedor = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnDeletar = new System.Windows.Forms.Button();
+            this.btnPesquisar = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnCadastrar = new System.Windows.Forms.Button();
             this.txtUf = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtCidade = new System.Windows.Forms.TextBox();
@@ -48,9 +52,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.rbPf = new System.Windows.Forms.RadioButton();
             this.rbPj = new System.Windows.Forms.RadioButton();
-            this.txtPessoa = new System.Windows.Forms.MaskedTextBox();
+            this.txtCadPessoa = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtRazaoSocial = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -66,9 +70,6 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fornecedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cnpj = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -80,11 +81,11 @@
             this.bairro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.inativo = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgFornecedor)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // dtgFornecedor
@@ -106,7 +107,8 @@
             this.complemento,
             this.bairro,
             this.cidade,
-            this.estado});
+            this.estado,
+            this.inativo});
             this.dtgFornecedor.Location = new System.Drawing.Point(0, 181);
             this.dtgFornecedor.Name = "dtgFornecedor";
             this.dtgFornecedor.ReadOnly = true;
@@ -115,9 +117,12 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.btnDeletar);
+            this.groupBox1.Controls.Add(this.btnPesquisar);
+            this.groupBox1.Controls.Add(this.btnEditar);
+            this.groupBox1.Controls.Add(this.btnCadastrar);
             this.groupBox1.Controls.Add(this.txtUf);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.txtCidade);
@@ -134,18 +139,59 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.rbPf);
             this.groupBox1.Controls.Add(this.rbPj);
-            this.groupBox1.Controls.Add(this.txtPessoa);
+            this.groupBox1.Controls.Add(this.txtCadPessoa);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.txtRazaoSocial);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(0, 28);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(840, 147);
+            this.groupBox1.Size = new System.Drawing.Size(1160, 147);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados Cadastrais";
+            // 
+            // btnDeletar
+            // 
+            this.btnDeletar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDeletar.Location = new System.Drawing.Point(1073, 104);
+            this.btnDeletar.Name = "btnDeletar";
+            this.btnDeletar.Size = new System.Drawing.Size(75, 23);
+            this.btnDeletar.TabIndex = 25;
+            this.btnDeletar.Text = "Deletar";
+            this.btnDeletar.UseVisualStyleBackColor = true;
+            // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPesquisar.Location = new System.Drawing.Point(1073, 48);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(75, 23);
+            this.btnPesquisar.TabIndex = 24;
+            this.btnPesquisar.Text = "Pesquisar";
+            this.btnPesquisar.UseVisualStyleBackColor = true;
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEditar.Location = new System.Drawing.Point(1073, 75);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(75, 23);
+            this.btnEditar.TabIndex = 23;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            // 
+            // btnCadastrar
+            // 
+            this.btnCadastrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCadastrar.Location = new System.Drawing.Point(1073, 19);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(75, 23);
+            this.btnCadastrar.TabIndex = 22;
+            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // txtUf
             // 
@@ -285,13 +331,13 @@
             this.rbPj.UseVisualStyleBackColor = true;
             this.rbPj.CheckedChanged += new System.EventHandler(this.rbPj_CheckedChanged);
             // 
-            // txtPessoa
+            // txtCadPessoa
             // 
-            this.txtPessoa.Location = new System.Drawing.Point(457, 47);
-            this.txtPessoa.Mask = "##,###,###/####-##";
-            this.txtPessoa.Name = "txtPessoa";
-            this.txtPessoa.Size = new System.Drawing.Size(104, 20);
-            this.txtPessoa.TabIndex = 5;
+            this.txtCadPessoa.Location = new System.Drawing.Point(457, 47);
+            this.txtCadPessoa.Mask = "##,###,###/####-##";
+            this.txtCadPessoa.Name = "txtCadPessoa";
+            this.txtCadPessoa.Size = new System.Drawing.Size(104, 20);
+            this.txtCadPessoa.TabIndex = 5;
             // 
             // label3
             // 
@@ -302,12 +348,12 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "CNPJ";
             // 
-            // textBox2
+            // txtRazaoSocial
             // 
-            this.textBox2.Location = new System.Drawing.Point(91, 47);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(339, 20);
-            this.textBox2.TabIndex = 3;
+            this.txtRazaoSocial.Location = new System.Drawing.Point(91, 47);
+            this.txtRazaoSocial.Name = "txtRazaoSocial";
+            this.txtRazaoSocial.Size = new System.Drawing.Size(339, 20);
+            this.txtRazaoSocial.TabIndex = 3;
             // 
             // textBox1
             // 
@@ -448,34 +494,6 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.comboBox1);
-            this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Location = new System.Drawing.Point(864, 28);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(268, 147);
-            this.groupBox2.TabIndex = 3;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Plano de Contas";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(16, 31);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(85, 13);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "Plano de Contas";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(19, 50);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(229, 21);
-            this.comboBox1.TabIndex = 1;
-            // 
             // codigo
             // 
             this.codigo.HeaderText = "Código";
@@ -542,12 +560,19 @@
             this.estado.Name = "estado";
             this.estado.ReadOnly = true;
             // 
+            // inativo
+            // 
+            this.inativo.HeaderText = "Inativo";
+            this.inativo.Name = "inativo";
+            this.inativo.ReadOnly = true;
+            this.inativo.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.inativo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
             // FrmFornecedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1160, 605);
-            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.bindingNavigator1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dtgFornecedor);
@@ -561,8 +586,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -572,9 +595,9 @@
 
         private System.Windows.Forms.DataGridView dtgFornecedor;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.MaskedTextBox txtPessoa;
+        private System.Windows.Forms.MaskedTextBox txtCadPessoa;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtRazaoSocial;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -606,9 +629,10 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.MaskedTextBox txtCep;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button btnDeletar;
+        private System.Windows.Forms.Button btnPesquisar;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn fornecedor;
         private System.Windows.Forms.DataGridViewTextBoxColumn cnpj;
@@ -620,5 +644,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn bairro;
         private System.Windows.Forms.DataGridViewTextBoxColumn cidade;
         private System.Windows.Forms.DataGridViewTextBoxColumn estado;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn inativo;
     }
 }

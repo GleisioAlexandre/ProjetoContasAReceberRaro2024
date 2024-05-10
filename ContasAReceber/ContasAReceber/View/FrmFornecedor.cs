@@ -1,4 +1,5 @@
-﻿using ContasAReceber.servico;
+﻿using ContasAReceber.controller;
+using ContasAReceber.servico;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,8 +23,8 @@ namespace ContasAReceber.View
         {
             if (rbPf.Checked == true)
             {
-                txtPessoa.Mask = "###,###,###-##";
-                txtPessoa.Width = 82;
+                txtCadPessoa.Mask = "###,###,###-##";
+                txtCadPessoa.Width = 82;
             }
         }
 
@@ -31,8 +32,8 @@ namespace ContasAReceber.View
         {
             if (rbPj.Checked == true)
             {
-                txtPessoa.Mask = "##,###,###/####-##";
-                txtPessoa.Width = 104;
+                txtCadPessoa.Mask = "##,###,###/####-##";
+                txtCadPessoa.Width = 104;
             }
         }
 
@@ -47,6 +48,18 @@ namespace ContasAReceber.View
                 txtCidade.Text = buscaCep.ConsultaCep(txtCep.Text)[3].ToString();
                 txtUf.Text = buscaCep.ConsultaCep(txtCep.Text)[4].ToString();
                 txtNumero.Focus();
+            }
+        }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OperacoesFornecedores fornecedores = new OperacoesFornecedores();
+                fornecedores.InserirFornecedor(txtRazaoSocial.Text);
+            }catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex);
             }
         }
     }

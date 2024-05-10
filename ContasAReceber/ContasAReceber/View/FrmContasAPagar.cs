@@ -60,5 +60,10 @@ namespace ContasAReceber.View
         {
             txtParcelas.KeyPress += manipuladorText.NegacaoZero;
         }
+
+        private void FrmContasAPagar_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -47,6 +47,7 @@ namespace ContasAReceber.View
         {
             FrmConfiguracao configuracao = new FrmConfiguracao();
             configuracao.MdiParent = this;
+            configuracao.WindowState = FormWindowState.Normal;
             configuracao.Show();
         }
 
@@ -54,6 +55,7 @@ namespace ContasAReceber.View
         {
             FrmContasAPagar contasAPagar = new FrmContasAPagar();
             contasAPagar.MdiParent = this;
+            contasAPagar.WindowState = FormWindowState.Maximized;
             contasAPagar.Show();
         }
 
@@ -61,6 +63,7 @@ namespace ContasAReceber.View
         {
             FrmFornecedor fornecedor = new FrmFornecedor();
             fornecedor.MdiParent = this;
+            fornecedor.WindowState = FormWindowState.Maximized;
             fornecedor.Show();
         }
 
@@ -68,6 +71,7 @@ namespace ContasAReceber.View
         {
             FrmPlanoDeContas planoDeContas = new FrmPlanoDeContas();
             planoDeContas.MdiParent = this;
+            planoDeContas.WindowState = FormWindowState.Maximized;
             planoDeContas.Show();
         }
     }

@@ -45,6 +45,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtDocumento = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtValorParcela = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -70,7 +71,6 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgContasAPagar)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
@@ -81,6 +81,9 @@
             // 
             this.dtgContasAPagar.AllowUserToAddRows = false;
             this.dtgContasAPagar.AllowUserToDeleteRows = false;
+            this.dtgContasAPagar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dtgContasAPagar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgContasAPagar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.fornecedor,
@@ -190,6 +193,8 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.txtValorParcela);
@@ -213,6 +218,13 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1165, 263);
             this.panel1.TabIndex = 0;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(145, 156);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(295, 26);
+            this.textBox1.TabIndex = 10;
             // 
             // label9
             // 
@@ -446,13 +458,6 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(145, 156);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(295, 26);
-            this.textBox1.TabIndex = 10;
-            // 
             // FrmContasAPagar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -461,10 +466,10 @@
             this.Controls.Add(this.bindingNavigator1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dtgContasAPagar);
-            this.MaximizeBox = false;
             this.Name = "FrmContasAPagar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "0";
+            this.Load += new System.EventHandler(this.FrmContasAPagar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgContasAPagar)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

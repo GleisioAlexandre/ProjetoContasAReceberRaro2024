@@ -58,6 +58,7 @@
             this.btnPasta.TabIndex = 30;
             this.btnPasta.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnPasta.UseVisualStyleBackColor = true;
+            this.btnPasta.Click += new System.EventHandler(this.btnPasta_Click);
             // 
             // txtCaminhoLogo
             // 
@@ -129,6 +130,7 @@
             this.btnPesquisar.Text = "...";
             this.btnPesquisar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // panel1
             // 
@@ -169,6 +171,7 @@
             this.btnSalvar.TabIndex = 24;
             this.btnSalvar.Text = "Salvar Configurações";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // label3
             // 

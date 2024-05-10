@@ -94,5 +94,10 @@ namespace ContasAReceber.View
                 MessageBox.Show("Nem um arquivo selecionado!", "Selecione um arquivo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
+
+        private void btnPesquisar_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

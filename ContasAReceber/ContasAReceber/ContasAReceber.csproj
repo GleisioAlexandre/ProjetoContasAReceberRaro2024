@@ -187,12 +187,14 @@
     <Compile Include="controller\ManipuladorTextBox.cs" />
     <Compile Include="controller\OperacoesClientes.cs" />
     <Compile Include="controller\OperacoesContas.cs" />
+    <Compile Include="controller\OperacoesFornecedores.cs" />
     <Compile Include="controller\Relatorio.cs" />
     <Compile Include="controller\RelatoriosClientes.cs" />
     <Compile Include="model\BancoDeDados.cs" />
     <Compile Include="model\CepInfo.cs" />
     <Compile Include="model\Cliente.cs" />
     <Compile Include="model\Contas.cs" />
+    <Compile Include="model\Fornecedor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="servico\ServicoBuscaCep.cs" />
