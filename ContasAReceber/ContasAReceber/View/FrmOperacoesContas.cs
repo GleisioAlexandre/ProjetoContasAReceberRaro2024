@@ -15,12 +15,12 @@ namespace ContasAReceber.View
 {
     public partial class FrmOperacoesContas : Form
     {
-        private FrmContas contas;
+        private FrmContasAReceber contas;
         private int LocalizacaoX;
         private int LocalizacaoY;
         OperacoesContas op = new OperacoesContas();
         ManipuladorTextBox manipuladorText = new ManipuladorTextBox();
-        public FrmOperacoesContas(FrmContas frmContas)
+        public FrmOperacoesContas(FrmContasAReceber frmContas)
         {
             InitializeComponent();
             LocalizacaoX = (Screen.PrimaryScreen.Bounds.Width - this.Width)/2;
@@ -49,8 +49,10 @@ namespace ContasAReceber.View
         }
         private void FrmInserirContas_Load(object sender, EventArgs e)
         {
+            
             if (txtDocumento.Text.Equals(""))
             {
+                txtNomeCliente.Focus();
                 dtEntrada.Text = DateTime.Now.ToString("dd/MM/yyyy");
                 dtVencimento.Text = DateTime.Now.ToString("dd/MM/yyyy");
                 dtPagamento.Text = DateTime.Now.ToString("dd/MM/yyyy");

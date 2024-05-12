@@ -20,11 +20,9 @@ namespace ContasAReceber.model
             string query = "select * from pessoa";
             BancoDeDados bd = new BancoDeDados(stringDeConexao);
             FbDataAdapter dataAdapter = new FbDataAdapter(query, bd.conexao(stringDeConexao));
-           
-
             bd.AbreConexao();
             dataAdapter.Fill(dt, "pessoa");
-
+            bd.Fechaconexao();
             return dt;
         }
         public DataTable ExibeGridClientes()

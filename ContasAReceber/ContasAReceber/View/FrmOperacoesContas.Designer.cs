@@ -100,6 +100,7 @@
             this.txtCodigoCliente.ReadOnly = true;
             this.txtCodigoCliente.Size = new System.Drawing.Size(61, 31);
             this.txtCodigoCliente.TabIndex = 5;
+            this.txtCodigoCliente.TabStop = false;
             // 
             // btnPesquisarCliente
             // 
@@ -126,7 +127,7 @@
             this.txtNomeCliente.Location = new System.Drawing.Point(109, 61);
             this.txtNomeCliente.Name = "txtNomeCliente";
             this.txtNomeCliente.Size = new System.Drawing.Size(537, 31);
-            this.txtNomeCliente.TabIndex = 7;
+            this.txtNomeCliente.TabIndex = 1;
             this.txtNomeCliente.TextChanged += new System.EventHandler(this.txtNomeCliente_TextChanged);
             this.txtNomeCliente.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNomeCliente_KeyDown);
             // 

@@ -39,7 +39,7 @@ namespace ContasAReceber.View
 
         private void contasAReceberToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            FrmContas contas = new FrmContas();
+            FrmContasAReceber contas = new FrmContasAReceber();
             contas.MdiParent = this;
             contas.Show();
         }

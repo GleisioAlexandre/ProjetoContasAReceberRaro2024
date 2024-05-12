@@ -1045,7 +1045,6 @@ D:\Projetos 2024\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.exe.conf
 D:\Projetos 2024\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.Properties.Resources.resources
 D:\Projetos 2024\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmClientes.resources
 D:\Projetos 2024\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmConfiguracao.resources
-D:\Projetos 2024\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmContas.resources
 D:\Projetos 2024\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmHome.resources
 D:\Projetos 2024\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmOperacoesClientes.resources
 D:\Projetos 2024\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmOperacoesContas.resources
@@ -1221,3 +1220,4 @@ D:\Projetos 2024\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.Frm
 C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmContasAPagar.resources
 D:\Projetos 2024\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmFornecedor.resources
 D:\Projetos 2024\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmPlanoDeContas.resources
+D:\Projetos 2024\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmContasAReceber.resources

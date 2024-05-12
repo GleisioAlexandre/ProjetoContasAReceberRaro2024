@@ -18,7 +18,7 @@ namespace ContasAReceber.View
         {
             InitializeComponent();
         }
-
+        OperacoesFornecedores op = new OperacoesFornecedores();
         private void rbPf_CheckedChanged(object sender, EventArgs e)
         {
             if (rbPf.Checked == true)
@@ -56,11 +56,17 @@ namespace ContasAReceber.View
             try
             {
                 OperacoesFornecedores fornecedores = new OperacoesFornecedores();
-                fornecedores.InserirFornecedor(txtRazaoSocial.Text);
+                fornecedores.InserirFornecedor(txtRazaoSocial.Text, txtCadPessoa.Text, txtCep.Text, txtLogradouro.Text, Int32.Parse(txtNumero.Text), txtComplemento.Text ,txtBairro.Text ,txtCidade.Text, txtUf.Text);
             }catch (Exception ex)
             {
                 MessageBox.Show("Erro: " + ex);
             }
+        }
+
+        private void FrmFornecedor_Load(object sender, EventArgs e)
+        {
+            bindingSource1.DataSource = op.BindigSourceFornecedores().Tables["fornecedores"];
+            dtgFornecedor.DataSource = bindingSource1;
         }
     }
 }
