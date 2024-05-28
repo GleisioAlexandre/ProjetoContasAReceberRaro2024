@@ -25,18 +25,6 @@ namespace ContasAReceber.model
             bd.Fechaconexao();
             return dt;
         }
-        public DataTable ExibeGridClientes()
-        {
-            
-            BancoDeDados bd = new BancoDeDados(stringDeConexao);
-            bd.AbreConexao();
-            FbCommand comando = new FbCommand("select * from pessoa;", bd.conexao(stringDeConexao));
-            FbDataAdapter adaptador = new FbDataAdapter(comando);
-            DataTable dt = new DataTable();
-            adaptador.Fill(dt);
-            bd.Fechaconexao();
-            return dt;
-        }
         public void InserirClientes(String nome, String cadastropessoa, String nomecontato, String telefone, String celular, String email ,String cep, String logradouro, int numero, String complemento, String bairro, String cidade, String uf, int pj)
         {
             BancoDeDados bd = new BancoDeDados(stringDeConexao);

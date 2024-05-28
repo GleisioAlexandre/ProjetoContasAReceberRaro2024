@@ -18,10 +18,6 @@ namespace ContasAReceber.controller
         {
             return cliente.BindingSourceClinetes(); ;
         }
-        public DataTable ExibeGridClinetes()
-        {
-            return cliente.ExibeGridClientes();
-        }
         public void InseirClinete(String nome, String cadastropessoa, String nomeContato, String telefone, String celular, String email, String cep, String logradouro, Int32 numero, String complemento, String bairro, String cidade, String uf, Int32 pj)
         {
             cliente.InserirClientes(nome, cadastropessoa, nomeContato, telefone, celular, email, cep, logradouro, numero, complemento, bairro, cidade, uf, pj);

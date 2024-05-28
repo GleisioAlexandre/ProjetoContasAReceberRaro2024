@@ -61,18 +61,12 @@ namespace ContasAReceber.View
 
         private void fornecedoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmFornecedor fornecedor = new FrmFornecedor();
-            fornecedor.MdiParent = this;
-            fornecedor.WindowState = FormWindowState.Maximized;
-            fornecedor.Show();
+           
         }
 
         private void planoDeContasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmPlanoDeContas planoDeContas = new FrmPlanoDeContas();
-            planoDeContas.MdiParent = this;
-            planoDeContas.WindowState = FormWindowState.Maximized;
-            planoDeContas.Show();
+           
         }
     }
 }

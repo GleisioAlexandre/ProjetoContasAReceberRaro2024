@@ -102,8 +102,25 @@ namespace ContasAReceber.View
         private void btnEditarCliente_Click(object sender, EventArgs e)
         {
             int pj;
+            string telefone, celular;
             try
             {
+                if (txtTelefone.Text == "(  )    -")
+                {
+                    telefone = "";
+                }
+                else
+                {
+                    telefone = txtTelefone.Text;
+                }
+                if (txtCelular.Text == "(  )     -")
+                {
+                    celular = "";
+                }
+                else
+                {
+                    celular = txtCelular.Text;
+                }
                 if (cbxPj.Checked == true)
                 {
                     pj = 1;
@@ -113,7 +130,7 @@ namespace ContasAReceber.View
                     pj = 0;
                 }
                 OperacoesClientes opcliente = new OperacoesClientes();
-                opcliente.AtualizarCliente(txtCliente.Text, txtCpfCnpj.Text, txtNomeContato.Text, txtTelefone.Text, txtCelular.Text, txtEmail.Text, txtCep.Text, txtLogradouro.Text, Int32.Parse(txtNumero.Text), txtComplemento.Text, txtBairro.Text, txtCidade.Text, txtUf.Text, pj, Int32.Parse(lblIdCliente.Text));
+                opcliente.AtualizarCliente(txtCliente.Text, txtCpfCnpj.Text, txtNomeContato.Text, telefone, celular, txtEmail.Text, txtCep.Text, txtLogradouro.Text, Int32.Parse(txtNumero.Text), txtComplemento.Text, txtBairro.Text, txtCidade.Text, txtUf.Text, pj, Int32.Parse(lblIdCliente.Text));
                 clientes.AtualizaGriCliente();
                 this.Close();
             }
@@ -148,8 +165,25 @@ namespace ContasAReceber.View
         private void btnCadastrarCliente_Click(object sender, EventArgs e)
         {
             int pj;
+            string telefone, celular,cep;
             try
             {
+                if (txtTelefone.Text == "(  )    -")
+                {
+                    telefone = "";
+                }
+                else
+                {
+                    telefone = txtTelefone.Text;
+                }
+                if (txtCelular.Text == "(  )     -")
+                {
+                    celular = "";
+                }
+                else
+                {
+                    celular = txtCelular.Text;
+                }
                 if (cbxPj.Checked == true)
                 {
                      pj = 1;
@@ -159,13 +193,13 @@ namespace ContasAReceber.View
                     pj = 0;
                 }
                 OperacoesClientes opCliente = new OperacoesClientes();
-                opCliente.InseirClinete(txtCliente.Text, txtCpfCnpj.Text, txtNomeContato.Text, txtTelefone.Text, txtCelular.Text, txtEmail.Text,txtCep.Text, txtLogradouro.Text, Int32.Parse(txtNumero.Text), txtComplemento.Text, txtBairro.Text, txtCidade.Text, txtUf.Text, pj);
+                opCliente.InseirClinete(txtCliente.Text, txtCpfCnpj.Text, txtNomeContato.Text, telefone, celular, txtEmail.Text, txtCep.Text, txtLogradouro.Text, Int32.Parse(txtNumero.Text), txtComplemento.Text, txtBairro.Text, txtCidade.Text, txtUf.Text, pj);
                 clientes.AtualizaGriCliente();
                 this.Close();
             } catch (Exception ex)
             {
 
-                MessageBox.Show("Erro: " + ex, "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Erro: Verifique os dados digitados!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void FrmOperacoesClientes_FormClosed(object sender, FormClosedEventArgs e)

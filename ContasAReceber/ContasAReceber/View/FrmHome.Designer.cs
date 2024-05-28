@@ -31,17 +31,13 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.fornecedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contasAReceberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contasAReceberToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.contasAPagarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.TitulosAPagar = new System.Windows.Forms.ToolStripMenuItem();
             this.configuraçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configurarBancoDeDabosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblData = new System.Windows.Forms.ToolStripStatusLabel();
-            this.planoDeContasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -51,7 +47,6 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cadastroToolStripMenuItem,
             this.contasAReceberToolStripMenuItem,
-            this.contasAPagarToolStripMenuItem,
             this.configuraçãoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -62,9 +57,7 @@
             // cadastroToolStripMenuItem
             // 
             this.cadastroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.clientesToolStripMenuItem,
-            this.fornecedoresToolStripMenuItem,
-            this.planoDeContasToolStripMenuItem});
+            this.clientesToolStripMenuItem});
             this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
             this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.cadastroToolStripMenuItem.Text = "Cadastro";
@@ -75,13 +68,6 @@
             this.clientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.clientesToolStripMenuItem.Text = "Clientes";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
-            // 
-            // fornecedoresToolStripMenuItem
-            // 
-            this.fornecedoresToolStripMenuItem.Name = "fornecedoresToolStripMenuItem";
-            this.fornecedoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.fornecedoresToolStripMenuItem.Text = "Fornecedores";
-            this.fornecedoresToolStripMenuItem.Click += new System.EventHandler(this.fornecedoresToolStripMenuItem_Click);
             // 
             // contasAReceberToolStripMenuItem
             // 
@@ -94,24 +80,9 @@
             // contasAReceberToolStripMenuItem1
             // 
             this.contasAReceberToolStripMenuItem1.Name = "contasAReceberToolStripMenuItem1";
-            this.contasAReceberToolStripMenuItem1.Size = new System.Drawing.Size(165, 22);
+            this.contasAReceberToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.contasAReceberToolStripMenuItem1.Text = "Contas a Receber";
             this.contasAReceberToolStripMenuItem1.Click += new System.EventHandler(this.contasAReceberToolStripMenuItem1_Click);
-            // 
-            // contasAPagarToolStripMenuItem
-            // 
-            this.contasAPagarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.TitulosAPagar});
-            this.contasAPagarToolStripMenuItem.Name = "contasAPagarToolStripMenuItem";
-            this.contasAPagarToolStripMenuItem.Size = new System.Drawing.Size(98, 20);
-            this.contasAPagarToolStripMenuItem.Text = "Contas a Pagar";
-            // 
-            // TitulosAPagar
-            // 
-            this.TitulosAPagar.Name = "TitulosAPagar";
-            this.TitulosAPagar.Size = new System.Drawing.Size(109, 22);
-            this.TitulosAPagar.Text = "Titulos";
-            this.TitulosAPagar.Click += new System.EventHandler(this.TitulosAPagar_Click);
             // 
             // configuraçãoToolStripMenuItem
             // 
@@ -124,8 +95,8 @@
             // configurarBancoDeDabosToolStripMenuItem
             // 
             this.configurarBancoDeDabosToolStripMenuItem.Name = "configurarBancoDeDabosToolStripMenuItem";
-            this.configurarBancoDeDabosToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
-            this.configurarBancoDeDabosToolStripMenuItem.Text = "Configurar Banco de Dabos";
+            this.configurarBancoDeDabosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.configurarBancoDeDabosToolStripMenuItem.Text = "Configurações";
             this.configurarBancoDeDabosToolStripMenuItem.Click += new System.EventHandler(this.configurarBancoDeDabosToolStripMenuItem_Click);
             // 
             // statusStrip1
@@ -155,13 +126,6 @@
             this.lblData.Name = "lblData";
             this.lblData.Size = new System.Drawing.Size(76, 17);
             this.lblData.Text = "00/00/0000";
-            // 
-            // planoDeContasToolStripMenuItem
-            // 
-            this.planoDeContasToolStripMenuItem.Name = "planoDeContasToolStripMenuItem";
-            this.planoDeContasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.planoDeContasToolStripMenuItem.Text = "Plano de Contas";
-            this.planoDeContasToolStripMenuItem.Click += new System.EventHandler(this.planoDeContasToolStripMenuItem_Click);
             // 
             // FrmHome
             // 
@@ -198,9 +162,5 @@
         private System.Windows.Forms.ToolStripMenuItem contasAReceberToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem configuraçãoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem configurarBancoDeDabosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem contasAPagarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem TitulosAPagar;
-        private System.Windows.Forms.ToolStripMenuItem fornecedoresToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem planoDeContasToolStripMenuItem;
     }
 }

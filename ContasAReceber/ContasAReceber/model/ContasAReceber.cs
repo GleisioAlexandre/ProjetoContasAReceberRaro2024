@@ -10,7 +10,7 @@ using System.Configuration;
 
 namespace ContasAReceber.model
 {
-    class Contas
+    class ContasAReceber
     {
         private string stringDeConexao = ConfigurationManager.ConnectionStrings["ConexaoFirebird"].ConnectionString;
 

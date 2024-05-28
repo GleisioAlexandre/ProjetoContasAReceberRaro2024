@@ -17,7 +17,7 @@ namespace ContasAReceber.controller
 {
     class OperacoesContas
     {
-        Contas contas = new Contas();
+        model.ContasAReceber contas = new model.ContasAReceber();
 
         public DataSet datSet()
         {
