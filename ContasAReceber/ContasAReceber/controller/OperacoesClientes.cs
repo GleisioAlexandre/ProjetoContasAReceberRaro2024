@@ -242,9 +242,11 @@ namespace ContasAReceber.controller
                     document.BottomMargin - 10,
                     0);
             }
-          
         }
-      
-       
+        public string FomataNumeroTelefone(string numeroTelefone)
+        {
+
+            return numeroTelefone == "(  )    -" || numeroTelefone == "(  )     -" ? "": numeroTelefone;
+        }       
     }
 }

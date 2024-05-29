@@ -865,12 +865,10 @@ C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\Cont
 C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.csprojAssemblyReference.cache
 C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.exe.config
 C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.Properties.Resources.resources
 C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmClientes.resources
 C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmConfiguracao.resources
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmContas.resources
 C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmHome.resources
 C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmOperacoesClientes.resources
 C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmOperacoesContas.resources
@@ -1217,5 +1215,5 @@ C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasA
 C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\System.ValueTuple.xml
 D:\Projetos 2024\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.csprojAssemblyReference.cache
 D:\Projetos 2024\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmContasAPagar.resources
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmContasAPagar.resources
 D:\Projetos 2024\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmContasAReceber.resources
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmContasAReceber.resources
