@@ -121,35 +121,37 @@ namespace ContasAReceber.View
         }
         private void btnInserir_Click(object sender, EventArgs e)
         {
-            try
-            {
-                string entrada, vencimento, pagamento;
-                entrada = op.FormataData(txtEntrada.Text);
-                vencimento = op.FormataData(txtVencimento.Text);
-                pagamento = op.FormataData(txtPagamento.Text);
-                if (txtNomeCliente.Text.Equals("") || txtValor.Text.Equals("") || txtDocumento.Text.Equals(""))
-                {
-                    MessageBox.Show("Todos os campos devem ser preenchidos para a inclusão do registro!", "Alerta!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    if (MessageBox.Show("Verifique se todos os dados foram inseridos corretamente! \n Se tudo estiver correto clique em SIM", "Informação!", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
-                    {
-                        op.InserirConta(entrada, Int32.Parse(txtCodigoCliente.Text), Double.Parse(txtValor.Text), txtDocumento.Text, (cbxClass.SelectedIndex)+1, (cbxSituacao.SelectedIndex)+1, vencimento, pagamento);
-                        this.Close();
-                        contas.AtualizaGridContas();
-                    }
-                    else
-                    {
-                        this.Close();
-                    }
-                    MessageBox.Show("Dados inseridos com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro ao Tentar Salvar as informações!\n" + ex, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+           
+             try
+             {
+                 string  entrada, vencimento, pagamento;
+                 entrada = op.FormataData(txtEntrada.Text).Replace('/', '.');
+                 vencimento = op.FormataData(txtVencimento.Text).Replace('/', '.');
+                 pagamento = op.FormataData(txtPagamento.Text).Replace('/', '.');
+
+                 if (txtNomeCliente.Text.Equals("") || txtValor.Text.Equals("") || txtDocumento.Text.Equals(""))
+                 {
+                     MessageBox.Show("Todos os campos devem ser preenchidos para a inclusão do registro!", "Alerta!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                 }
+                 else
+                 {
+                     if (MessageBox.Show("Verifique se todos os dados foram inseridos corretamente! \n Se tudo estiver correto clique em SIM", "Informação!", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                     {
+                         op.InserirConta(entrada, Int32.Parse(txtCodigoCliente.Text), Double.Parse(txtValor.Text), txtDocumento.Text, (cbxClass.SelectedIndex)+1, (cbxSituacao.SelectedIndex)+1, vencimento, pagamento);
+                         this.Close();
+                         contas.AtualizaGridContas();
+                     }
+                     else
+                     {
+                         this.Close();
+                     }
+                     MessageBox.Show("Dados inseridos com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                 }
+             }
+             catch (Exception ex)
+             {
+                 MessageBox.Show("Erro ao Tentar Salvar as informações!\n" + ex, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+             }
         }
         private void btnDeletar_Click(object sender, EventArgs e)
         {

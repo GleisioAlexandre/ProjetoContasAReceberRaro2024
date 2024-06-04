@@ -1219,3 +1219,4 @@ D:\Projetos 2024\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.Frm
 C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmContasAPagar.resources
 D:\Projetos 2024\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmContasAReceber.resources
 C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmContasAReceber.resources
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\System.ComponentModel.Annotations.dll
