@@ -870,7 +870,6 @@ C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\Cont
 C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.Properties.Resources.resources
 C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmClientes.resources
 C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmConfiguracao.resources
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmContas.resources
 C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmHome.resources
 C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmOperacoesClientes.resources
 C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmOperacoesContas.resources
@@ -1219,3 +1218,4 @@ D:\Projetos 2024\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.csprojAs
 D:\Projetos 2024\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmContasAPagar.resources
 C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmContasAPagar.resources
 D:\Projetos 2024\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmContasAReceber.resources
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmContasAReceber.resources

@@ -32,15 +32,15 @@ namespace ContasAReceber.View
         {
                     string documento = stringDoFormContas;
                     lblConta.Text = op.PesquisarDivida(documento)[0].ToString();
-                    dtEntrada.Text = op.PesquisarDivida(documento)[1].ToString();
+                    txtEntrada.Text = op.PesquisarDivida(documento)[1].ToString();
                     txtCodigoCliente.Text = op.PesquisarDivida(documento)[2].ToString();
                     txtNomeCliente.Text = op.PesquisarDivida(documento)[3].ToString();
                     txtValor.Text = op.PesquisarDivida(documento)[4].ToString();
                     txtDocumento.Text = op.PesquisarDivida(documento)[5].ToString();
                     cbxClass.SelectedIndex = Int32.Parse(op.PesquisarDivida(documento)[6].ToString()) - 1;
                     cbxSituacao.SelectedIndex = Int32.Parse(op.PesquisarDivida(documento)[7].ToString()) - 1;
-                    dtVencimento.Text = op.PesquisarDivida(documento)[8].ToString();
-                    dtPagamento.Text = op.PesquisarDivida(documento)[9].ToString();
+                    txtVencimento.Text = op.PesquisarDivida(documento)[8].ToString();
+                    txtPagamento.Text = op.PesquisarDivida(documento)[9].ToString();
                     btnDeletar.Enabled = true;
                     btnAtualizar.Enabled = true;
                     btnInserir.Enabled = false;
@@ -53,9 +53,6 @@ namespace ContasAReceber.View
             if (txtDocumento.Text.Equals(""))
             {
                 txtNomeCliente.Focus();
-                dtEntrada.Text = DateTime.Now.ToString("dd/MM/yyyy");
-                dtVencimento.Text = DateTime.Now.ToString("dd/MM/yyyy");
-                dtPagamento.Text = DateTime.Now.ToString("dd/MM/yyyy");
                 txtValor.Text = "0,00";
             }
         }
@@ -64,6 +61,7 @@ namespace ContasAReceber.View
            if (txtNomeCliente.Text.Equals(""))
             {
                 MessageBox.Show("O campos Nome do Cliente, não pode ser nulo!");
+
             }
             else
             {
@@ -125,6 +123,10 @@ namespace ContasAReceber.View
         {
             try
             {
+                string entrada, vencimento, pagamento;
+                entrada = op.FormataData(txtEntrada.Text);
+                vencimento = op.FormataData(txtVencimento.Text);
+                pagamento = op.FormataData(txtPagamento.Text);
                 if (txtNomeCliente.Text.Equals("") || txtValor.Text.Equals("") || txtDocumento.Text.Equals(""))
                 {
                     MessageBox.Show("Todos os campos devem ser preenchidos para a inclusão do registro!", "Alerta!", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -133,7 +135,7 @@ namespace ContasAReceber.View
                 {
                     if (MessageBox.Show("Verifique se todos os dados foram inseridos corretamente! \n Se tudo estiver correto clique em SIM", "Informação!", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                     {
-                        op.InserirConta(dtEntrada.Text, Int32.Parse(txtCodigoCliente.Text), Double.Parse(txtValor.Text), txtDocumento.Text, (cbxClass.SelectedIndex)+1, (cbxSituacao.SelectedIndex)+1, dtVencimento.Text, dtPagamento.Text);
+                        op.InserirConta(entrada, Int32.Parse(txtCodigoCliente.Text), Double.Parse(txtValor.Text), txtDocumento.Text, (cbxClass.SelectedIndex)+1, (cbxSituacao.SelectedIndex)+1, vencimento, pagamento);
                         this.Close();
                         contas.AtualizaGridContas();
                     }
@@ -182,7 +184,11 @@ namespace ContasAReceber.View
         {
             try
             {
-                op.AtualizaContas(dtEntrada.Text , Int32.Parse(txtCodigoCliente.Text), Double.Parse(txtValor.Text), txtDocumento.Text, (cbxClass.SelectedIndex + 1), (cbxSituacao.SelectedIndex + 1), dtVencimento.Text, dtPagamento.Text, Int32.Parse(lblConta.Text));
+                string entrada, vencimento, pagamento;
+                entrada = op.FormataData(txtEntrada.Text);
+                vencimento = op.FormataData(txtVencimento.Text);
+                pagamento = op.FormataData(txtPagamento.Text);
+                op.AtualizaContas(entrada , Int32.Parse(txtCodigoCliente.Text), Double.Parse(txtValor.Text), txtDocumento.Text, (cbxClass.SelectedIndex + 1), (cbxSituacao.SelectedIndex + 1), vencimento, pagamento, Int32.Parse(lblConta.Text));
                 this.Close();
                 contas.AtualizaGridContas();
                 MessageBox.Show("Registro atualizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);

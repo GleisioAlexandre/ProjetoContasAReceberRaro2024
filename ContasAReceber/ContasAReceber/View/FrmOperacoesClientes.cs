@@ -105,22 +105,8 @@ namespace ContasAReceber.View
             string telefone, celular;
             try
             {
-                if (txtTelefone.Text == "(  )    -")
-                {
-                    telefone = "";
-                }
-                else
-                {
-                    telefone = txtTelefone.Text;
-                }
-                if (txtCelular.Text == "(  )     -")
-                {
-                    celular = "";
-                }
-                else
-                {
-                    celular = txtCelular.Text;
-                }
+                telefone = operacoesClientes.FormatarTelefone(txtTelefone.Text);
+                celular = operacoesClientes.FormatarTelefone(txtCelular.Text);
                 if (cbxPj.Checked == true)
                 {
                     pj = 1;
@@ -165,25 +151,11 @@ namespace ContasAReceber.View
         private void btnCadastrarCliente_Click(object sender, EventArgs e)
         {
             int pj;
-            string telefone, celular,cep;
+            string telefone, celular;
             try
             {
-                if (txtTelefone.Text == "(  )    -")
-                {
-                    telefone = "";
-                }
-                else
-                {
-                    telefone = txtTelefone.Text;
-                }
-                if (txtCelular.Text == "(  )     -")
-                {
-                    celular = "";
-                }
-                else
-                {
-                    celular = txtCelular.Text;
-                }
+                telefone = operacoesClientes.FormatarTelefone(txtTelefone.Text);
+                celular = operacoesClientes.FormatarTelefone(txtCelular.Text);
                 if (cbxPj.Checked == true)
                 {
                      pj = 1;
@@ -258,9 +230,6 @@ namespace ContasAReceber.View
             this.Close();
         }
 
-        private void txtNumero_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

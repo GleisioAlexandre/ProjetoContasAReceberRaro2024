@@ -242,9 +242,10 @@ namespace ContasAReceber.controller
                     document.BottomMargin - 10,
                     0);
             }
-          
         }
-      
-       
+       public string FormatarTelefone(string telefone)
+        {
+            return telefone == "(  )    -" || telefone == "(  )     -" ? "" : telefone;
+        }
     }
 }

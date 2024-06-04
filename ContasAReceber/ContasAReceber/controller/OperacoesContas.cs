@@ -62,13 +62,13 @@ namespace ContasAReceber.controller
         {
             contas.AtualizarContas(entrada, idcliente, valor, documento, classe, situacao, vencimento, pagamento, idcontas);
         }
-        public void GerarRelatorio(DataGridView dtgContas,  string total)
+        public void GerarRelatorio(DataGridView dtgContas, string total)
         {
             string data = DateTime.Now.ToString("ddMMyyyyhhmmss");
             try
             {
                 Console.WriteLine(total);
-              
+
                 string caminho = PegarCaminho() + $@"\{data}.pdf";
                 Document doc = CriarDocumento();
                 PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(caminho, FileMode.Create));
@@ -291,6 +291,10 @@ namespace ContasAReceber.controller
                     document.BottomMargin - 10,
                     0);
             }
+        }
+        public string FormataData(string data)
+        {
+            return data == "  /  /" ? "" : data;
         }
 
     }
