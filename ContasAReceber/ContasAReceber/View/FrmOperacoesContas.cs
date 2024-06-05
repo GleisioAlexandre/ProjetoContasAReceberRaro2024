@@ -125,9 +125,9 @@ namespace ContasAReceber.View
              try
              {
                  string  entrada, vencimento, pagamento;
-                 entrada = op.FormataData(txtEntrada.Text).Replace('/', '.');
-                 vencimento = op.FormataData(txtVencimento.Text).Replace('/', '.');
-                 pagamento = op.FormataData(txtPagamento.Text).Replace('/', '.');
+                 entrada = op.FormataData(txtEntrada.Text);
+                 vencimento = op.FormataData(txtVencimento.Text);
+                 pagamento = op.FormataData(txtPagamento.Text);
 
                  if (txtNomeCliente.Text.Equals("") || txtValor.Text.Equals("") || txtDocumento.Text.Equals(""))
                  {

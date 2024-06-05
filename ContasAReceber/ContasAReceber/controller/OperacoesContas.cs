@@ -294,7 +294,16 @@ namespace ContasAReceber.controller
         }
         public string FormataData(string data)
         {
-            return data == "  /  /" ? "" : data;
+            if (data.Equals("  /  /"))
+            {
+                data = "";
+            }
+            else
+            {
+                data = data.Replace('/', '.');
+            }
+            //return data == "  /  /" ? null : data.Replace('/', '.');
+            return data;
         }
 
     }
