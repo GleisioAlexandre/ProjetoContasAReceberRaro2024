@@ -27,7 +27,7 @@ namespace ContasAReceber.controller
         {
             return contas.ExibeGridContas();
         }
-        public void InserirConta(string entrada, int idCliente, double valor, string documento, int classe, int situacao, string vencimento, string pagamento)
+        public void InserirConta(string entrada, int idCliente, double valor, string documento, int classe, int situacao, string vencimento, object pagamento)
         {
             contas.InserirConta(entrada, idCliente, valor, documento, classe, situacao, vencimento, pagamento);
         }

@@ -124,10 +124,11 @@ namespace ContasAReceber.View
            
              try
              {
-                 string  entrada, vencimento, pagamento;
+                object pagamento;
+                 string  entrada, vencimento ;
                  entrada = op.FormataData(txtEntrada.Text);
                  vencimento = op.FormataData(txtVencimento.Text);
-                 pagamento = op.FormataData(txtPagamento.Text);
+                pagamento = op.FormataData(txtPagamento.Text);
 
                  if (txtNomeCliente.Text.Equals("") || txtValor.Text.Equals("") || txtDocumento.Text.Equals(""))
                  {
@@ -137,15 +138,12 @@ namespace ContasAReceber.View
                  {
                      if (MessageBox.Show("Verifique se todos os dados foram inseridos corretamente! \n Se tudo estiver correto clique em SIM", "Informação!", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                      {
-                         op.InserirConta(entrada, Int32.Parse(txtCodigoCliente.Text), Double.Parse(txtValor.Text), txtDocumento.Text, (cbxClass.SelectedIndex)+1, (cbxSituacao.SelectedIndex)+1, vencimento, pagamento);
-                         this.Close();
+                        op.InserirConta(entrada, Int32.Parse(txtCodigoCliente.Text), Double.Parse(txtValor.Text), txtDocumento.Text, (cbxClass.SelectedIndex) + 1, (cbxSituacao.SelectedIndex) + 1, vencimento, pagamento);
+                        this.Close();
                          contas.AtualizaGridContas();
+                        MessageBox.Show("Dados inseridos com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                      }
-                     else
-                     {
-                         this.Close();
-                     }
-                     MessageBox.Show("Dados inseridos com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    
                  }
              }
              catch (Exception ex)

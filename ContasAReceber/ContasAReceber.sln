@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.33919.361
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContasAReceber", "ContasAReceber\ContasAReceber.csproj", "{6DEB8CB9-8DF1-43D5-B3B9-DB9E69274FC2}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "ContasAReceber\Instalador\Setup\Setup.vdproj", "{7F96F2A6-9E91-48AA-8F26-1DCBE4AE9CCA}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupContasAReceber", "SetupContasAReceber\SetupContasAReceber.vdproj", "{39A8077B-A39C-422C-AC0D-C7DC57B3DC22}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,8 +17,8 @@ Global
 		{6DEB8CB9-8DF1-43D5-B3B9-DB9E69274FC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6DEB8CB9-8DF1-43D5-B3B9-DB9E69274FC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6DEB8CB9-8DF1-43D5-B3B9-DB9E69274FC2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7F96F2A6-9E91-48AA-8F26-1DCBE4AE9CCA}.Debug|Any CPU.ActiveCfg = Debug
-		{7F96F2A6-9E91-48AA-8F26-1DCBE4AE9CCA}.Release|Any CPU.ActiveCfg = Release
+		{39A8077B-A39C-422C-AC0D-C7DC57B3DC22}.Debug|Any CPU.ActiveCfg = Debug
+		{39A8077B-A39C-422C-AC0D-C7DC57B3DC22}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
