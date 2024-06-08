@@ -1220,3 +1220,6 @@ C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\Cont
 D:\Projetos 2024\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmContasAReceber.resources
 C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmContasAReceber.resources
 D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\System.Reflection.Context.dll
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\System.Reflection.Context.xml

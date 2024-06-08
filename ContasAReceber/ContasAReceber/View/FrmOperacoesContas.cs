@@ -55,6 +55,7 @@ namespace ContasAReceber.View
                 txtNomeCliente.Focus();
                 txtValor.Text = "0,00";
             }
+            txtEntrada.Text = DateTime.Now.ToString("dd/MM/yyyy"); ;
         }
         private void btnPesquisarCliente_Click(object sender, EventArgs e)
         {
@@ -121,16 +122,15 @@ namespace ContasAReceber.View
         }
         private void btnInserir_Click(object sender, EventArgs e)
         {
-           
              try
              {
-                object pagamento;
+                 string pagamento;
                  string  entrada, vencimento ;
                  entrada = op.FormataData(txtEntrada.Text);
                  vencimento = op.FormataData(txtVencimento.Text);
-                pagamento = op.FormataData(txtPagamento.Text);
+                 pagamento = txtPagamento.Text.Equals("  /  /") ? "11/11/1111" : op.FormataData(txtPagamento.Text);
 
-                 if (txtNomeCliente.Text.Equals("") || txtValor.Text.Equals("") || txtDocumento.Text.Equals(""))
+                if (txtNomeCliente.Text.Equals("") || txtValor.Text.Equals("") || txtDocumento.Text.Equals(""))
                  {
                      MessageBox.Show("Todos os campos devem ser preenchidos para a inclusão do registro!", "Alerta!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                  }
@@ -138,6 +138,7 @@ namespace ContasAReceber.View
                  {
                      if (MessageBox.Show("Verifique se todos os dados foram inseridos corretamente! \n Se tudo estiver correto clique em SIM", "Informação!", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                      {
+                        
                         op.InserirConta(entrada, Int32.Parse(txtCodigoCliente.Text), Double.Parse(txtValor.Text), txtDocumento.Text, (cbxClass.SelectedIndex) + 1, (cbxSituacao.SelectedIndex) + 1, vencimento, pagamento);
                         this.Close();
                          contas.AtualizaGridContas();
@@ -187,7 +188,7 @@ namespace ContasAReceber.View
                 string entrada, vencimento, pagamento;
                 entrada = op.FormataData(txtEntrada.Text);
                 vencimento = op.FormataData(txtVencimento.Text);
-                pagamento = op.FormataData(txtPagamento.Text);
+                pagamento = txtPagamento.Text.Equals("  /  /") ? "11/11/1111" : op.FormataData(txtPagamento.Text);
                 op.AtualizaContas(entrada , Int32.Parse(txtCodigoCliente.Text), Double.Parse(txtValor.Text), txtDocumento.Text, (cbxClass.SelectedIndex + 1), (cbxSituacao.SelectedIndex + 1), vencimento, pagamento, Int32.Parse(lblConta.Text));
                 this.Close();
                 contas.AtualizaGridContas();
