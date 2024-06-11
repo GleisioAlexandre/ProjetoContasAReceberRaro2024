@@ -41,7 +41,7 @@ namespace ContasAReceber.model
         {
            
             BancoDeDados bd = new BancoDeDados(stringDeConexao);
-            FbCommand comando = new FbCommand($"insert into contasareceber (entrada, idcliente, valor, documento, class, situacao, vencimento, pagamento) values ('{entrada}', '{idCliente}', '{valor}', '{documento}', '{classe}', '{situacao}', '{vencimento}', '{pagamento}')",bd.conexao(stringDeConexao));
+            FbCommand comando = new FbCommand($"insert into contasareceber (entrada, idcliente, valor, documento, class, situacao, vencimento, pagamento) values (@entrada, @idCliente, @valor, @documento, @class, @situacao, @vencimento, @pagamento)",bd.conexao(stringDeConexao));
             comando.Parameters.AddWithValue("@entrada", entrada);
             comando.Parameters.AddWithValue("@idcliente", idCliente);
             comando.Parameters.AddWithValue("@valor", valor);

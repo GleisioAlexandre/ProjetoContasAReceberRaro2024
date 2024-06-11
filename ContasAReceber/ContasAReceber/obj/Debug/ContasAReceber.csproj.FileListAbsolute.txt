@@ -878,6 +878,120 @@ C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\Cont
 C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.csproj.CopyComplete
 C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.exe
 C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.pdb
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\itext.barcodes.dll
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\itext.bouncy-castle-connector.dll
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\itext.commons.dll
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\itext.forms.dll
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\itext.io.dll
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\itext.kernel.dll
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\itext.layout.dll
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\itext.pdfa.dll
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\itext.pdfua.dll
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\itext.sign.dll
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\itext.styledxmlparser.dll
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\itext.svg.dll
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.Logging.dll
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.Options.dll
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.Primitives.dll
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\System.Buffers.dll
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\System.Memory.dll
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\itext.barcodes.xml
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\itext.bouncy-castle-connector.xml
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\itext.commons.xml
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\itext.forms.xml
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\itext.io.xml
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\itext.kernel.xml
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\itext.layout.xml
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\itext.pdfa.xml
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\itext.pdfua.xml
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\itext.sign.xml
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\itext.styledxmlparser.xml
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\itext.svg.xml
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.Logging.xml
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.Options.xml
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.Primitives.xml
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\System.Buffers.xml
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\System.Memory.xml
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\System.ValueTuple.xml
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\BouncyCastle.Cryptography.dll
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\itext.bouncy-castle-adapter.dll
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\BouncyCastle.Cryptography.xml
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\itext.bouncy-castle-adapter.xml
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\itextsharp.dll
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\itextsharp.xml
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\BouncyCastle.Cryptography.dll
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\itext.barcodes.dll
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\itext.bouncy-castle-adapter.dll
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\itext.bouncy-castle-connector.dll
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\itext.commons.dll
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\itext.forms.dll
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\itext.io.dll
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\itext.kernel.dll
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\itext.layout.dll
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\itext.pdfa.dll
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\itext.pdfua.dll
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\itext.sign.dll
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\itext.styledxmlparser.dll
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\itext.svg.dll
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\itextsharp.dll
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.Logging.dll
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.Options.dll
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.Primitives.dll
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\System.Buffers.dll
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\System.Memory.dll
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\BouncyCastle.Cryptography.xml
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\itext.barcodes.xml
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\itext.bouncy-castle-adapter.xml
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\itext.bouncy-castle-connector.xml
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\itext.commons.xml
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\itext.forms.xml
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\itext.io.xml
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\itext.kernel.xml
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\itext.layout.xml
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\itext.pdfa.xml
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\itext.pdfua.xml
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\itext.sign.xml
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\itext.styledxmlparser.xml
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\itext.svg.xml
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\itextsharp.xml
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.Logging.xml
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.Options.xml
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.Primitives.xml
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\System.Buffers.xml
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\System.Memory.xml
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\System.ValueTuple.xml
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmContasAPagar.resources
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmContasAReceber.resources
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\System.Reflection.Context.dll
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\System.Reflection.Context.xml
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.ReportViewer.Common.dll
 D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\ContasAReceber.exe.config
 D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\ContasAReceber.exe
 D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\ContasAReceber.pdb
@@ -970,15 +1084,36 @@ D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\System.Threading.Tasks.
 D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\System.Threading.Thread.dll
 D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\System.Threading.ThreadPool.dll
 D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\System.Threading.Timer.dll
-D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\System.ValueTuple.dll
 D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\System.Xml.ReaderWriter.dll
 D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\System.Xml.XDocument.dll
 D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\System.Xml.XmlDocument.dll
 D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\System.Xml.XmlSerializer.dll
 D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\System.Xml.XPath.dll
 D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\System.Xml.XPath.XDocument.dll
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\BouncyCastle.Crypto.dll
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\BouncyCastle.Cryptography.dll
 D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\FirebirdSql.Data.FirebirdClient.dll
-D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\itext.barcodes.dll
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\itext.bouncy-castle-adapter.dll
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\itext.bouncy-castle-connector.dll
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\itext.commons.dll
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\itext.forms.dll
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\itext.io.dll
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\itext.kernel.dll
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\itext.layout.dll
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\itext.pdfa.dll
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\itext.pdfua.dll
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\itext.sign.dll
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\itext.styledxmlparser.dll
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\itext.svg.dll
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\itextsharp.dll
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.Logging.dll
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.Options.dll
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.Primitives.dll
 D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
 D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.ReportViewer.Design.dll
 D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
@@ -986,8 +1121,14 @@ D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.ReportViewer.
 D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.SqlServer.Types.dll
 D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\Newtonsoft.Json.dll
 D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\PagedList.dll
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\System.Buffers.dll
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\System.ComponentModel.Annotations.dll
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\System.Memory.dll
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\System.Numerics.Vectors.dll
 D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
 D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\System.ValueTuple.dll
 D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\EnvDTE.dll
 D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
 D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
@@ -996,10 +1137,37 @@ D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.VisualStudio.
 D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
 D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
 D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.MSXML.dll
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\BouncyCastle.Cryptography.xml
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\itext.barcodes.xml
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\itext.bouncy-castle-adapter.xml
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\itext.bouncy-castle-connector.xml
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\itext.commons.xml
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\itext.forms.xml
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\itext.io.xml
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\itext.kernel.xml
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\itext.layout.xml
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\itext.pdfa.xml
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\itext.pdfua.xml
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\itext.sign.xml
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\itext.styledxmlparser.xml
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\itext.svg.xml
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\itextsharp.xml
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.Logging.xml
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.Options.xml
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.Primitives.xml
 D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\Newtonsoft.Json.xml
 D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\PagedList.xml
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\System.Buffers.xml
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\System.Memory.xml
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\System.Numerics.Vectors.xml
 D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\System.ValueTuple.xml
 D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
 D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
 D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
@@ -1044,6 +1212,8 @@ D:\Projetos 2024\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.exe.conf
 D:\Projetos 2024\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.Properties.Resources.resources
 D:\Projetos 2024\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmClientes.resources
 D:\Projetos 2024\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmConfiguracao.resources
+D:\Projetos 2024\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmContasAReceber.resources
+D:\Projetos 2024\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmContasAPagar.resources
 D:\Projetos 2024\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmHome.resources
 D:\Projetos 2024\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmOperacoesClientes.resources
 D:\Projetos 2024\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmOperacoesContas.resources
@@ -1052,174 +1222,8 @@ D:\Projetos 2024\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.csproj.C
 D:\Projetos 2024\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.csproj.CopyComplete
 D:\Projetos 2024\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.exe
 D:\Projetos 2024\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.pdb
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\itext.barcodes.dll
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\itext.bouncy-castle-connector.dll
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\itext.commons.dll
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\itext.forms.dll
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\itext.io.dll
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\itext.kernel.dll
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\itext.layout.dll
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\itext.pdfa.dll
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\itext.pdfua.dll
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\itext.sign.dll
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\itext.styledxmlparser.dll
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\itext.svg.dll
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.Logging.dll
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.Options.dll
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.Primitives.dll
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\System.Buffers.dll
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\System.Diagnostics.DiagnosticSource.dll
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\System.Memory.dll
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\System.Numerics.Vectors.dll
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\itext.barcodes.xml
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\itext.bouncy-castle-connector.xml
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\itext.commons.xml
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\itext.forms.xml
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\itext.io.xml
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\itext.kernel.xml
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\itext.layout.xml
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\itext.pdfa.xml
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\itext.pdfua.xml
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\itext.sign.xml
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\itext.styledxmlparser.xml
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\itext.svg.xml
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.Logging.xml
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.Options.xml
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.Primitives.xml
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\System.Buffers.xml
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\System.Diagnostics.DiagnosticSource.xml
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\System.Memory.xml
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\System.Numerics.Vectors.xml
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\System.ValueTuple.xml
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\BouncyCastle.Crypto.dll
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\BouncyCastle.Cryptography.dll
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\itext.bouncy-castle-adapter.dll
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\BouncyCastle.Cryptography.xml
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\itext.bouncy-castle-adapter.xml
-D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\BouncyCastle.Crypto.dll
-D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\BouncyCastle.Cryptography.dll
-D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\itext.barcodes.dll
-D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\itext.bouncy-castle-adapter.dll
-D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\itext.bouncy-castle-connector.dll
-D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\itext.commons.dll
-D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\itext.forms.dll
-D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\itext.io.dll
-D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\itext.kernel.dll
-D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\itext.layout.dll
-D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\itext.pdfa.dll
-D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\itext.pdfua.dll
-D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\itext.sign.dll
-D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\itext.styledxmlparser.dll
-D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\itext.svg.dll
-D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
-D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
-D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
-D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.Logging.dll
-D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.Options.dll
-D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.Primitives.dll
-D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\System.Buffers.dll
-D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\System.Diagnostics.DiagnosticSource.dll
-D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\System.Memory.dll
-D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\System.Numerics.Vectors.dll
-D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\BouncyCastle.Cryptography.xml
-D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\itext.barcodes.xml
-D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\itext.bouncy-castle-adapter.xml
-D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\itext.bouncy-castle-connector.xml
-D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\itext.commons.xml
-D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\itext.forms.xml
-D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\itext.io.xml
-D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\itext.kernel.xml
-D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\itext.layout.xml
-D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\itext.pdfa.xml
-D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\itext.pdfua.xml
-D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\itext.sign.xml
-D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\itext.styledxmlparser.xml
-D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\itext.svg.xml
-D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
-D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
-D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
-D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.Logging.xml
-D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
-D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.Options.xml
-D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.Primitives.xml
-D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\System.Buffers.xml
-D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\System.Diagnostics.DiagnosticSource.xml
-D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\System.Memory.xml
-D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\System.Numerics.Vectors.xml
-D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\System.ValueTuple.xml
-D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\itextsharp.dll
-D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\itextsharp.xml
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\itextsharp.dll
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\itextsharp.xml
-C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\BouncyCastle.Crypto.dll
-C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\BouncyCastle.Cryptography.dll
-C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\itext.barcodes.dll
-C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\itext.bouncy-castle-adapter.dll
-C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\itext.bouncy-castle-connector.dll
-C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\itext.commons.dll
-C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\itext.forms.dll
-C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\itext.io.dll
-C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\itext.kernel.dll
-C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\itext.layout.dll
-C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\itext.pdfa.dll
-C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\itext.pdfua.dll
-C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\itext.sign.dll
-C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\itext.styledxmlparser.dll
-C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\itext.svg.dll
-C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\itextsharp.dll
-C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
-C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
-C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.Logging.dll
-C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.Options.dll
-C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.Primitives.dll
-C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\System.Buffers.dll
-C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\System.Diagnostics.DiagnosticSource.dll
-C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\System.Memory.dll
-C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\System.Numerics.Vectors.dll
-C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\BouncyCastle.Cryptography.xml
-C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\itext.barcodes.xml
-C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\itext.bouncy-castle-adapter.xml
-C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\itext.bouncy-castle-connector.xml
-C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\itext.commons.xml
-C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\itext.forms.xml
-C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\itext.io.xml
-C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\itext.kernel.xml
-C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\itext.layout.xml
-C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\itext.pdfa.xml
-C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\itext.pdfua.xml
-C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\itext.sign.xml
-C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\itext.styledxmlparser.xml
-C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\itext.svg.xml
-C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\itextsharp.xml
-C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
-C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
-C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
-C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.Logging.xml
-C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
-C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.Options.xml
-C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\Microsoft.Extensions.Primitives.xml
-C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\System.Buffers.xml
-C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\System.Diagnostics.DiagnosticSource.xml
-C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\System.Memory.xml
-C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\System.Numerics.Vectors.xml
-C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\System.ValueTuple.xml
-D:\Projetos 2024\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.csprojAssemblyReference.cache
-D:\Projetos 2024\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmContasAPagar.resources
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmContasAPagar.resources
-D:\Projetos 2024\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmContasAReceber.resources
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmContasAReceber.resources
-D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\System.ComponentModel.Annotations.dll
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\System.ComponentModel.Annotations.dll
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\System.Reflection.Context.dll
-C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\System.Reflection.Context.xml
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\Projetos 2024\ContasAReceber\ContasAReceber\bin\Debug\BouncyCastle.Crypto.xml
