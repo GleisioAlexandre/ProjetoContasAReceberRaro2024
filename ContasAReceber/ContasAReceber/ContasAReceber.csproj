@@ -203,6 +203,7 @@
     <Compile Include="model\ContasAReceber.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="servico\SuporteRemoto.cs" />
     <Compile Include="servico\ServicoBuscaCep.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="View\FrmClientes.cs">
@@ -314,6 +315,7 @@
     <None Include="Resources\icons8-print-16.png" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="AcessoRemoto\" />
     <Folder Include="Banco de Dados\" />
     <Folder Include="Instalador\" />
   </ItemGroup>

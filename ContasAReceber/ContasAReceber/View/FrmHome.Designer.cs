@@ -38,6 +38,8 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblData = new System.Windows.Forms.ToolStripStatusLabel();
+            this.suporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.anydeskToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -47,7 +49,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cadastroToolStripMenuItem,
             this.contasAReceberToolStripMenuItem,
-            this.configuraçãoToolStripMenuItem});
+            this.configuraçãoToolStripMenuItem,
+            this.suporteToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1208, 24);
@@ -65,7 +68,7 @@
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.clientesToolStripMenuItem.Text = "Clientes";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
@@ -80,7 +83,7 @@
             // contasAReceberToolStripMenuItem1
             // 
             this.contasAReceberToolStripMenuItem1.Name = "contasAReceberToolStripMenuItem1";
-            this.contasAReceberToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.contasAReceberToolStripMenuItem1.Size = new System.Drawing.Size(165, 22);
             this.contasAReceberToolStripMenuItem1.Text = "Contas a Receber";
             this.contasAReceberToolStripMenuItem1.Click += new System.EventHandler(this.contasAReceberToolStripMenuItem1_Click);
             // 
@@ -95,7 +98,7 @@
             // configurarBancoDeDabosToolStripMenuItem
             // 
             this.configurarBancoDeDabosToolStripMenuItem.Name = "configurarBancoDeDabosToolStripMenuItem";
-            this.configurarBancoDeDabosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.configurarBancoDeDabosToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.configurarBancoDeDabosToolStripMenuItem.Text = "Configurações";
             this.configurarBancoDeDabosToolStripMenuItem.Click += new System.EventHandler(this.configurarBancoDeDabosToolStripMenuItem_Click);
             // 
@@ -126,6 +129,21 @@
             this.lblData.Name = "lblData";
             this.lblData.Size = new System.Drawing.Size(76, 17);
             this.lblData.Text = "00/00/0000";
+            // 
+            // suporteToolStripMenuItem
+            // 
+            this.suporteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.anydeskToolStripMenuItem});
+            this.suporteToolStripMenuItem.Name = "suporteToolStripMenuItem";
+            this.suporteToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.suporteToolStripMenuItem.Text = "Suporte";
+            // 
+            // anydeskToolStripMenuItem
+            // 
+            this.anydeskToolStripMenuItem.Name = "anydeskToolStripMenuItem";
+            this.anydeskToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.anydeskToolStripMenuItem.Text = "Anydesk";
+            this.anydeskToolStripMenuItem.Click += new System.EventHandler(this.anydeskToolStripMenuItem_Click);
             // 
             // FrmHome
             // 
@@ -162,5 +180,7 @@
         private System.Windows.Forms.ToolStripMenuItem contasAReceberToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem configuraçãoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem configurarBancoDeDabosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem suporteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem anydeskToolStripMenuItem;
     }
 }

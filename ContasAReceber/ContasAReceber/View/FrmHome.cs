@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ContasAReceber.servico;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -67,6 +68,12 @@ namespace ContasAReceber.View
         private void planoDeContasToolStripMenuItem_Click(object sender, EventArgs e)
         {
            
+        }
+
+        private void anydeskToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SuporteRemoto suporteRemoto = new SuporteRemoto();
+            suporteRemoto.AcessoRemoto();
         }
     }
 }
