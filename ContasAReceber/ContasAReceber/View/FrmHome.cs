@@ -31,6 +31,7 @@ namespace ContasAReceber.View
                 MessageBox.Show("Erro: " + ex, "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         private void FrmHome_Load(object sender, EventArgs e)
         {
             lblData.Text = DateTime.Now.ToString("dd/MM/yyyy");
@@ -50,5 +51,22 @@ namespace ContasAReceber.View
             configuracao.Show();
         }
 
+        private void TitulosAPagar_Click(object sender, EventArgs e)
+        {
+            FrmContasAPagar contasAPagar = new FrmContasAPagar();
+            contasAPagar.MdiParent = this;
+            contasAPagar.WindowState = FormWindowState.Maximized;
+            contasAPagar.Show();
+        }
+
+        private void fornecedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void planoDeContasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

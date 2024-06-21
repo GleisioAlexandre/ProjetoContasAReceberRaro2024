@@ -20,7 +20,7 @@ namespace ContasAReceber.model
             string query = "SELECT contasareceber.entrada, pessoa.nome, contasareceber.valor, contasareceber.documento, class.tipo, situacao.situacao, contasareceber.vencimento, contasareceber.pagamento FROM contasareceber JOIN pessoa ON contasareceber.idcliente = pessoa.idpessoa JOIN class ON contasareceber.class = class.iidclass JOIN situacao ON contasareceber.situacao = situacao.idsituacao";
             BancoDeDados bd = new BancoDeDados(stringDeConexao);
             FbDataAdapter adaptador = new FbDataAdapter(query, bd.conexao(stringDeConexao));
-            DataSet dataSet  = new DataSet();
+            DataSet dataSet = new DataSet();
             bd.AbreConexao();
             adaptador.Fill(dataSet, "contasareceber");
             return dataSet;
@@ -37,10 +37,11 @@ namespace ContasAReceber.model
             bd.Fechaconexao();
             return dt;
         }
-        public void InserirConta(string entrada, int idCliente, double valor, string documento, int classe, int situacao, string vencimento, string pagamento)
+        public void InserirConta(string entrada, int idCliente, double valor, string documento, int classe, int situacao, string vencimento, object pagamento)
         {
+
             BancoDeDados bd = new BancoDeDados(stringDeConexao);
-            FbCommand comando = new FbCommand($"insert into contasareceber (entrada, idcliente, valor, documento, class, situacao, vencimento, pagamento) values ('{entrada}', '{idCliente}', '{valor}', '{documento}', '{classe}', '{situacao}', '{vencimento}', '{pagamento}')",bd.conexao(stringDeConexao));
+            FbCommand comando = new FbCommand($"insert into contasareceber (entrada, idcliente, valor, documento, class, situacao, vencimento, pagamento) values (@entrada, @idCliente, @valor, @documento, @class, @situacao, @vencimento, @pagamento)", bd.conexao(stringDeConexao));
             comando.Parameters.AddWithValue("@entrada", entrada);
             comando.Parameters.AddWithValue("@idcliente", idCliente);
             comando.Parameters.AddWithValue("@valor", valor);
@@ -106,5 +107,5 @@ namespace ContasAReceber.model
 
     }
 
-   
+
 }

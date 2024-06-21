@@ -37,6 +37,7 @@ namespace ContasAReceber.View
            
             lblIdCliente.Text = operacoesClientes.PesquisaCliente(nome)[0].ToString();
             txtCliente.Text = operacoesClientes.PesquisaCliente(nome)[1].ToString();
+           
             txtNomeContato.Text = operacoesClientes.PesquisaCliente(nome)[3].ToString();
             txtTelefone.Text = operacoesClientes.PesquisaCliente(nome)[4].ToString();
             txtCelular.Text = operacoesClientes.PesquisaCliente(nome)[5].ToString();
@@ -104,8 +105,8 @@ namespace ContasAReceber.View
             string telefone, celular;
             try
             {
-                telefone = operacoesClientes.FomataNumeroTelefone(txtTelefone.Text);
-                celular = operacoesClientes.FomataNumeroTelefone(txtCelular.Text);
+                telefone = operacoesClientes.FormatarTelefone(txtTelefone.Text);
+                celular = operacoesClientes.FormatarTelefone(txtCelular.Text);
                 if (cbxPj.Checked == true)
                 {
                     pj = 1;
@@ -153,8 +154,8 @@ namespace ContasAReceber.View
             string telefone, celular;
             try
             {
-                telefone = operacoesClientes.FomataNumeroTelefone(txtTelefone.Text);
-                celular = operacoesClientes.FomataNumeroTelefone(txtCelular.Text);
+                telefone = operacoesClientes.FormatarTelefone(txtTelefone.Text);
+                celular = operacoesClientes.FormatarTelefone(txtCelular.Text);
                 if (cbxPj.Checked == true)
                 {
                      pj = 1;
@@ -229,9 +230,6 @@ namespace ContasAReceber.View
             this.Close();
         }
 
-        private void txtNumero_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

@@ -27,7 +27,7 @@ namespace ContasAReceber.controller
         {
             return contas.ExibeGridContas();
         }
-        public void InserirConta(string entrada, int idCliente, double valor, string documento, int classe, int situacao, string vencimento, string pagamento)
+        public void InserirConta(string entrada, int idCliente, double valor, string documento, int classe, int situacao, string vencimento, object pagamento)
         {
             contas.InserirConta(entrada, idCliente, valor, documento, classe, situacao, vencimento, pagamento);
         }
@@ -62,13 +62,13 @@ namespace ContasAReceber.controller
         {
             contas.AtualizarContas(entrada, idcliente, valor, documento, classe, situacao, vencimento, pagamento, idcontas);
         }
-        public void GerarRelatorio(DataGridView dtgContas,  string total)
+        public void GerarRelatorio(DataGridView dtgContas, string total)
         {
             string data = DateTime.Now.ToString("ddMMyyyyhhmmss");
             try
             {
                 Console.WriteLine(total);
-              
+
                 string caminho = PegarCaminho() + $@"\{data}.pdf";
                 Document doc = CriarDocumento();
                 PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(caminho, FileMode.Create));
@@ -291,6 +291,19 @@ namespace ContasAReceber.controller
                     document.BottomMargin - 10,
                     0);
             }
+        }
+        public string FormataData(string data)
+        {
+            if (data.Equals("  /  /"))
+            {
+                data = "";
+            }
+            else
+            {
+                data = data.Replace('/', '.');
+            }
+            //return data == "  /  /" ? null : data.Replace('/', '.');
+            return data;
         }
 
     }

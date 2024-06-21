@@ -48,7 +48,7 @@ namespace ContasAReceber.controller
         }
         public void AtualizarCliente(String nome, String cadastropessoa, String nomeContato, String telefone, String celular, String email, String cep, String logradouro, Int32 numero, String complemento, String bairro, String cidade, String uf, Int32 pj, Int32 idpessoa)
         {
-            cliente.AtualizarCliente(nome, cadastropessoa, nomeContato, telefone, celular, email ,cep, logradouro, numero, complemento, bairro, cidade, uf, pj, idpessoa);
+            cliente.AtualizarCliente(nome, cadastropessoa, nomeContato, telefone, celular, email, cep, logradouro, numero, complemento, bairro, cidade, uf, pj, idpessoa);
         }
         public void GerarRelatorio(DataGridView dtgClientes)
         {
@@ -243,10 +243,9 @@ namespace ContasAReceber.controller
                     0);
             }
         }
-        public string FomataNumeroTelefone(string numeroTelefone)
+        public string FormatarTelefone(string telefone)
         {
-
-            return numeroTelefone == "(  )    -" || numeroTelefone == "(  )     -" ? "": numeroTelefone;
-        }       
+            return telefone == "(  )    -" || telefone == "(  )     -" ? "" : telefone;
+        }
     }
 }

@@ -37,8 +37,8 @@
             this.txtNomeCliente = new System.Windows.Forms.TextBox();
             this.btnInserir = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dtPagamento = new System.Windows.Forms.TextBox();
-            this.dtVencimento = new System.Windows.Forms.TextBox();
+            this.txtPagamento = new System.Windows.Forms.MaskedTextBox();
+            this.txtVencimento = new System.Windows.Forms.MaskedTextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -51,9 +51,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnDeletar = new System.Windows.Forms.Button();
             this.btnAtualizar = new System.Windows.Forms.Button();
-            this.dtEntrada = new System.Windows.Forms.TextBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.lblConta = new System.Windows.Forms.Label();
+            this.txtEntrada = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -144,8 +144,8 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.dtPagamento);
-            this.groupBox2.Controls.Add(this.dtVencimento);
+            this.groupBox2.Controls.Add(this.txtPagamento);
+            this.groupBox2.Controls.Add(this.txtVencimento);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label7);
@@ -164,21 +164,25 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Informações da Divida";
             // 
-            // dtPagamento
+            // txtPagamento
             // 
-            this.dtPagamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtPagamento.Location = new System.Drawing.Point(639, 142);
-            this.dtPagamento.Name = "dtPagamento";
-            this.dtPagamento.Size = new System.Drawing.Size(100, 29);
-            this.dtPagamento.TabIndex = 31;
+            this.txtPagamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPagamento.Location = new System.Drawing.Point(639, 142);
+            this.txtPagamento.Mask = "00/00/0000";
+            this.txtPagamento.Name = "txtPagamento";
+            this.txtPagamento.Size = new System.Drawing.Size(98, 29);
+            this.txtPagamento.TabIndex = 32;
+            this.txtPagamento.ValidatingType = typeof(System.DateTime);
             // 
-            // dtVencimento
+            // txtVencimento
             // 
-            this.dtVencimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtVencimento.Location = new System.Drawing.Point(18, 142);
-            this.dtVencimento.Name = "dtVencimento";
-            this.dtVencimento.Size = new System.Drawing.Size(100, 29);
-            this.dtVencimento.TabIndex = 30;
+            this.txtVencimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVencimento.Location = new System.Drawing.Point(18, 142);
+            this.txtVencimento.Mask = "00/00/0000";
+            this.txtVencimento.Name = "txtVencimento";
+            this.txtVencimento.Size = new System.Drawing.Size(98, 29);
+            this.txtVencimento.TabIndex = 31;
+            this.txtVencimento.ValidatingType = typeof(System.DateTime);
             // 
             // label9
             // 
@@ -309,14 +313,6 @@
             this.btnAtualizar.UseVisualStyleBackColor = true;
             this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
-            // dtEntrada
-            // 
-            this.dtEntrada.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtEntrada.Location = new System.Drawing.Point(651, 37);
-            this.dtEntrada.Name = "dtEntrada";
-            this.dtEntrada.Size = new System.Drawing.Size(100, 29);
-            this.dtEntrada.TabIndex = 28;
-            // 
             // btnCancelar
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -339,13 +335,23 @@
             this.lblConta.Text = "Conta";
             this.lblConta.Visible = false;
             // 
+            // txtEntrada
+            // 
+            this.txtEntrada.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEntrada.Location = new System.Drawing.Point(651, 37);
+            this.txtEntrada.Mask = "00/00/0000";
+            this.txtEntrada.Name = "txtEntrada";
+            this.txtEntrada.Size = new System.Drawing.Size(98, 29);
+            this.txtEntrada.TabIndex = 30;
+            this.txtEntrada.ValidatingType = typeof(System.DateTime);
+            // 
             // FrmOperacoesContas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 528);
+            this.Controls.Add(this.txtEntrada);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.dtEntrada);
             this.Controls.Add(this.lblConta);
             this.Controls.Add(this.btnAtualizar);
             this.Controls.Add(this.btnDeletar);
@@ -392,10 +398,10 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnDeletar;
         private System.Windows.Forms.Button btnAtualizar;
-        private System.Windows.Forms.TextBox dtPagamento;
-        private System.Windows.Forms.TextBox dtVencimento;
-        private System.Windows.Forms.TextBox dtEntrada;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label lblConta;
+        private System.Windows.Forms.MaskedTextBox txtEntrada;
+        private System.Windows.Forms.MaskedTextBox txtPagamento;
+        private System.Windows.Forms.MaskedTextBox txtVencimento;
     }
 }

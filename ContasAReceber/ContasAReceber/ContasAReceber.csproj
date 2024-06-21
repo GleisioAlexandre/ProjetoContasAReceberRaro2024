@@ -199,39 +199,31 @@
     <Compile Include="View\FrmClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FrmClientes.Designer.cs">
-      <DependentUpon>FrmClientes.cs</DependentUpon>
-    </Compile>
+    <Compile Include="View\FrmClientes.Designer.cs" />
     <Compile Include="View\FrmConfiguracao.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FrmConfiguracao.Designer.cs">
-      <DependentUpon>FrmConfiguracao.cs</DependentUpon>
+    <Compile Include="View\FrmConfiguracao.Designer.cs" />
+    <Compile Include="View\FrmContasAPagar.cs">
+      <SubType>Form</SubType>
     </Compile>
+    <Compile Include="View\FrmContasAPagar.Designer.cs" />
     <Compile Include="View\FrmContasAReceber.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FrmContasAReceber.Designer.cs">
-      <DependentUpon>FrmContasAReceber.cs</DependentUpon>
-    </Compile>
+    <Compile Include="View\FrmContasAReceber.Designer.cs" />
     <Compile Include="View\FrmHome.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FrmHome.Designer.cs">
-      <DependentUpon>FrmHome.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\FrmOperacoesContas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\FrmOperacoesContas.Designer.cs">
-      <DependentUpon>FrmOperacoesContas.cs</DependentUpon>
-    </Compile>
+    <Compile Include="View\FrmHome.Designer.cs" />
     <Compile Include="View\FrmOperacoesClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FrmOperacoesClientes.Designer.cs">
-      <DependentUpon>FrmOperacoesClientes.cs</DependentUpon>
+    <Compile Include="View\FrmOperacoesClientes.Designer.cs" />
+    <Compile Include="View\FrmOperacoesContas.cs">
+      <SubType>Form</SubType>
     </Compile>
+    <Compile Include="View\FrmOperacoesContas.Designer.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -242,24 +234,13 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="View\FrmClientes.resx">
-      <DependentUpon>FrmClientes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\FrmConfiguracao.resx">
-      <DependentUpon>FrmConfiguracao.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\FrmContasAReceber.resx">
-      <DependentUpon>FrmContasAReceber.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\FrmHome.resx">
-      <DependentUpon>FrmHome.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\FrmOperacoesClientes.resx">
-      <DependentUpon>FrmOperacoesClientes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\FrmOperacoesContas.resx">
-      <DependentUpon>FrmOperacoesContas.cs</DependentUpon>
-    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmClientes.resx" />
+    <EmbeddedResource Include="View\FrmConfiguracao.resx" />
+    <EmbeddedResource Include="View\FrmContasAPagar.resx" />
+    <EmbeddedResource Include="View\FrmContasAReceber.resx" />
+    <EmbeddedResource Include="View\FrmHome.resx" />
+    <EmbeddedResource Include="View\FrmOperacoesClientes.resx" />
+    <EmbeddedResource Include="View\FrmOperacoesContas.resx" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\ContasAReceber.model.Contas.datasource" />
     <None Include="Properties\Settings.settings">
