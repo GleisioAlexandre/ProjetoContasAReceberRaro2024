@@ -114,6 +114,7 @@
             this.dtgContas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgContas.Size = new System.Drawing.Size(1106, 436);
             this.dtgContas.TabIndex = 2;
+            this.dtgContas.VirtualMode = true;
             this.dtgContas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgContas_CellDoubleClick);
             this.dtgContas.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dtgContas_CellFormatting);
             // 
