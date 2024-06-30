@@ -1230,3 +1230,5 @@ C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\Cont
 C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\SqlServerTypes\x86\msvcr120.dll
 C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
 C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\BouncyCastle.Crypto.xml
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\NLog.dll
+C:\Users\Gleisio\Source\Repos\ProjetoContasAReceberRaro20242\ContasAReceber\ContasAReceber\bin\Debug\NLog.xml

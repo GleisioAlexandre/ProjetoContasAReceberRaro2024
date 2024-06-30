@@ -1,4 +1,5 @@
 ﻿using ContasAReceber.controller;
+using NLog;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -61,14 +62,12 @@ namespace ContasAReceber.View
         {
            if (txtNomeCliente.Text.Equals(""))
             {
-                MessageBox.Show("O campos Nome do Cliente, não pode ser nulo!");
-
+                MessageBox.Show("Informe o nome do cliente!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
                 try
                 {
-                    
                     txtCodigoCliente.Text = op.PesquisarCliente(txtNomeCliente.Text)[0].ToString();
                     txtNomeCliente.Text = op.PesquisarCliente(txtNomeCliente.Text)[1].ToString();
                 }
@@ -122,9 +121,10 @@ namespace ContasAReceber.View
         }
         private void btnInserir_Click(object sender, EventArgs e)
         {
-             try
+            try
              {
-                 string pagamento;
+               
+                string pagamento;
                  string  entrada, vencimento ;
                  entrada = op.FormataData(txtEntrada.Text);
                  vencimento = op.FormataData(txtVencimento.Text);
@@ -132,13 +132,12 @@ namespace ContasAReceber.View
 
                 if (txtNomeCliente.Text.Equals("") || txtValor.Text.Equals("") || txtDocumento.Text.Equals(""))
                  {
-                     MessageBox.Show("Todos os campos devem ser preenchidos para a inclusão do registro!", "Alerta!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Todos os campos devem ser preenchidos para a inclusão do registro!", "Alerta!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                  }
                  else
                  {
                      if (MessageBox.Show("Verifique se todos os dados foram inseridos corretamente! \n Se tudo estiver correto clique em SIM", "Informação!", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                      {
-                        
                         op.InserirConta(entrada, Int32.Parse(txtCodigoCliente.Text), Double.Parse(txtValor.Text), txtDocumento.Text, (cbxClass.SelectedIndex) + 1, (cbxSituacao.SelectedIndex) + 1, vencimento, pagamento);
                         this.Close();
                          contas.AtualizaGridContas();
@@ -149,7 +148,7 @@ namespace ContasAReceber.View
              }
              catch (Exception ex)
              {
-                 MessageBox.Show("Erro ao Tentar Salvar as informações!\n" + ex, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Erro ao Tentar Salvar as informações!\n" + ex, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
              }
         }
         private void btnDeletar_Click(object sender, EventArgs e)
