@@ -37,7 +37,7 @@ namespace ContasAReceber.model
             bd.Fechaconexao();
             return dt;
         }
-        public void InserirConta(string entrada, int idCliente, double valor, string documento, int classe, int situacao, string vencimento, object pagamento)
+        public void InserirConta(string entrada, int idCliente, double valor, string documento, int classe, int situacao, string vencimento, string pagamento)
         {
            
             BancoDeDados bd = new BancoDeDados(stringDeConexao);

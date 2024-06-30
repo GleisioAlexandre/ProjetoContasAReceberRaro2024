@@ -37,6 +37,8 @@
             this.txtNomeCliente = new System.Windows.Forms.TextBox();
             this.btnInserir = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtPagamento = new System.Windows.Forms.MaskedTextBox();
+            this.txtVencimento = new System.Windows.Forms.MaskedTextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -52,8 +54,6 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.lblConta = new System.Windows.Forms.Label();
             this.txtEntrada = new System.Windows.Forms.MaskedTextBox();
-            this.txtVencimento = new System.Windows.Forms.MaskedTextBox();
-            this.txtPagamento = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -163,6 +163,28 @@
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Informações da Divida";
+            // 
+            // txtPagamento
+            // 
+            this.txtPagamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPagamento.Location = new System.Drawing.Point(639, 142);
+            this.txtPagamento.Mask = "00/00/0000";
+            this.txtPagamento.Name = "txtPagamento";
+            this.txtPagamento.Size = new System.Drawing.Size(98, 29);
+            this.txtPagamento.TabIndex = 32;
+            this.txtPagamento.ValidatingType = typeof(System.DateTime);
+            this.txtPagamento.Validated += new System.EventHandler(this.txtPagamento_Validated);
+            // 
+            // txtVencimento
+            // 
+            this.txtVencimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVencimento.Location = new System.Drawing.Point(18, 142);
+            this.txtVencimento.Mask = "00/00/0000";
+            this.txtVencimento.Name = "txtVencimento";
+            this.txtVencimento.Size = new System.Drawing.Size(98, 29);
+            this.txtVencimento.TabIndex = 31;
+            this.txtVencimento.ValidatingType = typeof(System.DateTime);
+            this.txtVencimento.Validated += new System.EventHandler(this.txtVencimento_Validated);
             // 
             // label9
             // 
@@ -324,26 +346,6 @@
             this.txtEntrada.Size = new System.Drawing.Size(98, 29);
             this.txtEntrada.TabIndex = 30;
             this.txtEntrada.ValidatingType = typeof(System.DateTime);
-            // 
-            // txtVencimento
-            // 
-            this.txtVencimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVencimento.Location = new System.Drawing.Point(18, 142);
-            this.txtVencimento.Mask = "00/00/0000";
-            this.txtVencimento.Name = "txtVencimento";
-            this.txtVencimento.Size = new System.Drawing.Size(98, 29);
-            this.txtVencimento.TabIndex = 31;
-            this.txtVencimento.ValidatingType = typeof(System.DateTime);
-            // 
-            // txtPagamento
-            // 
-            this.txtPagamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPagamento.Location = new System.Drawing.Point(639, 142);
-            this.txtPagamento.Mask = "00/00/0000";
-            this.txtPagamento.Name = "txtPagamento";
-            this.txtPagamento.Size = new System.Drawing.Size(98, 29);
-            this.txtPagamento.TabIndex = 32;
-            this.txtPagamento.ValidatingType = typeof(System.DateTime);
             // 
             // FrmOperacoesContas
             // 

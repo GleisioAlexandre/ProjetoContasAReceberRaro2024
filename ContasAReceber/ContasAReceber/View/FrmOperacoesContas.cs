@@ -123,28 +123,22 @@ namespace ContasAReceber.View
         {
             try
              {
-               
-                string pagamento;
-                 string  entrada, vencimento ;
-                 entrada = op.FormataData(txtEntrada.Text);
-                 vencimento = op.FormataData(txtVencimento.Text);
-                 pagamento = txtPagamento.Text.Equals("  /  /") ? "11/11/1111" : op.FormataData(txtPagamento.Text);
-
+                 string  entrada, vencimento, pagamento ;
+                entrada = txtEntrada.Text;// op.FormataData(txtEntrada.Text);
+                 vencimento = txtVencimento.Text;//op.FormataData(txtVencimento.Text);
+                pagamento = txtPagamento.Text.Equals("  /  /") ? null : txtPagamento.Text;//op.FormataData(txtPagamento.Text);
                 if (txtNomeCliente.Text.Equals("") || txtValor.Text.Equals("") || txtDocumento.Text.Equals(""))
                  {
                     MessageBox.Show("Todos os campos devem ser preenchidos para a inclusão do registro!", "Alerta!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                  }
-                 else
-                 {
-                     if (MessageBox.Show("Verifique se todos os dados foram inseridos corretamente! \n Se tudo estiver correto clique em SIM", "Informação!", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
-                     {
-                        op.InserirConta(entrada, Int32.Parse(txtCodigoCliente.Text), Double.Parse(txtValor.Text), txtDocumento.Text, (cbxClass.SelectedIndex) + 1, (cbxSituacao.SelectedIndex) + 1, vencimento, pagamento);
-                        this.Close();
-                         contas.AtualizaGridContas();
-                        MessageBox.Show("Dados inseridos com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                     }
-                    
-                 }
+                else if (MessageBox.Show("Verifique se todos os dados foram inseridos corretamente! \n Se tudo estiver correto clique em SIM", "Informação!", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                {
+                    op.InserirConta(entrada, Int32.Parse(txtCodigoCliente.Text), Double.Parse(txtValor.Text), txtDocumento.Text, (cbxClass.SelectedIndex) + 1, (cbxSituacao.SelectedIndex) + 1, vencimento, pagamento);
+                    this.Close();
+                    contas.AtualizaGridContas();
+                    MessageBox.Show("Dados inseridos com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+               
              }
              catch (Exception ex)
              {
@@ -187,11 +181,12 @@ namespace ContasAReceber.View
                 string entrada, vencimento, pagamento;
                 entrada = op.FormataData(txtEntrada.Text);
                 vencimento = op.FormataData(txtVencimento.Text);
-                pagamento = txtPagamento.Text.Equals("  /  /") ? "11/11/1111" : op.FormataData(txtPagamento.Text);
+                pagamento = txtPagamento.Text.Equals("  /  /") ? null : op.FormataData(txtPagamento.Text);
                 op.AtualizaContas(entrada , Int32.Parse(txtCodigoCliente.Text), Double.Parse(txtValor.Text), txtDocumento.Text, (cbxClass.SelectedIndex + 1), (cbxSituacao.SelectedIndex + 1), vencimento, pagamento, Int32.Parse(lblConta.Text));
                 this.Close();
                 contas.AtualizaGridContas();
                 MessageBox.Show("Registro atualizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                
             }
             catch (Exception ex)
             {
@@ -205,6 +200,41 @@ namespace ContasAReceber.View
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtVencimento_Validated(object sender, EventArgs e)
+        {
+
+           
+           
+        }
+
+        private void txtPagamento_Validated(object sender, EventArgs e)
+        {
+            DateTime? pagamento, vencimento, dataAtual;
+            dataAtual = DateTime.Now.Date;
+            vencimento = DateTime.Parse(txtVencimento.Text).Date;
+            pagamento = txtPagamento.Text != "  /  /" ? DateTime.Parse(txtPagamento.Text) : (DateTime?)null;
+            if (!pagamento.HasValue && vencimento >= dataAtual)
+            {
+                cbxSituacao.SelectedIndex = 2;
+            }
+            else if (pagamento < vencimento || pagamento >= vencimento)
+            {
+                cbxSituacao.SelectedIndex = 0;
+            }
+            else if (vencimento < dataAtual)
+            {
+                cbxSituacao.SelectedIndex = 1;
+            }
+            else if (pagamento <= vencimento)
+            {
+                cbxSituacao.SelectedIndex = 0;
+            }
+            else
+            {
+                cbxSituacao.SelectedIndex = 0;
+            }
         }
     }
 }
