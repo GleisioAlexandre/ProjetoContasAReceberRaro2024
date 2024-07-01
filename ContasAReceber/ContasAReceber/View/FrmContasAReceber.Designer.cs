@@ -67,7 +67,8 @@
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.lblValor = new System.Windows.Forms.ToolStripLabel();
             this.cKFiltro = new System.Windows.Forms.CheckBox();
-            this.dataEntrada = new System.Windows.Forms.DateTimePicker();
+            this.dataInicial = new System.Windows.Forms.DateTimePicker();
+            this.dataFinal = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dtgContas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
@@ -107,12 +108,12 @@
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dtgContas.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dtgContas.Location = new System.Drawing.Point(0, 39);
+            this.dtgContas.Location = new System.Drawing.Point(0, 28);
             this.dtgContas.Name = "dtgContas";
             this.dtgContas.ReadOnly = true;
             this.dtgContas.RowHeadersVisible = false;
             this.dtgContas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgContas.Size = new System.Drawing.Size(1106, 436);
+            this.dtgContas.Size = new System.Drawing.Size(1260, 447);
             this.dtgContas.TabIndex = 2;
             this.dtgContas.VirtualMode = true;
             this.dtgContas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgContas_CellDoubleClick);
@@ -222,7 +223,7 @@
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(1106, 27);
+            this.bindingNavigator1.Size = new System.Drawing.Size(1260, 27);
             this.bindingNavigator1.TabIndex = 3;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -352,7 +353,7 @@
             this.lblValor});
             this.toolStrip.Location = new System.Drawing.Point(0, 478);
             this.toolStrip.Name = "toolStrip";
-            this.toolStrip.Size = new System.Drawing.Size(1106, 25);
+            this.toolStrip.Size = new System.Drawing.Size(1260, 25);
             this.toolStrip.TabIndex = 7;
             this.toolStrip.Text = "toolStrip1";
             // 
@@ -389,29 +390,37 @@
             this.cKFiltro.AutoSize = true;
             this.cKFiltro.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.cKFiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cKFiltro.Location = new System.Drawing.Point(817, 5);
+            this.cKFiltro.Location = new System.Drawing.Point(1031, 5);
             this.cKFiltro.Name = "cKFiltro";
             this.cKFiltro.Size = new System.Drawing.Size(113, 17);
             this.cKFiltro.TabIndex = 8;
             this.cKFiltro.Text = "Filtro Composto";
             this.cKFiltro.UseVisualStyleBackColor = false;
             // 
-            // dataEntrada
+            // dataInicial
             // 
-            this.dataEntrada.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dataEntrada.Location = new System.Drawing.Point(957, 3);
-            this.dataEntrada.Name = "dataEntrada";
-            this.dataEntrada.ShowUpDown = true;
-            this.dataEntrada.Size = new System.Drawing.Size(99, 20);
-            this.dataEntrada.TabIndex = 9;
-            this.dataEntrada.Value = new System.DateTime(2024, 4, 21, 0, 0, 0, 0);
-            this.dataEntrada.ValueChanged += new System.EventHandler(this.dataEntrada_ValueChanged);
+            this.dataInicial.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dataInicial.Location = new System.Drawing.Point(825, 3);
+            this.dataInicial.Name = "dataInicial";
+            this.dataInicial.Size = new System.Drawing.Size(97, 20);
+            this.dataInicial.TabIndex = 9;
+            this.dataInicial.Value = new System.DateTime(2024, 6, 30, 0, 0, 0, 0);
+            // 
+            // dataFinal
+            // 
+            this.dataFinal.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dataFinal.Location = new System.Drawing.Point(928, 3);
+            this.dataFinal.Name = "dataFinal";
+            this.dataFinal.Size = new System.Drawing.Size(97, 20);
+            this.dataFinal.TabIndex = 10;
+            this.dataFinal.Value = new System.DateTime(2024, 6, 30, 0, 0, 0, 0);
             // 
             // FrmContasAReceber
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
-            this.ClientSize = new System.Drawing.Size(1106, 503);
-            this.Controls.Add(this.dataEntrada);
+            this.ClientSize = new System.Drawing.Size(1260, 503);
+            this.Controls.Add(this.dataFinal);
+            this.Controls.Add(this.dataInicial);
             this.Controls.Add(this.cKFiltro);
             this.Controls.Add(this.toolStrip);
             this.Controls.Add(this.bindingNavigator1);
@@ -460,7 +469,6 @@
         private System.Windows.Forms.ToolStripLabel lblValor;
         private System.Windows.Forms.ToolStripButton btnPesquisar;
         private System.Windows.Forms.CheckBox cKFiltro;
-        private System.Windows.Forms.DateTimePicker dataEntrada;
         private System.Windows.Forms.DataGridViewTextBoxColumn entrada;
         private System.Windows.Forms.DataGridViewTextBoxColumn nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn valor;
@@ -469,5 +477,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn situacao;
         private System.Windows.Forms.DataGridViewTextBoxColumn vencimento;
         private System.Windows.Forms.DataGridViewTextBoxColumn pagamento;
+        private System.Windows.Forms.DateTimePicker dataInicial;
+        private System.Windows.Forms.DateTimePicker dataFinal;
     }
 }

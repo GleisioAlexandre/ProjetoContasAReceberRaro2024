@@ -321,7 +321,6 @@
     <Folder Include="AcessoRemoto\" />
     <Folder Include="Banco de Dados\" />
     <Folder Include="Instalador\" />
-    <Folder Include="Log\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Img\pasta.png" />

@@ -82,11 +82,12 @@ namespace ContasAReceber.View
         }
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
-
             if (cKFiltro.Checked == true)
             {
                 Filtro();
-            }else if (cKFiltro.Checked == false && TxtNomeCliente.Text != "")
+                FiltroData(dataInicial.Value, dataFinal.Value);
+            }
+            else if (cKFiltro.Checked == false && TxtNomeCliente.Text != "")
             {
                 FiltroNomeCliente();
             }
@@ -95,10 +96,7 @@ namespace ContasAReceber.View
                 FiltroSituacao();
             }
         }
-        private void dataEntrada_ValueChanged(object sender, EventArgs e)
-        {
-            FiltroData(dataEntrada.Value);
-        }
+       
         //*************************************Inicio dos metodos criados manualmenet*************************************************************************
         private void Filtro()
         {
@@ -153,9 +151,11 @@ namespace ContasAReceber.View
             }
         }
 
-        private void FiltroData(DateTime entrada)
+        private void FiltroData(DateTime dataInicial, DateTime dataFinal)
         {
-            string filtroData = string.Format("entrada <= #{0}#", entrada.ToString("dd/MM/yyyy"));
+            string filtroData = string.Format("vencimento >= '{0}' AND vencimento <= '{1}'",
+             dataInicial = dataInicial.Date,
+             dataFinal = dataFinal.Date);
             bindingSource1.Filter = filtroData;
         }
         private void SomaValor()
