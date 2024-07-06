@@ -13,10 +13,11 @@ namespace ContasAReceber.View
 {
     public partial class FrmHome : Form
     {
+        ServicoDeLog log = new ServicoDeLog();
         public FrmHome()
         {
             InitializeComponent();
-
+            log.Logs(this.Name + ", foi aberto!");
         }
 
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -72,8 +73,13 @@ namespace ContasAReceber.View
 
         private void anydeskToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SuporteRemoto suporteRemoto = new SuporteRemoto();
+            ServicoSuporteRemoto suporteRemoto = new ServicoSuporteRemoto();
             suporteRemoto.AcessoRemoto();
+        }
+
+        private void FrmHome_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            log.Logs(this.Name + ", foi fechado!");
         }
     }
 }

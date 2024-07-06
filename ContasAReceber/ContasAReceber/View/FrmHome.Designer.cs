@@ -35,11 +35,11 @@
             this.contasAReceberToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.configuraçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configurarBancoDeDabosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.suporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.anydeskToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblData = new System.Windows.Forms.ToolStripStatusLabel();
-            this.suporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.anydeskToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -83,7 +83,7 @@
             // contasAReceberToolStripMenuItem1
             // 
             this.contasAReceberToolStripMenuItem1.Name = "contasAReceberToolStripMenuItem1";
-            this.contasAReceberToolStripMenuItem1.Size = new System.Drawing.Size(165, 22);
+            this.contasAReceberToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.contasAReceberToolStripMenuItem1.Text = "Contas a Receber";
             this.contasAReceberToolStripMenuItem1.Click += new System.EventHandler(this.contasAReceberToolStripMenuItem1_Click);
             // 
@@ -101,6 +101,21 @@
             this.configurarBancoDeDabosToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.configurarBancoDeDabosToolStripMenuItem.Text = "Configurações";
             this.configurarBancoDeDabosToolStripMenuItem.Click += new System.EventHandler(this.configurarBancoDeDabosToolStripMenuItem_Click);
+            // 
+            // suporteToolStripMenuItem
+            // 
+            this.suporteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.anydeskToolStripMenuItem});
+            this.suporteToolStripMenuItem.Name = "suporteToolStripMenuItem";
+            this.suporteToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.suporteToolStripMenuItem.Text = "Suporte";
+            // 
+            // anydeskToolStripMenuItem
+            // 
+            this.anydeskToolStripMenuItem.Name = "anydeskToolStripMenuItem";
+            this.anydeskToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.anydeskToolStripMenuItem.Text = "Anydesk";
+            this.anydeskToolStripMenuItem.Click += new System.EventHandler(this.anydeskToolStripMenuItem_Click);
             // 
             // statusStrip1
             // 
@@ -130,21 +145,6 @@
             this.lblData.Size = new System.Drawing.Size(76, 17);
             this.lblData.Text = "00/00/0000";
             // 
-            // suporteToolStripMenuItem
-            // 
-            this.suporteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.anydeskToolStripMenuItem});
-            this.suporteToolStripMenuItem.Name = "suporteToolStripMenuItem";
-            this.suporteToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
-            this.suporteToolStripMenuItem.Text = "Suporte";
-            // 
-            // anydeskToolStripMenuItem
-            // 
-            this.anydeskToolStripMenuItem.Name = "anydeskToolStripMenuItem";
-            this.anydeskToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.anydeskToolStripMenuItem.Text = "Anydesk";
-            this.anydeskToolStripMenuItem.Click += new System.EventHandler(this.anydeskToolStripMenuItem_Click);
-            // 
             // FrmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -158,6 +158,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmHome_FormClosing);
             this.Load += new System.EventHandler(this.FrmHome_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ContasAReceber.servico
 {
-    class SuporteRemoto
+    class ServicoSuporteRemoto
     {
         public void AcessoRemoto()
         {

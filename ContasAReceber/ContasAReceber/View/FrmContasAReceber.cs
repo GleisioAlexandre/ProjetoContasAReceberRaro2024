@@ -17,16 +17,18 @@ using System.Diagnostics;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 using Font = iTextSharp.text.Font;
+using ContasAReceber.servico;
 
 namespace ContasAReceber.View
 {
     public partial class FrmContasAReceber : Form
     {
         OperacoesContas op = new OperacoesContas();
+        ServicoDeLog log = new ServicoDeLog();
         public FrmContasAReceber()
         {
             InitializeComponent();
-
+            log.Logs("Foi aberto o " + this.Name);
         }
         private void FrmContas_Load(object sender, EventArgs e)
         {
