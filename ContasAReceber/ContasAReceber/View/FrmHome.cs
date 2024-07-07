@@ -60,6 +60,13 @@ namespace ContasAReceber.View
             contasAPagar.WindowState = FormWindowState.Maximized;
             contasAPagar.Show();
         }
+        private void usuáriosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmUsuários usuarios = new FrmUsuários();
+            usuarios.MdiParent = this;
+            usuarios.WindowState = FormWindowState.Maximized;
+            usuarios.Show();
+        }
 
         private void fornecedoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -81,5 +88,7 @@ namespace ContasAReceber.View
         {
             log.Logs(this.Name + ", foi fechado!");
         }
+
+      
     }
 }
