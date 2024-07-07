@@ -36,9 +36,10 @@ namespace ContasAReceber.View
 
         private void FrmHome_Load(object sender, EventArgs e)
         {
-            lblData.Text = DateTime.Now.ToString("dd/MM/yyyy");
+            
+            lblData.Text =  DateTime.Now.ToString("dd/MM/yyyy");
         }
-
+       
         private void contasAReceberToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             FrmContasAReceber contas = new FrmContasAReceber();
