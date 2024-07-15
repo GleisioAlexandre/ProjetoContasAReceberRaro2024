@@ -160,6 +160,41 @@ namespace ContasAReceber.View
              dataFinal = dataFinal.Date);
             bindingSource1.Filter = filtroData;
         }
+        private void FiltroCompleto(DateTime dataInicial, DateTime dataFinal, string nomeCliente, string situacao)
+        {
+            List<string> filtros = new List<string>();
+
+            // Filtro por nome do cliente
+            if (!string.IsNullOrWhiteSpace(nomeCliente))
+            {
+                filtros.Add($"nome LIKE '%{nomeCliente}%'");
+            }
+
+            // Filtro por situação
+            if (!string.IsNullOrEmpty(situacao) && !situacao.Equals("Todos"))
+            {
+                filtros.Add($"situacao = '{situacao}'");
+            }
+
+            // Filtro por data
+            if (dataInicial != DateTime.MinValue && dataFinal != DateTime.MinValue)
+            {
+                string filtroData = string.Format("vencimento >= #{0}# AND vencimento <= #{1}#",
+                                                  dataInicial.ToString("yyyy-MM-dd"),
+                                                  dataFinal.ToString("yyyy-MM-dd"));
+                filtros.Add(filtroData);
+            }
+
+            // Construir a string de filtro final
+            string filtroFinal = string.Join(" AND ", filtros);
+
+            // Aplicar o filtro ao BindingSource
+            bindingSource1.DataSource = op.datSet().Tables["contasareceber"];
+            bindingSource1.Filter = filtroFinal;
+
+            SomaValor();
+            ColoreValor();
+        }
         private void SomaValor()
         {
             decimal total = 0;
@@ -233,6 +268,14 @@ namespace ContasAReceber.View
         {
             FrmOperacoesContas frmInserirContas = new FrmOperacoesContas(this);
             frmInserirContas.ShowDialog();
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked == true)
+            {
+                FiltroCompleto(dataInicial.Value, dataFinal.Value, TxtNomeCliente.Text, CbxSituacao.SelectedText);
+            }
         }
     }
 }
