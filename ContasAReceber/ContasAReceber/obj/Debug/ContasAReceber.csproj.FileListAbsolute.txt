@@ -518,7 +518,6 @@ C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasA
 C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.Properties.Resources.resources
 C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmClientes.resources
 C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmConfiguracao.resources
-C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmContas.resources
 C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmHome.resources
 C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmOperacoesClientes.resources
 C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmOperacoesContas.resources
@@ -1472,3 +1471,14 @@ D:\Projetos 2024\Contas a Receber\ContasAReceber\ContasAReceber\obj\Debug\Contas
 D:\Projetos 2024\Contas a Receber\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.exe
 D:\Projetos 2024\Contas a Receber\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.pdb
 D:\Projetos 2024\Contas a Receber\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmUsuários.resources
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\NLog.dll
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\BouncyCastle.Crypto.xml
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\bin\Debug\NLog.xml
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmContasAReceber.resources
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmContasAPagar.resources
+C:\Users\jucaf\Source\Repos\ProjetoContasAReceberRaro2024\ContasAReceber\ContasAReceber\obj\Debug\ContasAReceber.View.FrmUsuários.resources

@@ -44,7 +44,6 @@ namespace ContasAReceber.View
                 MessageBox.Show("Erro, ao conectar o banco de dados! \n Erro: " + ex, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-      
         private void FrmContas_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Insert)
@@ -53,8 +52,6 @@ namespace ContasAReceber.View
                 frmInserirContas.ShowDialog();
             }
         }
-       
-        
         private void dtgContas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
            if (e.RowIndex >= 0 && e.RowIndex < dtgContas.Rows.Count)
@@ -84,21 +81,24 @@ namespace ContasAReceber.View
         }
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
-            if (cKFiltro.Checked == true)
-            {
-                Filtro();
-                FiltroData(dataInicial.Value, dataFinal.Value);
-            }
-            else if (cKFiltro.Checked == false && TxtNomeCliente.Text != "")
+          
+            if (rbNome.Checked == true)
             {
                 FiltroNomeCliente();
             }
-            else
+            else if (rbSituacao.Checked)
             {
                 FiltroSituacao();
             }
+            else if (rbData.Checked)
+            {
+                FiltroData();
+            }
+            else if (rbTodos.Checked)
+            {
+                FiltroCompleto2();
+            }
         }
-       
         //*************************************Inicio dos metodos criados manualmenet*************************************************************************
         private void Filtro()
         {
@@ -153,45 +153,42 @@ namespace ContasAReceber.View
             }
         }
 
-        private void FiltroData(DateTime dataInicial, DateTime dataFinal)
+        private void FiltroData()
         {
-            string filtroData = string.Format("vencimento >= '{0}' AND vencimento <= '{1}'",
-             dataInicial = dataInicial.Date,
-             dataFinal = dataFinal.Date);
+           DateTime dataInicio = dataInicial.Value;
+           DateTime dataTermino = dataFinal.Value;
+            string dataInicialFormatada = dataInicio.ToString("dd/MM/yyyy");
+            string dataFinalFormatada = dataTermino.ToString("dd/MM/yyyy");
+            string filtroData = $"vencimento >= '{dataInicialFormatada}' AND vencimento <= '{dataFinalFormatada}'";
             bindingSource1.Filter = filtroData;
         }
-        private void FiltroCompleto(DateTime dataInicial, DateTime dataFinal, string nomeCliente, string situacao)
+        private void FiltroCompleto1()
         {
-            List<string> filtros = new List<string>();
-
-            // Filtro por nome do cliente
-            if (!string.IsNullOrWhiteSpace(nomeCliente))
-            {
-                filtros.Add($"nome LIKE '%{nomeCliente}%'");
-            }
-
-            // Filtro por situação
-            if (!string.IsNullOrEmpty(situacao) && !situacao.Equals("Todos"))
-            {
-                filtros.Add($"situacao = '{situacao}'");
-            }
-
-            // Filtro por data
-            if (dataInicial != DateTime.MinValue && dataFinal != DateTime.MinValue)
-            {
-                string filtroData = string.Format("vencimento >= #{0}# AND vencimento <= #{1}#",
-                                                  dataInicial.ToString("yyyy-MM-dd"),
-                                                  dataFinal.ToString("yyyy-MM-dd"));
-                filtros.Add(filtroData);
-            }
-
-            // Construir a string de filtro final
-            string filtroFinal = string.Join(" AND ", filtros);
-
-            // Aplicar o filtro ao BindingSource
-            bindingSource1.DataSource = op.datSet().Tables["contasareceber"];
-            bindingSource1.Filter = filtroFinal;
-
+            DateTime dataInicio = dataInicial.Value;
+            DateTime dataTermino = dataFinal.Value;
+            string situacao = CbxSituacao.Text;
+            string dataInicialFormatada = dataInicio.ToString("dd/MM/yyyy");
+            string dataFinalFormatada = dataTermino.ToString("dd/MM/yyyy");
+            string situacaoFiltro = $"situacao = '{situacao}'";
+            string filtroData = string.Format($"vencimento >= '{dataInicialFormatada}' AND vencimento <= '{dataFinalFormatada}'");
+            string filtroCompleto = $"{situacaoFiltro} AND {filtroData}";
+            bindingSource1.Filter = filtroCompleto;
+            SomaValor();
+            ColoreValor();
+        }
+        private void FiltroCompleto2()
+        {
+            DateTime dataInicio = dataInicial.Value;
+            DateTime dataTermino = dataFinal.Value;
+            string nomeCliente = TxtNomeCliente.Text;
+            string situacao = CbxSituacao.Text;
+            string dataInicialFormatada = dataInicio.ToString("dd/MM/yyyy");
+            string dataFinalFormatada = dataTermino.ToString("dd/MM/yyyy");
+            string nomeFiltro = $"nome LIKE '%{nomeCliente}%'";
+            string situacaoFiltro = $"situacao = '{situacao}'";
+            string filtroData = string.Format($"vencimento >= '{dataInicialFormatada}' AND vencimento <= '{dataFinalFormatada}'");
+            string filtroCompleto = $"{nomeFiltro} AND {situacaoFiltro} AND {filtroData}";
+            bindingSource1.Filter = filtroCompleto;
             SomaValor();
             ColoreValor();
         }
@@ -261,21 +258,12 @@ namespace ContasAReceber.View
             dtgContas.DataSource = bindingSource1;
             //Limpa o texbox do filtro
             TxtNomeCliente.Clear();
-           
         }
        
         private void BtnInserir_Click(object sender, EventArgs e)
         {
             FrmOperacoesContas frmInserirContas = new FrmOperacoesContas(this);
             frmInserirContas.ShowDialog();
-        }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-            if (radioButton1.Checked == true)
-            {
-                FiltroCompleto(dataInicial.Value, dataFinal.Value, TxtNomeCliente.Text, CbxSituacao.SelectedText);
-            }
         }
     }
 }
