@@ -85,6 +85,7 @@ namespace ContasAReceber.View
             if (rbNome.Checked == true)
             {
                 FiltroNomeCliente();
+                
             }
             else if (rbSituacao.Checked)
             {
@@ -161,6 +162,8 @@ namespace ContasAReceber.View
             string dataFinalFormatada = dataTermino.ToString("dd/MM/yyyy");
             string filtroData = $"vencimento >= '{dataInicialFormatada}' AND vencimento <= '{dataFinalFormatada}'";
             bindingSource1.Filter = filtroData;
+            SomaValor();
+            ColoreValor();
         }
         private void FiltroCompleto1()
         {
