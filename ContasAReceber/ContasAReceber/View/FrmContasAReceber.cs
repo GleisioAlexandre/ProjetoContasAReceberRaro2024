@@ -158,10 +158,13 @@ namespace ContasAReceber.View
         {
            DateTime dataInicio = dataInicial.Value;
            DateTime dataTermino = dataFinal.Value;
+            string situacao = CbxSituacao.Text;
             string dataInicialFormatada = dataInicio.ToString("dd/MM/yyyy");
             string dataFinalFormatada = dataTermino.ToString("dd/MM/yyyy");
+            string situacaoFiltro = $"situacao = '{situacao}'";
             string filtroData = $"vencimento >= '{dataInicialFormatada}' AND vencimento <= '{dataFinalFormatada}'";
-            bindingSource1.Filter = filtroData;
+            string filtroCompleto = $"{situacaoFiltro} AND {filtroData}";
+            bindingSource1.Filter = filtroCompleto;
             SomaValor();
             ColoreValor();
         }
@@ -173,7 +176,7 @@ namespace ContasAReceber.View
             string dataInicialFormatada = dataInicio.ToString("dd/MM/yyyy");
             string dataFinalFormatada = dataTermino.ToString("dd/MM/yyyy");
             string situacaoFiltro = $"situacao = '{situacao}'";
-            string filtroData = string.Format($"vencimento >= '{dataInicialFormatada}' AND vencimento <= '{dataFinalFormatada}'");
+            string filtroData = $"vencimento >= '{dataInicialFormatada}' AND vencimento <= '{dataFinalFormatada}'";
             string filtroCompleto = $"{situacaoFiltro} AND {filtroData}";
             bindingSource1.Filter = filtroCompleto;
             SomaValor();

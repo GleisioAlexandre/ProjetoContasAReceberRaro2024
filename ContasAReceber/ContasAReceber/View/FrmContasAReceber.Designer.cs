@@ -49,11 +49,16 @@
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.BntPrint = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.TxtNomeCliente = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.CbxSituacao = new System.Windows.Forms.ToolStripComboBox();
-            this.btnPesquisar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnPesquisar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.BntPrint = new System.Windows.Forms.ToolStripButton();
             this.dataInicial = new System.Windows.Forms.DateTimePicker();
             this.dataFinal = new System.Windows.Forms.DateTimePicker();
             this.BottomToolStripPanel = new System.Windows.Forms.ToolStripPanel();
@@ -69,11 +74,6 @@
             this.rbNome = new System.Windows.Forms.RadioButton();
             this.rbSituacao = new System.Windows.Forms.RadioButton();
             this.rbData = new System.Windows.Forms.RadioButton();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.rbTodos = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dtgContas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
@@ -232,29 +232,32 @@
             this.bindingNavigator1.MovePreviousItem = null;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = null;
-            this.bindingNavigator1.Size = new System.Drawing.Size(1632, 28);
+            this.bindingNavigator1.Size = new System.Drawing.Size(1632, 27);
             this.bindingNavigator1.TabIndex = 3;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 28);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
-            // BntPrint
+            // toolStripLabel1
             // 
-            this.BntPrint.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.BntPrint.Image = global::ContasAReceber.Properties.Resources.icons8_print_16;
-            this.BntPrint.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.BntPrint.Name = "BntPrint";
-            this.BntPrint.Size = new System.Drawing.Size(24, 25);
-            this.BntPrint.Text = "Imprimir";
-            this.BntPrint.Click += new System.EventHandler(this.BntImprimir_Click);
+            this.toolStripLabel1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripLabel1.ForeColor = System.Drawing.Color.White;
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(46, 24);
+            this.toolStripLabel1.Text = "Cliente";
             // 
             // TxtNomeCliente
             // 
             this.TxtNomeCliente.Name = "TxtNomeCliente";
-            this.TxtNomeCliente.Size = new System.Drawing.Size(400, 28);
+            this.TxtNomeCliente.Size = new System.Drawing.Size(400, 27);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // CbxSituacao
             // 
@@ -265,8 +268,25 @@
             "Em Dia",
             "Pago"});
             this.CbxSituacao.Name = "CbxSituacao";
-            this.CbxSituacao.Size = new System.Drawing.Size(121, 28);
+            this.CbxSituacao.Size = new System.Drawing.Size(121, 27);
             this.CbxSituacao.Tag = "";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Margin = new System.Windows.Forms.Padding(200, 0, 250, 0);
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 27);
+            // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Margin = new System.Windows.Forms.Padding(100, 0, 1, 0);
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 27);
             // 
             // btnPesquisar
             // 
@@ -274,22 +294,31 @@
             this.btnPesquisar.Image = ((System.Drawing.Image)(resources.GetObject("btnPesquisar.Image")));
             this.btnPesquisar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(24, 25);
+            this.btnPesquisar.Size = new System.Drawing.Size(24, 24);
             this.btnPesquisar.Text = "toolStripButton1";
             this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
-            // toolStripSeparator3
+            // toolStripSeparator7
             // 
-            this.toolStripSeparator3.Margin = new System.Windows.Forms.Padding(200, 0, 250, 0);
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 28);
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 27);
+            // 
+            // BntPrint
+            // 
+            this.BntPrint.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.BntPrint.Image = global::ContasAReceber.Properties.Resources.icons8_print_16;
+            this.BntPrint.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BntPrint.Name = "BntPrint";
+            this.BntPrint.Size = new System.Drawing.Size(24, 24);
+            this.BntPrint.Text = "Imprimir";
+            this.BntPrint.Click += new System.EventHandler(this.BntImprimir_Click);
             // 
             // dataInicial
             // 
             this.dataInicial.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dataInicial.Location = new System.Drawing.Point(625, 3);
             this.dataInicial.Name = "dataInicial";
-            this.dataInicial.Size = new System.Drawing.Size(97, 22);
+            this.dataInicial.Size = new System.Drawing.Size(97, 20);
             this.dataInicial.TabIndex = 9;
             this.dataInicial.Value = new System.DateTime(2024, 6, 30, 0, 0, 0, 0);
             // 
@@ -298,7 +327,7 @@
             this.dataFinal.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dataFinal.Location = new System.Drawing.Point(726, 3);
             this.dataFinal.Name = "dataFinal";
-            this.dataFinal.Size = new System.Drawing.Size(97, 22);
+            this.dataFinal.Size = new System.Drawing.Size(97, 20);
             this.dataFinal.TabIndex = 10;
             this.dataFinal.Value = new System.DateTime(2024, 6, 30, 0, 0, 0, 0);
             // 
@@ -344,26 +373,26 @@
             this.BtnInserir.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnInserir.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnInserir.Name = "BtnInserir";
-            this.BtnInserir.Size = new System.Drawing.Size(58, 24);
+            this.BtnInserir.Size = new System.Drawing.Size(47, 22);
             this.BtnInserir.Text = "Inserir";
             this.BtnInserir.Click += new System.EventHandler(this.BtnInserir_Click);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 27);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 27);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 25);
             // 
             // lblValor
             // 
             this.lblValor.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.lblValor.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblValor.Name = "lblValor";
-            this.lblValor.Size = new System.Drawing.Size(106, 24);
+            this.lblValor.Size = new System.Drawing.Size(82, 22);
             this.lblValor.Text = "Total: R$ 0,00";
             // 
             // toolStrip
@@ -376,9 +405,9 @@
             this.toolStripSeparator4,
             this.toolStripSeparator5,
             this.lblValor});
-            this.toolStrip.Location = new System.Drawing.Point(0, 476);
+            this.toolStrip.Location = new System.Drawing.Point(0, 478);
             this.toolStrip.Name = "toolStrip";
-            this.toolStrip.Size = new System.Drawing.Size(1632, 27);
+            this.toolStrip.Size = new System.Drawing.Size(1632, 25);
             this.toolStrip.TabIndex = 7;
             this.toolStrip.Text = "toolStrip1";
             // 
@@ -386,11 +415,12 @@
             // 
             this.rbNome.AutoSize = true;
             this.rbNome.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.rbNome.Checked = true;
             this.rbNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbNome.ForeColor = System.Drawing.Color.White;
             this.rbNome.Location = new System.Drawing.Point(839, 4);
             this.rbNome.Name = "rbNome";
-            this.rbNome.Size = new System.Drawing.Size(70, 21);
+            this.rbNome.Size = new System.Drawing.Size(57, 17);
             this.rbNome.TabIndex = 11;
             this.rbNome.TabStop = true;
             this.rbNome.Text = "Nome";
@@ -404,9 +434,8 @@
             this.rbSituacao.ForeColor = System.Drawing.Color.White;
             this.rbSituacao.Location = new System.Drawing.Point(915, 4);
             this.rbSituacao.Name = "rbSituacao";
-            this.rbSituacao.Size = new System.Drawing.Size(92, 21);
+            this.rbSituacao.Size = new System.Drawing.Size(75, 17);
             this.rbSituacao.TabIndex = 12;
-            this.rbSituacao.TabStop = true;
             this.rbSituacao.Text = "Situação";
             this.rbSituacao.UseVisualStyleBackColor = false;
             // 
@@ -418,40 +447,10 @@
             this.rbData.ForeColor = System.Drawing.Color.White;
             this.rbData.Location = new System.Drawing.Point(1013, 4);
             this.rbData.Name = "rbData";
-            this.rbData.Size = new System.Drawing.Size(63, 21);
+            this.rbData.Size = new System.Drawing.Size(52, 17);
             this.rbData.TabIndex = 13;
-            this.rbData.TabStop = true;
             this.rbData.Text = "Data";
             this.rbData.UseVisualStyleBackColor = false;
-            // 
-            // toolStripLabel1
-            // 
-            this.toolStripLabel1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripLabel1.ForeColor = System.Drawing.Color.White;
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(57, 25);
-            this.toolStripLabel1.Text = "Cliente";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 28);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 28);
-            // 
-            // toolStripSeparator6
-            // 
-            this.toolStripSeparator6.Margin = new System.Windows.Forms.Padding(100, 0, 1, 0);
-            this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 28);
-            // 
-            // toolStripSeparator7
-            // 
-            this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 28);
             // 
             // rbTodos
             // 
@@ -461,9 +460,8 @@
             this.rbTodos.ForeColor = System.Drawing.Color.White;
             this.rbTodos.Location = new System.Drawing.Point(1082, 4);
             this.rbTodos.Name = "rbTodos";
-            this.rbTodos.Size = new System.Drawing.Size(74, 21);
+            this.rbTodos.Size = new System.Drawing.Size(60, 17);
             this.rbTodos.TabIndex = 14;
-            this.rbTodos.TabStop = true;
             this.rbTodos.Text = "Todos";
             this.rbTodos.UseVisualStyleBackColor = false;
             // 
