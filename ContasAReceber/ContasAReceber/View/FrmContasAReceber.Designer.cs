@@ -29,23 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmContasAReceber));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtgContas = new System.Windows.Forms.DataGridView();
-            this.entrada = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.situacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vencimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pagamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
@@ -75,6 +67,14 @@
             this.rbSituacao = new System.Windows.Forms.RadioButton();
             this.rbData = new System.Windows.Forms.RadioButton();
             this.rbTodos = new System.Windows.Forms.RadioButton();
+            this.entrada = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.situacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vencimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pagamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgContas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
@@ -89,13 +89,13 @@
             this.dtgContas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgContas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgContas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dtgContas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgContas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.entrada,
@@ -106,14 +106,14 @@
             this.situacao,
             this.vencimento,
             this.pagamento});
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgContas.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgContas.DefaultCellStyle = dataGridViewCellStyle14;
             this.dtgContas.Location = new System.Drawing.Point(0, 28);
             this.dtgContas.Name = "dtgContas";
             this.dtgContas.ReadOnly = true;
@@ -124,85 +124,6 @@
             this.dtgContas.VirtualMode = true;
             this.dtgContas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgContas_CellDoubleClick);
             this.dtgContas.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dtgContas_CellFormatting);
-            // 
-            // entrada
-            // 
-            this.entrada.DataPropertyName = "entrada";
-            dataGridViewCellStyle2.Format = "d";
-            dataGridViewCellStyle2.NullValue = null;
-            this.entrada.DefaultCellStyle = dataGridViewCellStyle2;
-            this.entrada.HeaderText = "Entrada";
-            this.entrada.Name = "entrada";
-            this.entrada.ReadOnly = true;
-            this.entrada.Width = 75;
-            // 
-            // nome
-            // 
-            this.nome.DataPropertyName = "nome";
-            this.nome.HeaderText = "Nome";
-            this.nome.Name = "nome";
-            this.nome.ReadOnly = true;
-            this.nome.Width = 400;
-            // 
-            // valor
-            // 
-            this.valor.DataPropertyName = "valor";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle3.Format = "C2";
-            dataGridViewCellStyle3.NullValue = null;
-            this.valor.DefaultCellStyle = dataGridViewCellStyle3;
-            this.valor.HeaderText = "Valor";
-            this.valor.Name = "valor";
-            this.valor.ReadOnly = true;
-            this.valor.Width = 90;
-            // 
-            // documento
-            // 
-            this.documento.DataPropertyName = "documento";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.documento.DefaultCellStyle = dataGridViewCellStyle4;
-            this.documento.HeaderText = "Documento";
-            this.documento.Name = "documento";
-            this.documento.ReadOnly = true;
-            this.documento.Width = 90;
-            // 
-            // tipo
-            // 
-            this.tipo.DataPropertyName = "tipo";
-            this.tipo.HeaderText = "Tipo";
-            this.tipo.Name = "tipo";
-            this.tipo.ReadOnly = true;
-            this.tipo.Width = 58;
-            // 
-            // situacao
-            // 
-            this.situacao.DataPropertyName = "situacao";
-            this.situacao.HeaderText = "Situação";
-            this.situacao.Name = "situacao";
-            this.situacao.ReadOnly = true;
-            this.situacao.Width = 73;
-            // 
-            // vencimento
-            // 
-            this.vencimento.DataPropertyName = "vencimento";
-            dataGridViewCellStyle5.Format = "d";
-            dataGridViewCellStyle5.NullValue = null;
-            this.vencimento.DefaultCellStyle = dataGridViewCellStyle5;
-            this.vencimento.HeaderText = "Vencimento";
-            this.vencimento.Name = "vencimento";
-            this.vencimento.ReadOnly = true;
-            this.vencimento.Width = 87;
-            // 
-            // pagamento
-            // 
-            this.pagamento.DataPropertyName = "pagamento";
-            dataGridViewCellStyle6.Format = "d";
-            dataGridViewCellStyle6.NullValue = null;
-            this.pagamento.DefaultCellStyle = dataGridViewCellStyle6;
-            this.pagamento.HeaderText = "Pagamento";
-            this.pagamento.Name = "pagamento";
-            this.pagamento.ReadOnly = true;
-            this.pagamento.Width = 87;
             // 
             // bindingNavigator1
             // 
@@ -465,6 +386,85 @@
             this.rbTodos.Text = "Todos";
             this.rbTodos.UseVisualStyleBackColor = false;
             // 
+            // entrada
+            // 
+            this.entrada.DataPropertyName = "entrada";
+            dataGridViewCellStyle9.Format = "d";
+            dataGridViewCellStyle9.NullValue = null;
+            this.entrada.DefaultCellStyle = dataGridViewCellStyle9;
+            this.entrada.HeaderText = "Entrada";
+            this.entrada.Name = "entrada";
+            this.entrada.ReadOnly = true;
+            this.entrada.Width = 80;
+            // 
+            // nome
+            // 
+            this.nome.DataPropertyName = "nome";
+            this.nome.HeaderText = "Nome";
+            this.nome.Name = "nome";
+            this.nome.ReadOnly = true;
+            this.nome.Width = 400;
+            // 
+            // valor
+            // 
+            this.valor.DataPropertyName = "valor";
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle10.Format = "C2";
+            dataGridViewCellStyle10.NullValue = null;
+            this.valor.DefaultCellStyle = dataGridViewCellStyle10;
+            this.valor.HeaderText = "Valor";
+            this.valor.Name = "valor";
+            this.valor.ReadOnly = true;
+            this.valor.Width = 90;
+            // 
+            // documento
+            // 
+            this.documento.DataPropertyName = "documento";
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.documento.DefaultCellStyle = dataGridViewCellStyle11;
+            this.documento.HeaderText = "Documento";
+            this.documento.Name = "documento";
+            this.documento.ReadOnly = true;
+            this.documento.Width = 90;
+            // 
+            // tipo
+            // 
+            this.tipo.DataPropertyName = "tipo";
+            this.tipo.HeaderText = "Tipo";
+            this.tipo.Name = "tipo";
+            this.tipo.ReadOnly = true;
+            this.tipo.Width = 58;
+            // 
+            // situacao
+            // 
+            this.situacao.DataPropertyName = "situacao";
+            this.situacao.HeaderText = "Situação";
+            this.situacao.Name = "situacao";
+            this.situacao.ReadOnly = true;
+            this.situacao.Width = 73;
+            // 
+            // vencimento
+            // 
+            this.vencimento.DataPropertyName = "vencimento";
+            dataGridViewCellStyle12.Format = "d";
+            dataGridViewCellStyle12.NullValue = null;
+            this.vencimento.DefaultCellStyle = dataGridViewCellStyle12;
+            this.vencimento.HeaderText = "Vencimento";
+            this.vencimento.Name = "vencimento";
+            this.vencimento.ReadOnly = true;
+            this.vencimento.Width = 80;
+            // 
+            // pagamento
+            // 
+            this.pagamento.DataPropertyName = "pagamento";
+            dataGridViewCellStyle13.Format = "d";
+            dataGridViewCellStyle13.NullValue = null;
+            this.pagamento.DefaultCellStyle = dataGridViewCellStyle13;
+            this.pagamento.HeaderText = "Pagamento";
+            this.pagamento.Name = "pagamento";
+            this.pagamento.ReadOnly = true;
+            this.pagamento.Width = 80;
+            // 
             // FrmContasAReceber
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -509,14 +509,6 @@
         private System.Windows.Forms.ToolStripButton btnPesquisar;
         private System.Windows.Forms.DateTimePicker dataInicial;
         private System.Windows.Forms.DateTimePicker dataFinal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn entrada;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn valor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn documento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tipo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn situacao;
-        private System.Windows.Forms.DataGridViewTextBoxColumn vencimento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pagamento;
         private System.Windows.Forms.ToolStripPanel BottomToolStripPanel;
         private System.Windows.Forms.ToolStripPanel TopToolStripPanel;
         private System.Windows.Forms.ToolStripPanel RightToolStripPanel;
@@ -536,5 +528,13 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
         private System.Windows.Forms.RadioButton rbTodos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn entrada;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn valor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn documento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn situacao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn vencimento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pagamento;
     }
 }
